@@ -1,0 +1,167 @@
+/* less imports */
+@font-face {
+  font-family: 'Supermercado One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/supermercadoone/v10/OpNXnpQWg8jc_xps_Gi14kVVEXOn60Y.ttf) format('truetype');
+}
+.centerWithMargin {
+  margin: 0 auto;
+}
+.App {
+  position: relative;
+  margin: 0 auto;
+}
+.Banner {
+  background-color: #ff2052;
+  padding: 1%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: no-wrap;
+  font-family: 'Supermercado One', cursive;
+  font-weight: normal;
+  font-size: 2rem;
+  color: #ffffff;
+}
+.Banner h2 {
+  font-size: 3rem;
+  margin: 0%;
+}
+.Banner .Banner-X {
+  min-width: none;
+  max-width: none;
+  width: 20%;
+}
+.Banner > h2:nth-child(1) > div:nth-child(1) {
+  display: inline;
+  margin-left: 2px;
+}
+.rainbow-checkbox-toggle_faux {
+  background-color: #ffffff !important;
+  border: none !important;
+}
+.ietQcB .rainbow-checkbox-toggle_faux::after {
+  background-color: #ff2052 !important;
+}
+.App > div:nth-child(1) {
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0.05%;
+}
+.Section {
+  min-height: none;
+  max-height: none;
+  height: 100%;
+  min-width: none;
+  max-width: none;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: no-wrap;
+  position: relative;
+}
+#Jumbotron {
+  background-image: url('../img/motherboard.jpg');
+  min-width: none;
+  max-width: none;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+.Nav {
+  right: 12;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: no-wrap;
+}
+.Nav .profile-img {
+  margin: 4%;
+  background-image: url('../img/genImg/profile.jpg');
+  background-position: center;
+  border-radius: 50%;
+  overflow: hidden;
+  min-width: none;
+  max-width: none;
+  width: 17rem;
+  min-height: none;
+  max-height: none;
+  height: 17rem;
+}
+@media (max-width: 1480px) {
+  .Nav .profile-img {
+    width: 13rem;
+    height: 13rem;
+  }
+}
+@media (max-width: 1130px) {
+  .Nav .profile-img {
+    width: 9rem;
+    height: 9rem;
+  }
+}
+.Nav ul {
+  list-style: none;
+}
+.Nav li {
+  font-family: 'Sora', sans-serif;
+  font-weight: 200;
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+.Nav li:hover {
+  color: #ff2052;
+  cursor: pointer;
+}
+.Section > div:nth-child(1) {
+  opacity: 1;
+  position: absolute;
+  z-index: 1;
+  top: 100px;
+  position: fixed;
+}
+.Main {
+  overflow-y: auto;
+}
+.Main-h3 {
+  font-size: 1.3rem;
+}
+#Jumbotron {
+  background-image: url('../img/motherboard.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: none;
+  max-width: none;
+  width: 100%;
+  min-height: 250px;
+  max-height: 500px;
+  height: 20%;
+}
+.Section > div:nth-child(2) {
+  min-height: none;
+  max-height: none;
+  height: 100%;
+  min-width: none;
+  max-width: none;
+  width: 80%;
+  position: absolute;
+  top: 69px;
+  right: 0;
+}
+body,
+.App,
+html,
+#root {
+  min-height: none;
+  max-height: none;
+  height: auto;
+}
+html {
+  font-family: 'Sora', sans-serif;
+  font-weight: 200;
+}

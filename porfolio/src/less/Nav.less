@@ -1,0 +1,45 @@
+.Nav{
+
+    right: 12;
+    .flex-flow(column, no-wrap, space-around);
+    .profile-img{
+        .margin(3);
+        background-image: url('../img/genImg/profile.jpg');
+        background-position: center;
+        border-radius: 50%;
+        overflow: hidden;
+        .w(17rem, none, none);
+        .h(17rem , none, none);
+        @media @1480px{
+            width: 13rem;
+            height: 13rem;
+        }
+        @media @1130px {
+            width: 9rem;
+            height: 9rem;
+        }
+    };
+    
+  
+    ul{
+        list-style: none;
+    };
+
+    li{
+        .font-style(@Sora, 200);
+        .font-size(2rem);
+        line-height: 2.5rem;
+        &:hover{
+            color: @infrared;
+            cursor: pointer;
+        };
+    };
+};
+
+.Section > div:nth-child(1){
+    opacity: 1;
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    position: fixed;
+}

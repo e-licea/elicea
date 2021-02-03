@@ -1,0 +1,39 @@
+.Banner{
+    .bg(@infrared);
+    .padding(0);
+    .flex-flow(row, no-wrap, space-between);
+    .font-style(@Super, normal);
+    .font-size(2rem);
+    color: @white;
+    h2{
+        .font-size(3rem);
+        .margin(-1%);
+    }
+    .Banner-X{
+        .w(20%, none, none)
+    }
+}
+
+//Dev Bit Customer styles
+.Banner > h2:nth-child(1) > div:nth-child(1){
+    display: inline;
+    margin-left: 2px;
+}
+
+.rainbow-checkbox-toggle_faux{
+    background-color: @white !important;
+    border: none !important;
+}
+
+.ietQcB .rainbow-checkbox-toggle_faux::after{
+    background-color: @infrared !important;
+}
+
+//
+.App > div:nth-child(1){
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: .05%;
+}

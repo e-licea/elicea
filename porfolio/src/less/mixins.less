@@ -1,0 +1,52 @@
+//Paint
+.bg(@color){
+    background-color: @color;
+}
+
+
+
+//fonts
+.font-style(@font, @weight){
+    font-family: @font;
+    font-weight: @weight;
+    
+}
+
+.font-size(@size){
+    font-size: @size;
+}
+
+
+
+//sizing
+.h(@height, @min, @max){
+    min-height: @min;
+    max-height: @max;
+    height: @height;
+}
+
+.w(@width, @min, @max){
+    min-width: @min;
+    max-width: @max;
+    width: @width;
+}
+
+.padding(@p){
+    padding: 1% + @p;
+}
+
+.margin(@m){
+    margin: 1% + @m;
+}
+
+.flex-flow(@flow, @wrap, @space){
+    display: flex;
+    flex-direction: @flow;
+    justify-content: @space;
+    flex-wrap: @wrap;
+}
+
+//ETC.
+.centerWithMargin{
+    margin: 0 auto;
+}
