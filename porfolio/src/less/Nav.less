@@ -1,11 +1,11 @@
 .Nav{
-
-    right: 12;
+    overflow-y: auto;
     .flex-flow(column, no-wrap, space-around);
+    align-items: center;
     .profile-img{
-        .margin(3);
-        background-image: url('../img/genImg/profile.jpg');
+        background-image: url('../img/genImg/profile.png');
         background-position: center;
+        background-size: cover;
         border-radius: 50%;
         overflow: hidden;
         .w(17rem, none, none);
@@ -23,6 +23,9 @@
   
     ul{
         list-style: none;
+        text-align: right;
+        .w(100%, none, none);
+        padding: 0;
     };
 
     li{
@@ -42,4 +45,8 @@
     z-index: 1;
     top: 100px;
     position: fixed;
+}
+
+#biz-card{
+    border: 1px red solid;
 }

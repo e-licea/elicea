@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@bit/bondz.react-epic-spinners.atom-spinner": "^0.3.0",
     "@bit/eden.10secondsofcode.react-blink-text": "0.0.2",
     "@bit/nexxtway.react-rainbow.checkbox-toggle": "^1.10.0",
     "@bit/nsebhastian.gsap-react.fade-in": "0.0.3",

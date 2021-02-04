@@ -34,6 +34,15 @@
   max-width: none;
   width: 20%;
 }
+.Banner .Banner-X .socialmedia img {
+  min-width: none;
+  max-width: none;
+  width: 10%;
+  min-height: none;
+  max-height: none;
+  height: 10%;
+  margin: 5px;
+}
 .Banner > h2:nth-child(1) > div:nth-child(1) {
   display: inline;
   margin-left: 2px;
@@ -50,7 +59,10 @@
   position: fixed;
   z-index: 2;
   top: 0;
-  left: 0.05%;
+  left: 0;
+}
+.atom-spinner {
+  display: inline-block;
 }
 .Section {
   min-height: none;
@@ -65,25 +77,18 @@
   flex-wrap: no-wrap;
   position: relative;
 }
-#Jumbotron {
-  background-image: url('../img/motherboard.jpg');
-  min-width: none;
-  max-width: none;
-  width: 100%;
-  text-align: center;
-  vertical-align: middle;
-}
 .Nav {
-  right: 12;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   flex-wrap: no-wrap;
+  align-items: center;
 }
 .Nav .profile-img {
-  margin: 4%;
-  background-image: url('../img/genImg/profile.jpg');
+  background-image: url('../img/genImg/profile.png');
   background-position: center;
+  background-size: cover;
   border-radius: 50%;
   overflow: hidden;
   min-width: none;
@@ -107,6 +112,11 @@
 }
 .Nav ul {
   list-style: none;
+  text-align: right;
+  min-width: none;
+  max-width: none;
+  width: 100%;
+  padding: 0;
 }
 .Nav li {
   font-family: 'Sora', sans-serif;
@@ -125,6 +135,9 @@
   top: 100px;
   position: fixed;
 }
+#biz-card {
+  border: 1px red solid;
+}
 .Main {
   overflow-y: auto;
 }
@@ -132,15 +145,53 @@
   font-size: 1.3rem;
 }
 #Jumbotron {
-  background-image: url('../img/motherboard.jpg');
+  background-image: url('https://images.pexels.com/photos/1938351/pexels-photo-1938351.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   min-width: none;
   max-width: none;
   width: 100%;
   min-height: 250px;
   max-height: 500px;
-  height: 20%;
+  height: 600px;
+}
+#Jumbotron h3 {
+  padding: 4%;
+  min-width: none;
+  max-width: none;
+  width: auto;
+  font-size: 2.4rem;
+  font-family: 'Supermercado One', cursive;
+  font-weight: regular;
+  color: white;
+  margin: 0;
+  text-align: left;
+  filter: none;
+}
+.sc-bdfBwQ {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+#Skills #CardContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: no-wrap;
+}
+#Skills #CardContainer .SkillCard {
+  min-width: none;
+  max-width: none;
+  width: 25%;
+}
+#Skills #CardContainer .SkillCard img {
+  min-width: none;
+  max-width: none;
+  width: 100%;
+  min-height: none;
+  max-height: none;
+  height: 100%;
 }
 .Section > div:nth-child(2) {
   min-height: none;
@@ -150,8 +201,11 @@
   max-width: none;
   width: 80%;
   position: absolute;
-  top: 69px;
+  top: 90px;
   right: 0;
+}
+#term-x {
+  color: #ff2052;
 }
 body,
 .App,
@@ -160,6 +214,10 @@ html,
   min-height: none;
   max-height: none;
   height: auto;
+  margin: 0;
+}
+#root {
+  margin: 0 0.65%;
 }
 html {
   font-family: 'Sora', sans-serif;

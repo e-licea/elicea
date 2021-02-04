@@ -1,14 +1,37 @@
 import React from 'react'
 
+//imported skills
+import node from '../../img/genImg/node.png';
+import react from '../../img/genImg/react.svg';
+import js from '../../img/genImg/javascript-39404.png';
+import mysql from '../../img/genImg/mysql.svg';
+import python from '../../img/genImg/python.png';
+import redux from '../../img/genImg/redux.svg';
+
+const skills = [node, react, js, mysql, python, redux ]
+
+
 export default function Skills() {
+
+
     return (
-        <div>
+        <div id = 'Skills'>
             <h3 className="Main-h3">Skills</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit molestiae doloremque nulla corporis exercitationem perferendis voluptatum ratione excepturi dolores nemo delectus, debitis tempora modi assumenda fugit laboriosam iste vero! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore sint animi doloribus deserunt vel nostrum praesentium ipsa, dolores asperiores iure, facere eos, doloremque debitis odio necessitatibus. Quod sapiente cupiditate mollitia?</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit molestiae doloremque nulla corporis exercitationem perferendis voluptatum ratione excepturi dolores nemo delectus, debitis tempora modi assumenda fugit laboriosam iste vero! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore sint animi doloribus deserunt vel nostrum praesentium ipsa, dolores asperiores iure, facere eos, doloremque debitis odio necessitatibus. Quod sapiente cupiditate mollitia?</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit molestiae doloremque nulla corporis exercitationem perferendis voluptatum ratione excepturi dolores nemo delectus, debitis tempora modi assumenda fugit laboriosam iste vero! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore sint animi doloribus deserunt vel nostrum praesentium ipsa, dolores asperiores iure, facere eos, doloremque debitis odio necessitatibus. Quod sapiente cupiditate mollitia?</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit molestiae doloremque nulla corporis exercitationem perferendis voluptatum ratione excepturi dolores nemo delectus, debitis tempora modi assumenda fugit laboriosam iste vero!</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit molestiae doloremque nulla corporis exercitationem perferendis voluptatum ratione excepturi dolores nemo delectus, debitis tempora modi assumenda fugit laboriosam iste vero!</p>
+            <div id = 'CardContainer'>
+                {
+                    skills.map( (skill)=>{
+                        const logo = skill
+                        return (
+                            <div className = 'SkillCard'>
+                                <img 
+                                src={skill} 
+                                alt=""/>
+
+                            </div>
+                        )
+                    })
+                }
+            </div>
         </div>
     )
 }

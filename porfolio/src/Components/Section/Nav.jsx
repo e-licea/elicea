@@ -13,11 +13,19 @@ export default function Nav() {
 
                 </div>
                 <ul>
-                    <li><Link to = 'About' smooth = {true} duration = {700}>About</Link></li>
-                    <li><Link to = 'Skills' smooth = {true} duration = {700}>Skills</Link></li>
-                    <li><Link to = 'Projects' smooth = {true} duration = {700}>Projects</Link></li>
-                    <li><Link to = 'Contact' smooth = {true} duration = {700}>Contact</Link></li>
+                    <li><Link to = 'About' smooth = {true} duration = {300} offset={-100}>About</Link></li>
+                    <li><Link to = 'Skills' smooth = {true} duration = {300} offset={-100}>Skills</Link></li>
+                    <li><Link to = 'Projects' smooth = {true} duration = {300} offset={-100}>Projects</Link></li>
+                    <li><Link to = 'Contact' smooth = {true} duration = {300} offset={50}>Contact</Link></li>
                 </ul>
+                <div id='biz-card'>
+                    
+                    <h4>Esteban Licea Jr.</h4>
+                    <p>ph: <span>773-788-2189</span></p>
+                    <p>email: <span>contact@elicea.com</span></p>
+
+
+                </div>
             </div>
             </FadeIn>
 

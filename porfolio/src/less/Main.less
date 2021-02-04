@@ -9,18 +9,54 @@
 }
 
 #Jumbotron{
-    background-image: url('../img/motherboard.jpg');
+    background-image: url('https://images.pexels.com/photos/1938351/pexels-photo-1938351.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
     background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
     .w(100%, none, none);
-    .h(20%, 250px, 500px);
+    .h(600px, 250px, 500px);
+    h3{   
+        .padding(3);
+        .w(auto,none,none);
+        .font-size(2.4rem);
+        .font-style(@Super, regular);
+        color: white;
+        margin: 0;
+        text-align: left;
+        filter: none;
+        span{
+            
+        }
+    }
+}
+
+.sc-bdfBwQ{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#Skills{
+
+
+    #CardContainer{
+        .flex-flow(row, no-wrap, space-around);
+        .SkillCard{
+            .w(25%, none, none);
+
+                img{
+                    .w(100%, none, none);
+                    .h(100%, none, none)
+                }
+        }
+    }
 }
 
 .Section > div:nth-child(2){
     .h(100%, none, none);
     .w(80%, none, none);
     position: absolute;
-    top: 69px;
+    top: 90px;
     right: 0;
 
 }
