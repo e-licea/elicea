@@ -4,9 +4,20 @@ export default function Contact() {
     return (
         <div id = 'Contact'>
             <h3 className="Main-h3">Contact</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit molestiae doloremque nulla corporis exercitationem perferendis voluptatum ratione excepturi dolores nemo delectus, debitis tempora modi assumenda fugit laboriosam iste vero! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore sint animi doloribus deserunt vel nostrum praesentium ipsa, dolores asperiores iure, facere eos, doloremque debitis odio necessitatibus. Quod sapiente cupiditate mollitia?</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit molestiae doloremque nulla corporis exercitationem perferendis voluptatum ratione excepturi dolores nemo delectus, debitis tempora modi assumenda fugit laboriosam iste vero!</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere odit molestiae doloremque nulla corporis exercitationem perferendis voluptatum ratione excepturi dolores nemo delectus, debitis tempora modi assumenda fugit laboriosam iste vero!</p>
+            <form action="">
+                <label>Name :
+                    <input type="text"/>
+                </label>
+                <label htmlFor="">Email :
+                    <input type="text"/>
+                </label>
+                <label htmlFor="">Subject :
+                    <input type="text"/>
+                </label>
+                <label htmlFor="">Message :
+                    <input type="text"/>
+                </label>
+            </form>
         </div>
     )
 }

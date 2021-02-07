@@ -4,19 +4,21 @@
   "private": true,
   "dependencies": {
     "@bit/bondz.react-epic-spinners.atom-spinner": "^0.3.0",
-    "@bit/eden.10secondsofcode.react-blink-text": "0.0.2",
+    "@bit/lekanmedia.shared-ui.toggle-button": "0.0.3",
     "@bit/nexxtway.react-rainbow.checkbox-toggle": "^1.10.0",
     "@bit/nsebhastian.gsap-react.fade-in": "0.0.3",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.2",
     "bit-bin": "^14.8.8",
+    "bootstrap": "^4.6.0",
     "gsap": "^3.6.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "react-scroll": "^1.8.1",
+    "reactstrap": "^8.9.0",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

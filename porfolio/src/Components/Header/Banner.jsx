@@ -5,6 +5,8 @@ import instagram from '../../img/icons/instagram.svg';
 //bit.dev imports
 import FadeIn from '@bit/nsebhastian.gsap-react.fade-in';
 import AtomSpinner from '@bit/bondz.react-epic-spinners.atom-spinner';
+import ToggleButton from '@bit/lekanmedia.shared-ui.toggle-button';
+
 
 
 export default function Banner() {
@@ -15,14 +17,11 @@ export default function Banner() {
         <FadeIn direction = 'down' duration = {.9}>
             <nav className = 'Banner'>
                 {/* <img src={logo} alt=""/> */}
-                <span><h2> <AtomSpinner color = '#ffffff' size = '50'/>elicea</h2></span>
+                <span><h2> <AtomSpinner color = '#ffffff' size = '40'/>elicea</h2></span>
                 <div className = 'Banner-X'>
-                    
                     <div className="socialmedia">
                         <a href="#" className = 'icon'><img src={github} alt="github"/></a>
-                        <a href="#" className = 'icon'><img src={instagram} alt="instagram"/></a>
-
-                        
+                        <a href="#" className = 'icon'><img src={instagram} alt="instagram"/></a>             
                     </div>
                 </div>
             </nav>

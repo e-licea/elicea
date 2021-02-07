@@ -15,7 +15,6 @@ export default function Main() {
     return (
         <FadeIn direction = 'left' duration = {.3}>
             <div className = 'Main'>
-
             	<Jumbotron/>
                 <About/>
                 <Skills/>

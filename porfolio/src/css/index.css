@@ -129,7 +129,7 @@
   cursor: pointer;
 }
 .Section > div:nth-child(1) {
-  opacity: 1;
+  margin: 1%;
   position: absolute;
   z-index: 1;
   top: 100px;
@@ -137,12 +137,17 @@
 }
 #biz-card {
   border: 1px red solid;
+  padding: 1%;
+  min-width: none;
+  max-width: none;
+  width: 100%;
 }
 .Main {
   overflow-y: auto;
+  font-size: 1.3rem;
 }
 .Main-h3 {
-  font-size: 1.3rem;
+  font-size: 1.7rem;
 }
 #Jumbotron {
   background-image: url('https://images.pexels.com/photos/1938351/pexels-photo-1938351.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
@@ -155,43 +160,84 @@
   min-height: 250px;
   max-height: 500px;
   height: 600px;
-}
-#Jumbotron h3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: none;
+  flex-wrap: wrap;
   padding: 4%;
+}
+#Jumbotron #Jumbo-msg,
+#Jumbotron #term-x {
+  line-height: 35px;
+  display: inline-block;
   min-width: none;
   max-width: none;
   width: auto;
+  min-height: none;
+  max-height: none;
+  height: 35px;
   font-size: 2.4rem;
   font-family: 'Supermercado One', cursive;
   font-weight: regular;
   color: white;
   margin: 0;
   text-align: left;
-  filter: none;
 }
-.sc-bdfBwQ {
-  width: 100vw;
-  height: 100vh;
+#term-x {
+  color: #ff2052;
+}
+#Jumbo-msg {
+  animation: typing-text 3s steps(55), blink 0.5s infinite;
   overflow: hidden;
+  white-space: nowrap;
+  border-right: 4px solid #ff2052;
+}
+@keyframes typing-text {
+  from {
+    width: 0;
+  }
+  to {
+    width: 900px;
+  }
+}
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: #ff2052;
+  }
+}
+#About {
+  background-color: #ff2052;
+  padding: 3%;
+  color: #ffffff;
+}
+#About:hover {
+  opacity: 0.9;
+}
+#Skills {
+  padding: 3%;
 }
 #Skills #CardContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
-  flex-wrap: no-wrap;
+  flex-wrap: wrap;
 }
 #Skills #CardContainer .SkillCard {
+  padding: 1%;
   min-width: none;
   max-width: none;
-  width: 25%;
+  width: 100%;
 }
 #Skills #CardContainer .SkillCard img {
   min-width: none;
   max-width: none;
-  width: 100%;
+  width: 100px;
   min-height: none;
   max-height: none;
-  height: 100%;
+  height: 100px;
 }
 .Section > div:nth-child(2) {
   min-height: none;
@@ -204,8 +250,31 @@
   top: 90px;
   right: 0;
 }
-#term-x {
-  color: #ff2052;
+#Projects {
+  padding: 3%;
+}
+#Contact {
+  padding: 3%;
+}
+#Contact form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#Contact form label {
+  padding: 1%;
+}
+.courasel-indicators,
+.slide {
+  min-width: none !important;
+  max-width: none !important;
+  width: 100% !important;
+}
+.coursel-item > img {
+  min-width: none !important;
+  max-width: none !important;
+  width: 100% !important;
 }
 body,
 .App,
