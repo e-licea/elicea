@@ -14,7 +14,7 @@
   margin: 0 auto;
 }
 .Banner {
-  background-color: #ff2052;
+  background-color: #1f285f;
   padding: 1%;
   display: flex;
   flex-direction: row;
@@ -52,7 +52,7 @@
   border: none !important;
 }
 .ietQcB .rainbow-checkbox-toggle_faux::after {
-  background-color: #ff2052 !important;
+  background-color: #1f285f !important;
 }
 .App > div:nth-child(1) {
   width: 100%;
@@ -125,7 +125,7 @@
   line-height: 2.5rem;
 }
 .Nav li:hover {
-  color: #ff2052;
+  color: #1f285f;
   cursor: pointer;
 }
 .Section > div:nth-child(1) {
@@ -184,13 +184,13 @@
   text-align: left;
 }
 #term-x {
-  color: #ff2052;
+  color: #1f285f;
 }
 #Jumbo-msg {
   animation: typing-text 3s steps(55), blink 0.5s infinite;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 4px solid #ff2052;
+  border-right: 4px solid #1f285f;
 }
 @keyframes typing-text {
   from {
@@ -205,11 +205,11 @@
     border-color: transparent;
   }
   to {
-    border-color: #ff2052;
+    border-color: #1f285f;
   }
 }
 #About {
-  background-color: #ff2052;
+  background-color: #1f285f;
   padding: 3%;
   color: #ffffff;
 }
@@ -275,7 +275,7 @@
   padding: 0 5%;
   border-radius: 2px;
   border: none;
-  background-color: #ff2052;
+  background-color: #1f285f;
   font-family: 'Sora', sans-serif;
   font-weight: 400;
   color: white;
