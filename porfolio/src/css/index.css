@@ -226,6 +226,10 @@
   flex-wrap: wrap;
 }
 #Skills #CardContainer .SkillCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
   padding: 1%;
   min-width: none;
   max-width: none;
@@ -238,6 +242,23 @@
   min-height: none;
   max-height: none;
   height: 100px;
+}
+#Skills #CardContainer .SkillCard div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#Skills #CardContainer .SkillCard div p {
+  min-width: none;
+  max-width: none;
+  width: 100px;
+  text-align: center;
+}
+#Skills #CardContainer .SkillCard p {
+  min-width: none;
+  max-width: none;
+  width: 50%;
 }
 .Section > div:nth-child(2) {
   min-height: none;
@@ -290,9 +311,14 @@ textarea {
 }
 .courasel-indicators,
 .slide {
+  overflow: hidden;
+  border: 1px solid black;
   min-width: none !important;
   max-width: none !important;
   width: 100% !important;
+  min-height: none !important;
+  max-height: 650px !important;
+  height: 650px !important;
 }
 .coursel-item > img {
   min-width: none !important;

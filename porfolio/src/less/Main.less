@@ -73,11 +73,23 @@
     #CardContainer{
         .flex-flow(column, wrap, space-around);
         .SkillCard{
+            .flex-flow(row, wrap, space-around);
             .padding(0);
             .w(100%, none, none);
                 img{
                     .w(100px, none, none);
                     .h(100px, none, none);
+                }
+                div{
+                    .flex-flow(column, wrap, space-around);
+                    p{
+                    .w(100px, none, none);
+                    text-align: center;
+                        
+                    }
+                }
+                p{
+                    .w(50%, none, none);
                 }
         }
     }

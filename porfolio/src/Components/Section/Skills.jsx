@@ -12,32 +12,68 @@ const skills = [
     {
         skill: "NodeJS",
         img: node,
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolorem illo facilis adipisci placeat nulla, quod deserunt excepturi sit. Exercitationem iste necessitatibus eveniet minima dolorum, dolorem aliquam nobis distinctio sequi."
+        description: [
+            "Creating and deploying back end restful APIs with node express",
+            "Adding SQL databases and models for persistence",
+            "Creating user authentication with JSON web tokens and sessions. ",
+            "Testing back end applications with Jest"
+    
+    ]
     },
     {
         skill: "ReactJS",
         img: react,
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolorem illo facilis adipisci placeat nulla, quod deserunt excepturi sit. Exercitationem iste necessitatibus eveniet minima dolorum, dolorem aliquam nobis distinctio sequi."
+        description: [
+            "Welcome",
+            "Adding SQL databases and models for persistence",
+            "Creating user authentication with JSON web tokens and sessions. ",
+            "Testing back end applications with Jest"
+    
+    ]
     },
     {
         skill: "JavaScript",
         img: js,
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolorem illo facilis adipisci placeat nulla, quod deserunt excepturi sit. Exercitationem iste necessitatibus eveniet minima dolorum, dolorem aliquam nobis distinctio sequi."
+        description: [
+            "Creating and deploying back end restful APIs with node express",
+            "Adding SQL databases and models for persistence",
+            "Creating user authentication with JSON web tokens and sessions. ",
+            "Testing back end applications with Jest"
+    
+    ]
     },
     {
         skill: "MySql",
         img: mysql,
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolorem illo facilis adipisci placeat nulla, quod deserunt excepturi sit. Exercitationem iste necessitatibus eveniet minima dolorum, dolorem aliquam nobis distinctio sequi."
+        description: [
+            "Creating and deploying back end restful APIs with node express",
+            "Adding SQL databases and models for persistence",
+            "Creating user authentication with JSON web tokens and sessions. ",
+            "Testing back end applications with Jest"
+    
+    ]
     },
     {
         skill: "Python",
         img: python,
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolorem illo facilis adipisci placeat nulla, quod deserunt excepturi sit. Exercitationem iste necessitatibus eveniet minima dolorum, dolorem aliquam nobis distinctio sequi."
+        description: [
+            "Creating and deploying back end restful APIs with node express",
+            "Adding SQL databases and models for persistence",
+            "Creating user authentication with JSON web tokens and sessions. ",
+            "Testing back end applications with Jest"
+    
+    ]
     },
     {
         skill: " React Redux",
         img: redux,
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolorem illo facilis adipisci placeat nulla, quod deserunt excepturi sit. Exercitationem iste necessitatibus eveniet minima dolorum, dolorem aliquam nobis distinctio sequi."
+        description: [
+            "Creating and deploying back end restful APIs with node express",
+            "Adding SQL databases and models for persistence",
+            "Creating user authentication with JSON web tokens and sessions. ",
+            "Testing back end applications with Jest"
+    
+    ]
     },
  ]
 
@@ -52,20 +88,34 @@ export default function Skills() {
                 {
                     skills.map( (skill)=>{
                         const logo = skill
-                        console.log(logo.img)
+                        const arr = skill.description
+                        console.log(logo.img, logo.description)
+                        
                         return (
                             <div className = 'SkillCard'>
-                                <img 
-                                src={skill.img} 
-                                alt=""/>
-                                <p>{skill.skill}</p>
-                                <p>{skill.description}</p>
-
+                                <div >
+                                    <img
+                                    src={skill.img}
+                                    alt=""/>
+                                    <p>{skill.skill}</p>
+                                </div>
+                                <div>{description(skill.description)}</div>
                             </div>
+
+                            
                         )
                     })
                 }
             </div>
         </div>
+    )
+}
+
+function description(arr){
+
+    return(
+        <ul>
+            {arr.map((desc, index)=>{return <li>{desc}</li>})}
+        </ul>
     )
 }
