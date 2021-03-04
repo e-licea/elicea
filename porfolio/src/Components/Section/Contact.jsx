@@ -1,22 +1,61 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react';
 
 export default function Contact() {
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    })
+
+    function onChange(e){
+        setFormData({...formData,[e.target.name]:e.target.value});
+       
+    }
+    
+    function onSubmit(e){
+        e.preventDefault();
+        console.log(formData);
+    }
+
     return (
         <div id = 'Contact'>
             <h3 className="Main-h3">Contact</h3>
-            <form action="">
+            <form onSubmit = {onSubmit} >
                 <label>Name :
-                    <input type="text"/>
+                    <input type="text"
+                        onChange = {onChange}
+                        name = "name"
+                        value = {formData.name}
+                        placeholder ='Enter your name'
+                    />
                 </label>
                 <label htmlFor="">Email :
-                    <input type="text"/>
+                    <input type="text"
+                    onChange = {onChange}
+                    name = 'email'
+                    value = {formData.email}
+                    placeholder ='youemail@email.com'
+                    />
                 </label>
                 <label htmlFor="">Subject :
-                    <input type="text"/>
+                    <input type="text"
+                    onChange = {onChange}
+                    name = 'subject'
+                    value = {formData.subject}
+                    placeholder = 'Re: Subject'
+                    />
                 </label>
                 <label htmlFor="">Message :
-                    <input type="text"/>
+                    <input type="text"
+                    onChange = {onChange}
+                    name = 'message'
+                    value = {formData.message}
+                    placeholder = 'Your message here'
+                    />
                 </label>
+                <button>Submit</button>
             </form>
         </div>
     )
