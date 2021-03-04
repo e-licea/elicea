@@ -10,8 +10,8 @@ export default function Contact() {
     })
 
     function onChange(e){
-        setFormData({...formData,[e.target.name]:e.target.value})
-        console.log(formData)
+        setFormData({...formData,[e.target.name]:e.target.value});
+       
     }
     
     function onSubmit(e){
@@ -22,7 +22,6 @@ export default function Contact() {
     return (
         <div id = 'Contact'>
             <h3 className="Main-h3">Contact</h3>
-            <p>Let me help turn your idea into reality. Connect with me!</p>
             <form onSubmit = {onSubmit} >
                 <label>Name :
                     <input type="text"
@@ -49,7 +48,7 @@ export default function Contact() {
                     />
                 </label>
                 <label htmlFor="">Message :
-                    <textarea type="text"
+                    <input type="text"
                     onChange = {onChange}
                     name = 'message'
                     value = {formData.message}
