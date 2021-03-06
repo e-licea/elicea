@@ -5,7 +5,7 @@
 }
 
 .Main-h3{
-    .font-size(1.7rem);
+    .font-size(2.7rem);
 
 }
 
@@ -45,7 +45,7 @@
             width: 0;
         }
         to{
-            width: 900px;
+            width: 600px;
         }
 }
 
@@ -76,20 +76,32 @@
             .flex-flow(row, wrap, space-around);
             .padding(0);
             .w(100%, none, none);
-                img{
-                    .w(100px, none, none);
-                    .h(100px, none, none);
-                }
+
                 div{
                     .flex-flow(column, wrap, space-around);
+                    img{
+                    
+                        .w(100px, none, none);
+                        .h(100px, none, none);
+                    }
                     p{
                     .w(100px, none, none);
                     text-align: center;
                         
                     }
                 }
-                p{
-                    .w(50%, none, none);
+
+                .skill-list{
+                    #bullit{
+                        color: #c72828;
+                    }
+                    width: 70%;
+                    list-style: none;
+                    word-wrap: normal;
+    
+                    li{
+                        padding:1%;
+                    }
                 }
         }
     }
@@ -108,14 +120,16 @@
 }
 
 #Contact{
+    .flex-flow(row, wrap, space-between);
     .padding(2);
-    form{
+  div{  
+      form{
         .flex-flow(column, wrap, center);
         label{
             .padding(0);
         }
         button{
-            .w(15%, none, none);
+            .w(25%, none, none);
             .h(40px, none, none);
             padding: 0 5%;
             border-radius: 2px;
@@ -124,6 +138,12 @@
             .font-style(@Sora, 400);
             color: white;
         }
+    }
+}
+
+    img{
+        .w(20%, 20%, 60%);
+        .h(20%, 20%, 60%);
     }
 }
 textarea{

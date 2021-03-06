@@ -147,7 +147,7 @@
   font-size: 1.3rem;
 }
 .Main-h3 {
-  font-size: 1.7rem;
+  font-size: 2.7rem;
 }
 #Jumbotron {
   background-image: url('https://images.pexels.com/photos/1938351/pexels-photo-1938351.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
@@ -197,7 +197,7 @@
     width: 0;
   }
   to {
-    width: 900px;
+    width: 600px;
   }
 }
 @keyframes blink {
@@ -235,7 +235,13 @@
   max-width: none;
   width: 100%;
 }
-#Skills #CardContainer .SkillCard img {
+#Skills #CardContainer .SkillCard div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#Skills #CardContainer .SkillCard div img {
   min-width: none;
   max-width: none;
   width: 100px;
@@ -243,22 +249,22 @@
   max-height: none;
   height: 100px;
 }
-#Skills #CardContainer .SkillCard div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
 #Skills #CardContainer .SkillCard div p {
   min-width: none;
   max-width: none;
   width: 100px;
   text-align: center;
 }
-#Skills #CardContainer .SkillCard p {
-  min-width: none;
-  max-width: none;
-  width: 50%;
+#Skills #CardContainer .SkillCard .skill-list {
+  width: 70%;
+  list-style: none;
+  word-wrap: normal;
+}
+#Skills #CardContainer .SkillCard .skill-list #bullit {
+  color: #c72828;
+}
+#Skills #CardContainer .SkillCard .skill-list li {
+  padding: 1%;
 }
 .Section > div:nth-child(2) {
   min-height: none;
@@ -275,21 +281,25 @@
   padding: 3%;
 }
 #Contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
   padding: 3%;
 }
-#Contact form {
+#Contact div form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
 }
-#Contact form label {
+#Contact div form label {
   padding: 1%;
 }
-#Contact form button {
+#Contact div form button {
   min-width: none;
   max-width: none;
-  width: 15%;
+  width: 25%;
   min-height: none;
   max-height: none;
   height: 40px;
@@ -300,6 +310,14 @@
   font-family: 'Sora', sans-serif;
   font-weight: 400;
   color: white;
+}
+#Contact img {
+  min-width: 20%;
+  max-width: 60%;
+  width: 20%;
+  min-height: 20%;
+  max-height: 60%;
+  height: 20%;
 }
 textarea {
   min-height: none;
