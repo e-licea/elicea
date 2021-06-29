@@ -1,8 +1,34 @@
-
-.courasel-indicators, .slide{
-    .w(100%, none, none) !important;
+.photo-container{
+    position: relative;
+    overflow: hidden;
+    .h(auto, 650px, 650px);
+    img{
+        .w(100%, none, none)
+    }
+    
 }
 
-.coursel-item > img {
-    .w(100%, none, none) !important;
+#next, #prev{
+    cursor: pointer;
+    color: #ffffff;
+    position: absolute;
+    .bg(#1f285f);
+    opacity: .84;
+    top: 0;
+    .h(100%, none, 650px);
+    .w(60px, none, none);
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    &:hover{
+        opacity: .97;
+    }
+}
+
+#next{
+    right: 0;
+}
+
+#prev{
+    left: 0;
 }

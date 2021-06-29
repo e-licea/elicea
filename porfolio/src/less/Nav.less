@@ -2,6 +2,8 @@
     overflow-y: auto;
     .flex-flow(column, no-wrap, space-around);
     align-items: center;
+    position: fixed;
+    top: 100px;
     .profile-img{
         background-image: url('../img/genImg/profile.png');
         background-position: center;
@@ -10,11 +12,11 @@
         overflow: hidden;
         .w(17rem, none, none);
         .h(17rem , none, none);
-        @media @1480px{
+        @media @tablet{
             width: 13rem;
             height: 13rem;
         }
-        @media @1130px {
+        @media @tablet {
             width: 9rem;
             height: 9rem;
         }
@@ -27,7 +29,7 @@
         .w(100%, none, none);
         padding: 0;
     };
-
+ 
     li{
         .font-style(@Sora, 200);
         .font-size(2rem);
@@ -39,16 +41,9 @@
     };
 };
 
-.Section > div:nth-child(1){
-    margin: 1%;
-    position: absolute;
-    z-index: 1;
-    top: 100px;
-    position: fixed;
-}
+
 
 #biz-card{
-    border: 1px red solid;
     .padding(0);
     .w(100%, none, none);
     

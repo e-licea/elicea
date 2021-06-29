@@ -1,76 +1,107 @@
-import React, { useState } from 'react';
-import {
-  Carousel,
-  CarouselItem,
-  CarouselControl,
-  CarouselIndicators,
-  CarouselCaption
-} from 'reactstrap';
+import React, { Component } from 'react'
+import { useSpring, animated } from 'react-spring';
 
-const items = [
-  {
-    src: 'https://images.pexels.com/photos/63294/autos-technology-vw-multi-storey-car-park-63294.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    altText: 'Slide 1',
-    caption: 'Slide 1'
-  },
-  {
-    src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa20%20text%20%7B%20fill%3A%23444%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa20%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23666%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22247.3203125%22%20y%3D%22218.3%22%3ESecond%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-    altText: 'Slide 2',
-    caption: 'Slide 2'
-  },
-  {
-    src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa21%20text%20%7B%20fill%3A%23333%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa21%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23555%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22277%22%20y%3D%22218.3%22%3EThird%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-    altText: 'Slide 3',
-    caption: 'Slide 3'
-  }
-];
+export default class SlideShow extends Component {
 
-const SlideShow = (props) => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [animating, setAnimating] = useState(false);
 
-  const next = () => {
-    if (animating) return;
-    const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
-    setActiveIndex(nextIndex);
+  constructor(props){
+    super(props)
+    this.state = {
+      active : imgArr[0],
+      imgArr: imgArr
+    }
+    this.onClick = this.onClick.bind(this);
   }
 
-  const previous = () => {
-    if (animating) return;
-    const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
-    setActiveIndex(nextIndex);
+
+  componentWillMount(){
+    console.log('The component will now mount')
+
+  }
+  
+  componentDidMount(){
+    console.log(this.state)
+    setInterval(()=>{
+      this.setState({active: this.state.active.id == 3? imgArr[0] : imgArr[this.state.active.id + 1]})
+    }, 10000)
   }
 
-  const goToIndex = (newIndex) => {
-    if (animating) return;
-    setActiveIndex(newIndex);
+
+
+  onClick(e){
+    e.preventDefault();
+    if (e.target.id != 'next'){
+      console.log('prev')
+      this.setState({
+        active: this.state.active.id == 0? imgArr[3] : imgArr[this.state.active.id - 1],
+      })
+    }
+    else {
+      console.log('next')
+      this.setState({
+        active: this.state.active.id == 3? imgArr[0] : imgArr[this.state.active.id + 1],
+      })
+    }
+    
   }
 
-  const slides = items.map((item) => {
+
+  render() {
     return (
-      <CarouselItem
-        onExiting={() => setAnimating(true)}
-        onExited={() => setAnimating(false)}
-        key={item.src}
-      >
-        <img src={item.src} alt={item.altText} />
-        <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
-      </CarouselItem>
-    );
-  });
+      <div id = 'SlideShow'>
+        <div className="photo-container">
+          <div 
+            id = 'prev'
+            onClick={this.onClick}
+            >prev</div>
+              <ActiveImg active = {this.state.active}/>
 
-  return (
-    <Carousel
-      activeIndex={activeIndex}
-      next={next}
-      previous={previous}
-    >
-      <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
-      {slides}
-      <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-      <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-    </Carousel>
-  );
+          <div 
+            id = 'next'
+            onClick={this.onClick}
+            >next</div>
+
+        </div>
+      </div>
+    )
+  }
 }
 
-export default SlideShow;
+
+function ActiveImg(props){
+
+  let { active } = props
+  const styles = useSpring({
+    config: {delay: 10000, duration: 300},
+    to: async (next, cancel) => {
+      await next({ marginRight: '1200px' })
+      await next({ marginRight: '0px' })
+
+    },
+    from:{marginRight: '0px'}
+  })
+
+  return(
+      <animated.div  style= {styles}>
+        <img id = {active.id} src={active.imgSrc} alt="" />
+      </animated.div>
+  )
+}
+
+
+
+const imgArr = [
+  {
+    id: 0,
+    imgSrc: 'https://images.ctfassets.net/hrltx12pl8hq/3MbF54EhWUhsXunc5Keueb/60774fbbff86e6bf6776f1e17a8016b4/04-nature_721703848.jpg?fit=fill&w=480&h=270',
+  },  {
+    id: 1,
+    imgSrc: 'https://media.istockphoto.com/photos/the-african-king-picture-id492611032?k=6&m=492611032&s=612x612&w=0&h=Y_CHJCbkFOqmXvHOYSdxu0T5UZqoRj7OzpIBLGkvf_Q=',
+  },  {
+    id: 2,
+    imgSrc: 'https://cdn.eso.org/images/thumb300y/eso1322a.jpg',
+  },  {
+    id: 3,
+    imgSrc: 'https://spaceplace.nasa.gov/gallery-sun/en/solar-flare.en.jpg',
+  }
+]

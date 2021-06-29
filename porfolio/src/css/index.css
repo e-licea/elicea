@@ -4,7 +4,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/supermercadoone/v10/OpNXnpQWg8jc_xps_Gi14kVVEXOn60Y.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/supermercadoone/v12/OpNXnpQWg8jc_xps_Gi14kVVEXOn60Y.ttf) format('truetype');
 }
 .centerWithMargin {
   margin: 0 auto;
@@ -15,6 +15,9 @@
 }
 .Banner {
   background-color: #1f285f;
+  min-height: none;
+  max-height: none;
+  height: 100px;
   padding: 1%;
   display: flex;
   flex-direction: row;
@@ -68,14 +71,15 @@
   min-height: none;
   max-height: none;
   height: 100%;
-  min-width: none;
-  max-width: none;
+  min-width: 500px;
+  max-width: 1400px;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: no-wrap;
   position: relative;
+  margin: 0 auto;
 }
 .Nav {
   overflow-y: auto;
@@ -84,6 +88,8 @@
   justify-content: space-around;
   flex-wrap: no-wrap;
   align-items: center;
+  position: fixed;
+  top: 100px;
 }
 .Nav .profile-img {
   background-image: url('../img/genImg/profile.png');
@@ -98,13 +104,13 @@
   max-height: none;
   height: 17rem;
 }
-@media (max-width: 1480px) {
+@media (max-width: 1080px) {
   .Nav .profile-img {
     width: 13rem;
     height: 13rem;
   }
 }
-@media (max-width: 1130px) {
+@media (max-width: 1080px) {
   .Nav .profile-img {
     width: 9rem;
     height: 9rem;
@@ -128,22 +134,13 @@
   color: #1f285f;
   cursor: pointer;
 }
-.Section > div:nth-child(1) {
-  margin: 1%;
-  position: absolute;
-  z-index: 1;
-  top: 100px;
-  position: fixed;
-}
 #biz-card {
-  border: 1px red solid;
   padding: 1%;
   min-width: none;
   max-width: none;
   width: 100%;
 }
 .Main {
-  overflow-y: auto;
   font-size: 1.3rem;
 }
 .Main-h3 {
@@ -210,14 +207,10 @@
 }
 #About {
   background-color: #1f285f;
-  padding: 3%;
   color: #ffffff;
 }
 #About:hover {
   opacity: 0.9;
-}
-#Skills {
-  padding: 3%;
 }
 #Skills #CardContainer {
   display: flex;
@@ -249,12 +242,6 @@
   position: absolute;
   top: 90px;
   right: 0;
-}
-#Projects {
-  padding: 3%;
-}
-#Contact {
-  padding: 3%;
 }
 #Contact form {
   display: flex;
@@ -288,16 +275,45 @@ textarea {
   max-width: none;
   width: 400px;
 }
-.courasel-indicators,
-.slide {
-  min-width: none !important;
-  max-width: none !important;
-  width: 100% !important;
+.photo-container {
+  position: relative;
+  overflow: hidden;
+  min-height: 650px;
+  max-height: 650px;
+  height: auto;
 }
-.coursel-item > img {
-  min-width: none !important;
-  max-width: none !important;
-  width: 100% !important;
+.photo-container img {
+  min-width: none;
+  max-width: none;
+  width: 100%;
+}
+#next,
+#prev {
+  cursor: pointer;
+  color: #ffffff;
+  position: absolute;
+  background-color: #1f285f;
+  opacity: 0.84;
+  top: 0;
+  min-height: none;
+  max-height: 650px;
+  height: 100%;
+  min-width: none;
+  max-width: none;
+  width: 60px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+#next:hover,
+#prev:hover {
+  opacity: 0.97;
+}
+#next {
+  right: 0;
+}
+#prev {
+  left: 0;
 }
 body,
 .App,
