@@ -1,8 +1,16 @@
 .Section{
-    .h(100%, none, none);
-    .w(100%, 500px, 1400px);
+    .h(auto, none, none);
+    .w(100%, auto, 1400px);
+    top: 100px;
     .flex-flow(row, no-wrap, space-between);
     position: relative;
     margin: 0 auto;
+    padding-left: 2%;
+    padding-right: 2%;
+    @media @tablet {
+        .w(100%, none, none)!important;
+    }
+
+
 }
 

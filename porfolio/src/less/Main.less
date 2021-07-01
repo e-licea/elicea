@@ -1,7 +1,14 @@
 .Main{
-    
+    margin-top: 1%;
     .font-size(1.3rem); 
-
+    .w(70%, none, none);
+    position: absolute;
+    right: 0;
+    padding-bottom: 10%;
+    @media @tablet {
+        margin: 0;
+        .w(100%, none, none);
+    }
 }
 
 .Main-h3{
@@ -9,42 +16,98 @@
 }
 
 #Jumbotron{
-    background-image: url('https://images.pexels.com/photos/1938351/pexels-photo-1938351.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    .bg(#272727);
     .w(100%, none, none);
     .h(600px, 250px, 500px);
     .flex-flow(row, wrap, none);
-    .padding(3);
+    position: relative;
+
     #Jumbo-msg, #term-x{
+
         line-height: 35px;
-        display: inline-block;
-        .w(auto,none,none);
         .h(35px, none, none);
-        .font-size(2.4rem);
+        .font-size(1.5rem);
         .font-style(@Super, regular);
-        color: white;
         margin: 0;
-        text-align: left;
+        margin-left: 1%;
     }
 }
 
+#close, #expand, #mini{
+
+}
+#close{
+    .bg(#fc5e5e);
+    background-image: url('https://drive.google.com/uc?id=13EVMNDprBOFC-_0IYjl0qNVmOR7nLKa-');
+    .w(10px, none, none);
+    .h(10px, none, none);
+
+}
+#expand{
+    .bg(#41ff51);
+    background-image: url('https://drive.google.com/uc?id=193Qz_dkIbewMYkB9fNoOqrCc_Xqf51Ld');
+    .w(10px, none, none);
+    .h(10px, none, none);
+}
+#mini{
+    .bg(#fdbf4b);
+    background-image: url('https://drive.google.com/uc?id=1VCiH1A3JqSzx8oMR_MX7PxMyzmolHAGZ');
+    background-position: center;
+    .w(20px, none, none);
+    .h(20px, none, none);
+}
+
+.ToolBar{
+    .w(100%, none, none);
+    .h(50px, none, none);
+    .bg(#5c5c5c);
+    .flex-flow(row, no-wrap, space);
+    position: absolute;
+    top: 0;
+    left: 0;
+    div{
+        .h(20px, none, none);
+        .w(150px, none, none);
+        .flex-flow(row, no-wrap, space-evenly);
+        position: absolute;
+        right: 10px;
+        div{
+            .w(25px, none, none);
+            .h(25px, none, none);
+        }
+    }
+}
+
+#term{
+    margin-top: 55px;
+    .flex-flow(row, no-wrap, space-around);
+    .w(100%, none, none);   
+
+}
 #term-x{
     color: @infrared;
+    .w(100%, none, none);   
+    color: #41ff51;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+
 }
 #Jumbo-msg{
-    animation: typing-text 3s steps(55), blink .5s infinite;
+    animation: typing-text 3s steps(41), blink .5s infinite;
     overflow: hidden;
     white-space: nowrap;
     border-right: 4px solid @infrared;
+    color: white !important;
+
+
 }
 @keyframes typing-text {
         from{
             width: 0;
         }
         to{
-            width: 900px;
+            width: 650px;
         }
 }
 
@@ -80,13 +143,6 @@
     }
 }
 
-.Section > div:nth-child(2){
-    .h(100%, none, none);
-    .w(80%, none, none);
-    position: absolute;
-    top: 90px;
-    right: 0;
-}
 
 #Projects{
 }
@@ -94,11 +150,15 @@
 #Contact{
     form{
         .flex-flow(column, wrap, center);
+        .w(50%, 350px, 600px);
         label{
             .padding(0);
+            input{
+                display: block;
+            }
         }
         button{
-            .w(15%, none, none);
+            .w(120px, none, none);
             .h(40px, none, none);
             padding: 0 5%;
             border-radius: 2px;
@@ -112,5 +172,5 @@
 textarea{
     .h(200px, none, none);
     .w(400px, none, none);
-    
+    display: block;
 }

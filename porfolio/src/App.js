@@ -7,9 +7,6 @@ function App() {
     <div className="App">
         <Banner/>  
         <Section/>
-      <section>
-
-      </section>
     </div>
   );
 }

@@ -1,11 +1,15 @@
 .Banner{
+    position: fixed;
+    z-index: 9;
     .bg(@infrared);
+    .w(100%, none, none);
     .h(100px, none,none);
     .padding(0);
     .flex-flow(row, no-wrap, space-between);
     .font-style(@Super, normal);
     .font-size(2rem);
     color: @white;
+    .b-shadow();
     h2{
         .font-size(3rem);
         .margin(-1%);

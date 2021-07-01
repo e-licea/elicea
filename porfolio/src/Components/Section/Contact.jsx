@@ -48,7 +48,7 @@ export default function Contact() {
                     />
                 </label>
                 <label htmlFor="">Message :
-                    <input type="text"
+                    <textarea type="text"
                     onChange = {onChange}
                     name = 'message'
                     value = {formData.message}

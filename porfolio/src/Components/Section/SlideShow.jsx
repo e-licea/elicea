@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import { useSpring, animated } from 'react-spring';
+import { useSpring, animated } from 'react-spring'
+
+
 
 export default class SlideShow extends Component {
 
@@ -53,13 +55,13 @@ export default class SlideShow extends Component {
           <div 
             id = 'prev'
             onClick={this.onClick}
-            >prev</div>
+            ></div>
               <ActiveImg active = {this.state.active}/>
 
           <div 
             id = 'next'
             onClick={this.onClick}
-            >next</div>
+            ></div>
 
         </div>
       </div>
@@ -72,13 +74,13 @@ function ActiveImg(props){
 
   let { active } = props
   const styles = useSpring({
-    config: {delay: 10000, duration: 300},
+    config: {delay: 10000, duration: 400},
     to: async (next, cancel) => {
-      await next({ marginRight: '1200px' })
-      await next({ marginRight: '0px' })
+      await next({ opacity: '0', marginTop: '800px' })
+      await next({ opacity: '1', marginTop: '0px' })
 
     },
-    from:{marginRight: '0px'}
+    from:{ opacity: '0', marginTop: '800px' }
   })
 
   return(

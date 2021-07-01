@@ -11,16 +11,17 @@ export default function Banner() {
 
 
     return (
-        <div>
+        <>
             <nav className = 'Banner'>
                 {/* <img src={logo} alt=""/> */}
                 <div className = 'Banner-X'>
                     <div className="socialmedia">
                         <a href="#" className = 'icon'><img src={github} alt="github"/></a>
-                        <a href="#" className = 'icon'><img src={instagram} alt="instagram"/></a>             
+                        <a href="#" className = 'icon'><img src={instagram} alt="instagram"/></a>  
+                                   
                     </div>
                 </div>
             </nav>
-        </div>
+        </>
     )
 }
