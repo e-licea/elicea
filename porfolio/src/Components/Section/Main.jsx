@@ -14,10 +14,11 @@ export default function Main() {
     return (
             <>
                 <div className = 'Main'>
-                    <Jumbotron/>
-                    <Projects/>
                     
+                    <Jumbotron/>
+                    <About/>                    
                     <Skills/>
+                    <Projects/>
                     <Contact/>       
                 </div>
             </>

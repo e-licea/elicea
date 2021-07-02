@@ -52,34 +52,19 @@
   color: #ffffff;
   box-shadow: 0 8px 6px -6px black;
 }
-.Banner h2 {
-  font-size: 3rem;
-  margin: 0%;
-}
 .Banner .Banner-X {
   min-width: none;
   max-width: none;
-  width: 20%;
+  width: 100px;
 }
 .Banner .Banner-X .socialmedia img {
   min-width: none;
   max-width: none;
-  width: 10%;
+  width: 20px;
   min-height: none;
   max-height: none;
-  height: 10%;
+  height: 20px;
   margin: 5px;
-}
-.Banner > h2:nth-child(1) > div:nth-child(1) {
-  display: inline;
-  margin-left: 2px;
-}
-.rainbow-checkbox-toggle_faux {
-  background-color: #ffffff !important;
-  border: none !important;
-}
-.ietQcB .rainbow-checkbox-toggle_faux::after {
-  background-color: #ff2052 !important;
 }
 .App > div:nth-child(1) {
   width: 100%;
@@ -87,9 +72,6 @@
   z-index: 2;
   top: 0;
   left: 0;
-}
-.atom-spinner {
-  display: inline-block;
 }
 .Section {
   min-height: none;
@@ -165,6 +147,7 @@
   .Nav .profile-img {
     width: 13rem;
     height: 13rem;
+    display: none;
   }
 }
 @media (max-width: 1000px) {
@@ -179,10 +162,12 @@
   min-width: none;
   max-width: none;
   width: 100%;
-  padding: 2%;
+  margin-top: 4%;
 }
 @media (max-width: 1000px) {
   .Nav ul {
+    margin: 0;
+    text-align: center;
     min-height: none;
     max-height: none;
     height: 100%;
@@ -196,18 +181,23 @@
   font-family: 'Sora', sans-serif;
   font-weight: 200;
   font-size: 2rem;
-  line-height: 2.5rem;
+  line-height: 60px;
   padding: 2%;
+  font-family: 'Supermercado One', cursive;
+  font-weight: regular;
 }
 .Nav li:hover {
-  color: #ff2052;
+  background-color: #ff2052;
+  color: white;
   cursor: pointer;
-  background-color: #272727;
 }
 @media (max-width: 1000px) {
   .Nav li {
+    padding: 0%;
     font-size: 1.3rem;
-    line-height: 60px;
+    min-width: none;
+    max-width: none;
+    width: 80px;
     color: white;
   }
   .Nav li:hover {
@@ -246,6 +236,11 @@
 .Main-h3 {
   font-size: 1.7rem;
 }
+#About,
+#Projects,
+#Contact {
+  padding: 2%;
+}
 #Jumbotron {
   background-color: #272727;
   min-width: none;
@@ -259,49 +254,77 @@
   justify-content: none;
   flex-wrap: wrap;
   position: relative;
-}
-#Jumbotron #Jumbo-msg,
-#Jumbotron #term-x {
-  line-height: 35px;
-  min-height: none;
-  max-height: none;
-  height: 35px;
-  font-size: 1.5rem;
   font-family: 'Supermercado One', cursive;
   font-weight: regular;
-  margin: 0;
-  margin-left: 1%;
+}
+@media (max-width: 1000px) {
+  #Jumbotron {
+    min-height: 250px;
+    max-height: 500px;
+    height: 380px;
+  }
+}
+#term {
+  position: absolute;
+  top: 45px;
+  left: 10px;
+  color: #41ff51;
+  position: relative;
+}
+#term,
+.type {
+  font-size: 1.7rem;
+}
+@media (max-width: 1000px) {
+  #term,
+  .type {
+    font-size: 1.4rem;
+  }
+}
+.type {
+  position: absolute;
+  left: 195px;
+  top: 45px;
+  color: white;
+}
+@media (max-width: 1000px) {
+  .type {
+    left: 165px;
+  }
+}
+#close,
+#expand,
+#mini {
+  margin-top: 15px;
+  padding: 5%;
+  min-width: none;
+  max-width: none;
+  width: 15px;
+  min-height: none;
+  max-height: none;
+  height: 15px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+}
+#close > img,
+#expand > img,
+#mini > img {
+  min-width: none;
+  max-width: none;
+  width: 5px;
+  min-height: none;
+  max-height: none;
+  height: 5px;
 }
 #close {
   background-color: #fc5e5e;
-  background-image: url('https://drive.google.com/uc?id=13EVMNDprBOFC-_0IYjl0qNVmOR7nLKa-');
-  min-width: none;
-  max-width: none;
-  width: 10px;
-  min-height: none;
-  max-height: none;
-  height: 10px;
 }
 #expand {
   background-color: #41ff51;
-  background-image: url('https://drive.google.com/uc?id=193Qz_dkIbewMYkB9fNoOqrCc_Xqf51Ld');
-  min-width: none;
-  max-width: none;
-  width: 10px;
-  min-height: none;
-  max-height: none;
-  height: 10px;
 }
 #mini {
   background-color: #fdbf4b;
-  background-image: url('https://drive.google.com/uc?id=1VCiH1A3JqSzx8oMR_MX7PxMyzmolHAGZ');
-  background-position: center;
-  min-width: none;
-  max-width: none;
-  width: 20px;
-  min-height: none;
-  max-height: none;
-  height: 20px;
 }
 .ToolBar {
   min-width: none;
@@ -309,12 +332,8 @@
   width: 100%;
   min-height: none;
   max-height: none;
-  height: 50px;
+  height: 40px;
   background-color: #5c5c5c;
-  display: flex;
-  flex-direction: row;
-  justify-content: space;
-  flex-wrap: no-wrap;
   position: absolute;
   top: 0;
   left: 0;
@@ -322,67 +341,23 @@
 .ToolBar div {
   min-height: none;
   max-height: none;
-  height: 20px;
+  height: 40px;
   min-width: none;
   max-width: none;
-  width: 150px;
+  width: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: no-wrap;
+  float: right;
+}
+.cpu-gif {
   position: absolute;
-  right: 10px;
-}
-.ToolBar div div {
+  bottom: 5px;
+  right: 20px;
   min-width: none;
   max-width: none;
-  width: 25px;
-  min-height: none;
-  max-height: none;
-  height: 25px;
-}
-#term {
-  margin-top: 55px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: no-wrap;
-  min-width: none;
-  max-width: none;
-  width: 100%;
-}
-#term-x {
-  color: #ff2052;
-  min-width: none;
-  max-width: none;
-  width: 100%;
-  color: #41ff51;
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-}
-#Jumbo-msg {
-  animation: typing-text 3s steps(41), blink 0.5s infinite;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 4px solid #ff2052;
-  color: white !important;
-}
-@keyframes typing-text {
-  from {
-    width: 0;
-  }
-  to {
-    width: 650px;
-  }
-}
-@keyframes blink {
-  from {
-    border-color: transparent;
-  }
-  to {
-    border-color: #ff2052;
-  }
+  width: 30%;
 }
 #About {
   background-color: #ff2052;
@@ -410,6 +385,10 @@
   min-height: none;
   max-height: none;
   height: 100px;
+}
+#Contact {
+  background-color: black;
+  color: white;
 }
 #Contact form {
   display: flex;
@@ -494,6 +473,48 @@ textarea {
 #prev {
   left: 0;
 }
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCp6KVjbNBYlgoKejZftWyI.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCu6KVjbNBYlgoKeg7z.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCp6KVjbNBYlgoKejYHtGyI.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCv6KVjbNBYlgoC1CzTtw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCs6KVjbNBYlgo6eA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCv6KVjbNBYlgoCjC3Ttw.ttf) format('truetype');
+}
 body,
 .App,
 html,
@@ -505,6 +526,8 @@ html,
   max-height: none;
   height: auto;
   margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
 }
 html {
   font-family: 'Sora', sans-serif;

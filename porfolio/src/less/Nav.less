@@ -30,6 +30,7 @@
         @media @tablet{
             width: 13rem;
             height: 13rem;
+            display: none;
         }
         @media @tablet {
             width: 9rem;
@@ -42,8 +43,10 @@
         list-style: none;
         text-align: right;
         .w(100%, none, none);
-        padding: 2%;
+        margin-top: 4%;
         @media @tablet {
+            margin: 0;
+            text-align: center;
             .h(100%, none, none);
             .flex-flow(row, no-wrap, space-around);
         }
@@ -52,21 +55,24 @@
     li{
         .font-style(@Sora, 200);
         .font-size(2rem);
-        line-height: 2.5rem;
+        line-height: 60px;
         padding: 2%;
+        .font-style(@Super, regular);
         &:hover{
-            color: @infrared;
+            .bg(@infrared);
+            color: white;
             cursor: pointer;
-            .bg(#272727);
 
         };
         @media @tablet {
+            .padding(-1%);
             .font-size(1.3rem);
-            line-height: 60px;
+            .w(80px, none, none);
             color: white;
             &:hover{
                 color: antiquewhite;
             }
+
         }
     };
 };
