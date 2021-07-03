@@ -130,7 +130,7 @@
   }
 }
 .Nav .profile-img {
-  background-image: url('../img/genImg/profile.png');
+  background-image: url('https://drive.google.com/uc?id=1DQCBLj-hPM0BhA25ZBzXKEdjXlUe_fo2');
   background-position: center;
   background-size: cover;
   border-radius: 50%;
@@ -234,9 +234,11 @@
   }
 }
 .Main-h3 {
-  font-size: 1.7rem;
+  font-size: 2rem;
+  margin: 3% 0;
 }
 #About,
+#Skills,
 #Projects,
 #Contact {
   padding: 2%;
@@ -385,6 +387,20 @@
   min-height: none;
   max-height: none;
   height: 100px;
+}
+#Skills #CardContainer .SkillCard .skill-list li {
+  list-style-type: none;
+}
+#Skills #CardContainer .SkillCard .skill-list li #bullit {
+  color: #ff2052;
+}
+#Projects .project-overview {
+  min-height: none;
+  max-height: none;
+  height: 500px;
+}
+#Projects .project-overview h3 {
+  margin: 4% 0;
 }
 #Contact {
   background-color: black;

@@ -21,14 +21,14 @@ export default class SlideShow extends Component {
 
   }
   
-  componentDidMount(){
-    console.log(this.state)
-    setInterval(()=>{
-      this.setState({
-        active: this.state.active.id == 4? imgArr[0] : imgArr[this.state.active.id + 1],
-      })
-    }, 10000)
-  }
+ // componentDidMount(){
+  //  console.log(this.state)
+  //  setInterval(()=>{
+ //     this.setState({
+//        active: this.state.active.id == 4? imgArr[0] : imgArr[this.state.active.id + 1],
+ //     })
+//    }, 10000)
+//  }
 
 
 
@@ -67,7 +67,7 @@ export default class SlideShow extends Component {
 
         </div>
 
-        <div>
+        <div className ='project-overview'>
           <h3>{this.state.active.project}</h3>
           <p>
             {this.state.active.desc}
@@ -111,8 +111,8 @@ const imgArr = [
   {
     id: 1,
     project: 'High Ground Restore',
-    imgSrc: 'https://media.istockphoto.com/photos/the-african-king-picture-id492611032?k=6&m=492611032&s=612x612&w=0&h=Y_CHJCbkFOqmXvHOYSdxu0T5UZqoRj7OzpIBLGkvf_Q=',
-    desc:'the id is 1'
+    imgSrc: 'https://drive.google.com/uc?id=1qgjQ8tvpZP7wMy2mbqom6vZOeD8P63Wk',
+    desc:'High Ground Restore was my first real-world application.  It was built for a client who was starting their own roofing company in Chicago. Evertything from it\'s logo down to the actual application was made from the bottom up. The site is viewable in many different kinds of screens. It also is packed with a few informative widgets for the user such as displaying time and tempreture in the Chicago land area. The site is able to route to company emails securely through forms and comes with search engine optimization.'
   },  
   {
     id: 2,
