@@ -36,14 +36,26 @@ const skills = [
     ]
     },
     {
-        skill: "ReactJS",
+        skill: "HTML",
         end: 'front',
-        img: 'https://drive.google.com/uc?id=1AnMDvTV_iM_O53ZzUBYQ3CdkU9ErSofk',
+        img: 'https://drive.google.com/uc?id=1bMowbcmamCaOtW7QSMNat5E2ekYPBsTc',
         description: [
-            "Working with functional and class components with dynamic state.",
-            "Creating global state with useContext",
-            "Interacting with authenticated RESTful APIs ",
-            "Testing back end applications with Jest"
+            "Setting up setting up express servers with route handlers.",
+            "Connecting RESTful APIs with sql databases for persistence.",
+            "User authentication with JSON tokens or sessions. ",
+            "Back-end app testing with Jest"
+    
+    ]
+    },
+    {
+        skill: "CSS",
+        end: 'front',
+        img: 'https://drive.google.com/uc?id=1oD2Vta5BIfuevMf6WINjkd966zYqiC6Q',
+        description: [
+            "Setting up setting up express servers with route handlers.",
+            "Connecting RESTful APIs with sql databases for persistence.",
+            "User authentication with JSON tokens or sessions. ",
+            "Back-end app testing with Jest"
     
     ]
     },
@@ -60,9 +72,22 @@ const skills = [
     ]
     },
     {
+        skill: "ReactJS",
+        end: 'front',
+        img: 'https://drive.google.com/uc?id=1Os9iSrisdY138k3DwxKeCIbO_aoWJwVZ',
+        description: [
+            "Working with functional and class components with dynamic state.",
+            "Creating global state with useContext",
+            "Interacting with authenticated RESTful APIs ",
+            "Testing back end applications with Jest"
+    
+    ]
+    },
+
+    {
         skill: "MySql",
         end: 'db',
-        img: 'https://drive.google.com/uc?id=1G97E4lCCU4ZyYZWTUq4CuU88-bMG1fH7',
+        img: 'https://drive.google.com/uc?id=1I-dL0bosBKwooPJlz8e7YiKj1rhcYro-',
         description: [
             "D",
             "Adding SQL databases and models for persistence",
@@ -71,6 +96,59 @@ const skills = [
     
     ]
     },
+
+    {
+        skill: "Mac OSX",
+        end: 'os',
+        img: 'https://drive.google.com/uc?id=1VWhmdkQ6YmhkslFRt78B133z6zEelRWa',
+        description: [
+            "D",
+            "Adding SQL databases and models for persistence",
+            "Creating user authentication with JSON web tokens and sessions. ",
+            "Testing back end applications with Jest"
+    
+    ]
+    },
+
+    {
+        skill: "Windows10",
+        end: 'os',
+        img: 'https://drive.google.com/uc?id=1A9CmHJRFKYx-MOyKtBQaN0KX9sN2kl6k',
+        description: [
+            "D",
+            "Adding SQL databases and models for persistence",
+            "Creating user authentication with JSON web tokens and sessions. ",
+            "Testing back end applications with Jest"
+    
+    ]
+    },
+
+    {
+        skill: "Linux",
+        end: 'os',
+        img: 'https://drive.google.com/uc?id=1A0ykVzN7X0M7a8XySQhJNRx8NYSpE1Qi',
+        description: [
+            "D",
+            "Adding SQL databases and models for persistence",
+            "Creating user authentication with JSON web tokens and sessions. ",
+            "Testing back end applications with Jest"
+    
+    ]
+    },
+    {
+        skill: "Firebase",
+        end: 'db',
+        img: 'https://drive.google.com/uc?id=1xWoIHexaCv5Jb1dJzhRWytJoN2xUOBw7',
+        description: [
+            "D",
+            "Adding SQL databases and models for persistence",
+            "Creating user authentication with JSON web tokens and sessions. ",
+            "Testing back end applications with Jest"
+    
+    ]
+    },
+
+    
     {
         skill: "Python",
         end: 'back',
@@ -110,14 +188,15 @@ export default function Skills() {
 
             <div id = 'CardContainer'>
                 <>
+                 {/* 
                     <div>
-                        {/* GENERAL SKILLS */}
+                       GENERAL SKILLS 
                         {
                             skills.map((skill)=>{
                                 if(skill.end == 'skill'){
                                     return(
                                     <div className = 'SkillCard'>
-                                        <div >
+                                        <div className='img-con'>
                                             <img
                                             src={skill.img}
                                             alt=""/>
@@ -130,20 +209,20 @@ export default function Skills() {
                             })
                         }
                     </div>
+                    */}
                     <div>
-                        <h4>Front End</h4>
+                        <h4>Front-End</h4>
                         {
                             skills.map((skill)=>{
                                 if(skill.end == 'front'){
                                     return(
                                     <div className = 'SkillCard'>
-                                        <div >
+                                        <div className='img-con'>
                                             <img
                                             src={skill.img}
                                             alt=""/>
                                             <p>{skill.skill}</p>
                                         </div>
-                                        {description(skill.description)}
                                     </div>
                                     )
                                 }
@@ -152,19 +231,18 @@ export default function Skills() {
 
                     </div>
                     <div>
-                        <h4>Database</h4>
+                        <h4>Back-End</h4>
                         {
                             skills.map((skill)=>{
-                                if(skill.end == 'db'){
+                                if(skill.end == 'back'){
                                     return(
                                     <div className = 'SkillCard'>
-                                        <div >
+                                        <div className='img-con'>
                                             <img
                                             src={skill.img}
                                             alt=""/>
                                             <p>{skill.skill}</p>
                                         </div>
-                                        {description(skill.description)}
                                     </div>
                                     )
                                 }
@@ -172,25 +250,44 @@ export default function Skills() {
                         }
                     </div>
                     <div>
-                        <h4>Back End</h4>
+                        <h4>Database</h4>
                         {
                             skills.map((skill)=>{
-                                if(skill.end == 'back'){
+                                if(skill.end == 'db'){
                                     return(
                                     <div className = 'SkillCard'>
-                                        <div >
+                                        <div className='img-con' >
                                             <img
                                             src={skill.img}
                                             alt=""/>
                                             <p>{skill.skill}</p>
                                         </div>
-                                        {description(skill.description)}
                                     </div>
                                     )
                                 }
                             })
                         }
                     </div>
+                    <div>
+                        <h4>Operating Systems</h4>
+                        {
+                            skills.map((skill)=>{
+                                if(skill.end == 'os'){
+                                    return(
+                                    <div className = 'SkillCard'>
+                                        <div className='img-con' >
+                                            <img
+                                            src={skill.img}
+                                            alt=""/>
+                                            <p>{skill.skill}</p>
+                                        </div>
+                                    </div>
+                                    )
+                                }
+                            })
+                        }
+                    </div>
+
                 </>
 
             </div>

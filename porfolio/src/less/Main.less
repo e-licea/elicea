@@ -123,17 +123,47 @@
     
     #CardContainer{
         .flex-flow(column, wrap, space-around);
+        h4{
+            text-align: center;
+            .w(100%, none, none);
+            .bg(#353535);
+            color: white
+        }
         .SkillCard{
+            margin-top: 2%;
+            margin-bottom: 4%;
+            display: inline-block;
+            .w(140px, none, none)!important;
+            .h(180px, none, none);
+            @media @tablet {
+                
+            }
             .padding(0);
             .w(100%, none, none);
+            .img-con{
+                .flex-flow(column, no-wrap, space-evenly);
+                .w(130px, none, none);
+                .h(130px, none, none);
+
                 img{
                     .w(100px, none, none);
                     .h(100px, none, none);
+                    margin: 0 auto;
                 }
+                p{
+                    text-align: center;
+                }
+            }
             .skill-list{
-
+                .padding(0);
+                .w(65%, none, none);
+                @media @tablet {
+                    .w(100%, none, none);
+                    
+                }
                 li{
                     list-style-type: none;
+                    .margin(1);
                     #bullit{
                         color: @infrared;
                     }
@@ -147,7 +177,7 @@
 #Projects{
 
     .project-overview{
-        .h(500px, none,none);
+        .h(350px, none,none);
 
         h3{
             margin: 4% 0;

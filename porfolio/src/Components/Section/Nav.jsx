@@ -18,7 +18,6 @@ export default function Nav() {
     return (
 
             <div className = 'Nav'>
-                <div className="profile-img"></div>
                 <ul>
                     <li><Link to = 'About' smooth = {true} duration = {300} offset={-100}>About</Link></li>
                     <li><Link to = 'Skills' smooth = {true} duration = {300} offset={-100}>Skills</Link></li>
