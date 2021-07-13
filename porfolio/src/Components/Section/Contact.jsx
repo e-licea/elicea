@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import emailjs from 'emailjs-com';
 
 export default function Contact() {
 
@@ -17,6 +18,13 @@ export default function Contact() {
     function onSubmit(e){
         e.preventDefault();
         console.log(formData);
+        emailjs.sendForm('service_2xlw3um', 'template_5kptc2g', e.target, 'user_zmrJEylQGxnauacF4paiD')
+            .then((result) => {
+                console.log('SUCCESS!', result.status, result.text);
+            }, (error) => {
+                console.log('FAILED...', error);
+            });
+
     }
 
     return (

@@ -120,14 +120,16 @@
 };
 
 #Skills{
-    
+    #CardContainer > div{
+        .centerWithMargin();
+    }
+
     #CardContainer{
         .flex-flow(column, wrap, space-around);
         h4{
             text-align: center;
             .w(100%, none, none);
-            .bg(#353535);
-            color: white
+            .c(#353535);
         }
         .SkillCard{
             margin-top: 2%;
@@ -175,14 +177,26 @@
 
 
 #Projects{
-
+    padding-bottom: 10%;
     .project-overview{
-        .h(350px, none,none);
+        .h(max-content, none,none);
 
-        h3{
+        h4{
             margin: 4% 0;
         }
-    }
+        a{
+            padding: 1%;
+            &:last-child{
+                border-left: #272727 2px solid;
+            }
+        }
+
+    } 
+}
+
+#coffee{
+    margin: 1%;
+    width: 30px
 }
 
 #Contact{

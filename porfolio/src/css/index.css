@@ -370,6 +370,9 @@
 #About:hover {
   opacity: 0.9;
 }
+#Skills #CardContainer > div {
+  margin: 0 auto;
+}
 #Skills #CardContainer {
   display: flex;
   flex-direction: column;
@@ -381,8 +384,7 @@
   min-width: none;
   max-width: none;
   width: 100%;
-  background-color: #353535;
-  color: white;
+  color: #353535;
 }
 #Skills #CardContainer .SkillCard {
   margin-top: 2%;
@@ -443,13 +445,26 @@
 #Skills #CardContainer .SkillCard .skill-list li #bullit {
   color: #ff2052;
 }
+#Projects {
+  padding-bottom: 10%;
+}
 #Projects .project-overview {
   min-height: none;
   max-height: none;
-  height: 350px;
+  height: max-content;
 }
-#Projects .project-overview h3 {
+#Projects .project-overview h4 {
   margin: 4% 0;
+}
+#Projects .project-overview a {
+  padding: 1%;
+}
+#Projects .project-overview a:last-child {
+  border-left: #272727 2px solid;
+}
+#coffee {
+  margin: 1%;
+  width: 30px;
 }
 #Contact {
   background-color: black;

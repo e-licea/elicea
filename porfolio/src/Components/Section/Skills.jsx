@@ -136,20 +136,6 @@ const skills = [
     ]
     },
     {
-        skill: "Firebase",
-        end: 'db',
-        img: 'https://drive.google.com/uc?id=1xWoIHexaCv5Jb1dJzhRWytJoN2xUOBw7',
-        description: [
-            "D",
-            "Adding SQL databases and models for persistence",
-            "Creating user authentication with JSON web tokens and sessions. ",
-            "Testing back end applications with Jest"
-    
-    ]
-    },
-
-    
-    {
         skill: "Python",
         end: 'back',
         img: 'https://drive.google.com/uc?id=1fTphCmnvi2z2j07oAtUb_yhxZ6GosYWc',
@@ -211,6 +197,25 @@ export default function Skills() {
                     </div>
                     */}
                     <div>
+                        <h4>OS</h4>
+                        {
+                            skills.map((skill)=>{
+                                if(skill.end == 'os'){
+                                    return(
+                                    <div className = 'SkillCard'>
+                                        <div className='img-con' >
+                                            <img
+                                            src={skill.img}
+                                            alt=""/>
+                                            <p>{skill.skill}</p>
+                                        </div>
+                                    </div>
+                                    )
+                                }
+                            })
+                        }
+                    </div>
+                    <div>
                         <h4>Front-End</h4>
                         {
                             skills.map((skill)=>{
@@ -250,7 +255,7 @@ export default function Skills() {
                         }
                     </div>
                     <div>
-                        <h4>Database</h4>
+                        <h4>Persistence</h4>
                         {
                             skills.map((skill)=>{
                                 if(skill.end == 'db'){
@@ -268,25 +273,7 @@ export default function Skills() {
                             })
                         }
                     </div>
-                    <div>
-                        <h4>Operating Systems</h4>
-                        {
-                            skills.map((skill)=>{
-                                if(skill.end == 'os'){
-                                    return(
-                                    <div className = 'SkillCard'>
-                                        <div className='img-con' >
-                                            <img
-                                            src={skill.img}
-                                            alt=""/>
-                                            <p>{skill.skill}</p>
-                                        </div>
-                                    </div>
-                                    )
-                                }
-                            })
-                        }
-                    </div>
+
 
                 </>
 
