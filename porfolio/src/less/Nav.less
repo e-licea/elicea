@@ -1,3 +1,70 @@
+.hideTheMenu{
+    .flex-flow(column-reverse, no-wrap, space-around);
+    z-index: 9;
+    align-items: center;
+    .bg(yellow);
+    .w(150px, none, none);
+    .h(250px, none, none);
+    margin: 0;
+    position: fixed;
+    bottom: -250px;
+    left: 10px;
+    .l-shadow();
+    flex-direction: column-reverse;
+    #HideMenu{
+        cursor: pointer;
+        position: fixed;
+        bottom: 0;
+        left: 130px;
+        height: 30px;
+        width: 30px;
+        
+        .bg(navy);
+
+        img{
+            padding-top: 5px;
+            height: 20px;
+            width: 20px;
+        }
+    }
+    ul{
+        position: relative;
+        list-style: none;
+        text-align: center;
+        .h(100%, none, none);
+    }
+    #Back2Top{
+        position: fixed;
+        left: 160px;
+        bottom: 0px;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        text-align: center;
+        line-height: 30px;
+        .bg(@infrared);
+        a{
+            img{
+                padding: 0;
+                width: 14px;
+            }
+        }
+    }
+    .social-media{
+        width: 100%;
+        display: flex;
+        justify-content: right;
+        padding: 1%;
+        a{
+            img{
+
+                height: 20px;
+                width: 20px;
+            }
+        }
+    }
+    
+}
 .Nav{
     .flex-flow(column, no-wrap, space-around);
     align-items: center;
@@ -8,15 +75,32 @@
     .w(250px, none, none);
     .h(max-content, none, none);
     @media @tablet {
+        
+        opacity: .94;
         bottom: 0px;
-        left:0px;
+        left:10px;
         margin: 0;
-        .w(100%, none, none);
-        .h(60px, none, none);
+        .w(150px, none, none);
+        .h(250px, none, none);
         .bg(@infrared);
-        .t-shadow();
+        .l-shadow();
+        flex-direction: column-reverse;
 
 
+    }
+
+    .social-media{
+        width: 100%;
+        display: flex;
+        justify-content: right;
+        padding: 1%;
+        a{
+            img{
+
+                height: 20px;
+                width: 20px;
+            }
+        }
     }
     .profile-img{
         background-image: url('https://drive.google.com/uc?id=1DQCBLj-hPM0BhA25ZBzXKEdjXlUe_fo2');
@@ -40,6 +124,7 @@
     
   
     ul{
+        position: relative;
         list-style: none;
         text-align: right;
         .w(100%, none, none);
@@ -48,15 +133,76 @@
             margin: 0;
             text-align: center;
             .h(100%, none, none);
-            .flex-flow(row, no-wrap, space-around);
         }
     };
- 
+    #hideMenu{
+        cursor: pointer;
+        position: fixed;
+        bottom: 250px;
+        left: 130px;
+        height: 30px;
+        width: 30px;
+        .bg(navy);
+
+        img{
+            padding-top: 5px;
+            height: 20px;
+            width: 20px;
+        }
+
+    }
+
+    #back2Top{
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        text-align: center;
+        line-height: 30px;
+        .bg(@infrared);
+        color: white;
+        @media @tablet {
+            position: fixed;
+            left: 160px;
+            bottom: 0px;
+            a{
+            font-size: 1.5rem;
+
+            }
+
+        }
+        &:hover{
+            .bg(black);
+        }
+        a{
+            display: inline-block;
+            line-height: 30px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            font-size: 2rem;
+            height: 100%;
+            img{
+                padding-bottom: 10px;
+                padding-right: 7px; 
+                width: 20px;  
+                @media @tablet {
+                    padding: 0;
+                    width: 14px;
+
+                }    
+            }
+        
+        }
+    }
+
     li{
         .font-style(@Sora, 200);
-        .font-size(2rem);
-        line-height: 60px;
+        .font-size(1.5rem);
+        line-height: 50px;
         padding: 2%;
+        a{
+            margin-right: 2%;
+        }
         .font-style(@Super, regular);
         &:hover{
             .bg(@infrared);

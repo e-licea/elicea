@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function About() {
     return (
-        <div id = 'About'>
-            <h3 className="Main-h3">About</h3>
+        <div id = 'Intro'>
+            <h3 className="Main-h3"># Intro</h3>
 
             
             <p>

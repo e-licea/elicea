@@ -1,7 +1,10 @@
 .Section{
     .h(auto, none, none);
-    .w(100%, auto, 1400px);
-    top: 100px;
+    .w(100%, auto, 1200px);
+    top: 50px;
+    @media @tablet {
+        top: 0;
+    }
     .flex-flow(row, no-wrap, space-between);
     position: relative;
     margin: 0 auto;

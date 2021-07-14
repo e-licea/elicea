@@ -170,7 +170,7 @@ export default function Skills() {
     return (
         <div id = 'Skills'>
             
-            <h3 className="Main-h3">Skills</h3>
+            <h3 className="Main-h3"># Skills</h3>
 
             <div id = 'CardContainer'>
                 <>
@@ -197,7 +197,7 @@ export default function Skills() {
                     </div>
                     */}
                     <div>
-                        <h4>OS</h4>
+                        <h4>Operating Systems / Kernels</h4>
                         {
                             skills.map((skill)=>{
                                 if(skill.end == 'os'){

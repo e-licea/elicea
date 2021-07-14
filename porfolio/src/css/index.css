@@ -31,58 +31,14 @@
   position: relative;
   margin: 0 auto;
 }
-.Banner {
-  position: fixed;
-  z-index: 9;
-  background-color: #ff2052;
-  min-width: none;
-  max-width: none;
-  width: 100%;
-  min-height: none;
-  max-height: none;
-  height: 100px;
-  padding: 1%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: no-wrap;
-  font-family: 'Supermercado One', cursive;
-  font-weight: normal;
-  font-size: 2rem;
-  color: #ffffff;
-  box-shadow: 0 8px 6px -6px black;
-}
-.Banner .Banner-X {
-  margin-right: 0;
-  margin-left: auto;
-  min-width: none;
-  max-width: none;
-  width: 100px;
-}
-.Banner .Banner-X .socialmedia img {
-  min-width: none;
-  max-width: none;
-  width: 20px;
-  min-height: none;
-  max-height: none;
-  height: 20px;
-  margin: 5px;
-}
-.App > div:nth-child(1) {
-  width: 100%;
-  position: fixed;
-  z-index: 2;
-  top: 0;
-  left: 0;
-}
 .Section {
   min-height: none;
   max-height: none;
   height: auto;
   min-width: auto;
-  max-width: 1400px;
+  max-width: 1200px;
   width: 100%;
-  top: 100px;
+  top: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -94,10 +50,82 @@
 }
 @media (max-width: 1000px) {
   .Section {
+    top: 0;
+  }
+}
+@media (max-width: 1000px) {
+  .Section {
     min-width: none !important;
     max-width: none !important;
     width: 100% !important;
   }
+}
+.hideTheMenu {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: no-wrap;
+  z-index: 9;
+  align-items: center;
+  background-color: yellow;
+  min-width: none;
+  max-width: none;
+  width: 150px;
+  min-height: none;
+  max-height: none;
+  height: 250px;
+  margin: 0;
+  position: fixed;
+  bottom: -250px;
+  left: 10px;
+  box-shadow: -8px 0 6px -6px black;
+  flex-direction: column-reverse;
+}
+.hideTheMenu #HideMenu {
+  cursor: pointer;
+  position: fixed;
+  bottom: 0;
+  left: 130px;
+  height: 30px;
+  width: 30px;
+  background-color: navy;
+}
+.hideTheMenu #HideMenu img {
+  padding-top: 5px;
+  height: 20px;
+  width: 20px;
+}
+.hideTheMenu ul {
+  position: relative;
+  list-style: none;
+  text-align: center;
+  min-height: none;
+  max-height: none;
+  height: 100%;
+}
+.hideTheMenu #Back2Top {
+  position: fixed;
+  left: 160px;
+  bottom: 0px;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+  background-color: #ff2052;
+}
+.hideTheMenu #Back2Top a img {
+  padding: 0;
+  width: 14px;
+}
+.hideTheMenu .social-media {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  padding: 1%;
+}
+.hideTheMenu .social-media a img {
+  height: 20px;
+  width: 20px;
 }
 .Nav {
   display: flex;
@@ -118,18 +146,30 @@
 }
 @media (max-width: 1000px) {
   .Nav {
+    opacity: 0.94;
     bottom: 0px;
-    left: 0px;
+    left: 10px;
     margin: 0;
     min-width: none;
     max-width: none;
-    width: 100%;
+    width: 150px;
     min-height: none;
     max-height: none;
-    height: 60px;
+    height: 250px;
     background-color: #ff2052;
-    box-shadow: 0 -8px 6px -6px black;
+    box-shadow: -8px 0 6px -6px black;
+    flex-direction: column-reverse;
   }
+}
+.Nav .social-media {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  padding: 1%;
+}
+.Nav .social-media a img {
+  height: 20px;
+  width: 20px;
 }
 .Nav .profile-img {
   background-image: url('https://drive.google.com/uc?id=1DQCBLj-hPM0BhA25ZBzXKEdjXlUe_fo2');
@@ -159,6 +199,7 @@
   }
 }
 .Nav ul {
+  position: relative;
   list-style: none;
   text-align: right;
   min-width: none;
@@ -173,20 +214,75 @@
     min-height: none;
     max-height: none;
     height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: no-wrap;
+  }
+}
+.Nav #hideMenu {
+  cursor: pointer;
+  position: fixed;
+  bottom: 250px;
+  left: 130px;
+  height: 30px;
+  width: 30px;
+  background-color: navy;
+}
+.Nav #hideMenu img {
+  padding-top: 5px;
+  height: 20px;
+  width: 20px;
+}
+.Nav #back2Top {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+  background-color: #ff2052;
+  color: white;
+}
+@media (max-width: 1000px) {
+  .Nav #back2Top {
+    position: fixed;
+    left: 160px;
+    bottom: 0px;
+  }
+  .Nav #back2Top a {
+    font-size: 1.5rem;
+  }
+}
+.Nav #back2Top:hover {
+  background-color: black;
+}
+.Nav #back2Top a {
+  display: inline-block;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 2rem;
+  height: 100%;
+}
+.Nav #back2Top a img {
+  padding-bottom: 10px;
+  padding-right: 7px;
+  width: 20px;
+}
+@media (max-width: 1000px) {
+  .Nav #back2Top a img {
+    padding: 0;
+    width: 14px;
   }
 }
 .Nav li {
   font-family: 'Sora', sans-serif;
   font-weight: 200;
-  font-size: 2rem;
-  line-height: 60px;
+  font-size: 1.5rem;
+  line-height: 50px;
   padding: 2%;
   font-family: 'Supermercado One', cursive;
   font-weight: regular;
+}
+.Nav li a {
+  margin-right: 2%;
 }
 .Nav li:hover {
   background-color: #ff2052;
@@ -230,16 +326,19 @@
 @media (max-width: 1000px) {
   .Main {
     margin: 0;
+    padding: 0 1%;
     min-width: none;
     max-width: none;
     width: 100%;
   }
 }
 .Main-h3 {
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin: 3% 0;
+  font-family: 'Supermercado One', cursive;
+  font-weight: none;
 }
-#About,
+#Intro,
 #Skills,
 #Projects,
 #Contact {
@@ -265,7 +364,7 @@
   #Jumbotron {
     min-height: 250px;
     max-height: 500px;
-    height: 380px;
+    height: 340px;
   }
 }
 #term {
@@ -363,11 +462,11 @@
   max-width: none;
   width: 30%;
 }
-#About {
+#Intro {
   background-color: #ff2052;
   color: #ffffff;
 }
-#About:hover {
+#Intro:hover {
   opacity: 0.9;
 }
 #Skills #CardContainer > div {
@@ -388,7 +487,7 @@
 }
 #Skills #CardContainer .SkillCard {
   margin-top: 2%;
-  margin-bottom: 4%;
+  margin-bottom: 1%;
   display: inline-block;
   min-width: none !important;
   max-width: none !important;
@@ -416,13 +515,14 @@
 #Skills #CardContainer .SkillCard .img-con img {
   min-width: none;
   max-width: none;
-  width: 100px;
+  width: 70px;
   min-height: none;
   max-height: none;
-  height: 100px;
+  height: 70px;
   margin: 0 auto;
 }
 #Skills #CardContainer .SkillCard .img-con p {
+  font-size: 1rem;
   text-align: center;
 }
 #Skills #CardContainer .SkillCard .skill-list {
@@ -470,43 +570,48 @@
   background-color: black;
   color: white;
 }
-#Contact form {
+#Contact div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: no-wrap;
+}
+#Contact div form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
+  width: 50%;
+}
+#Contact div form label input {
+  display: block;
   min-width: 350px;
   max-width: 600px;
   width: 50%;
 }
-#Contact form label {
-  padding: 1%;
-}
-#Contact form label input {
-  display: block;
-}
-#Contact form button {
+#Contact div form button {
   min-width: none;
   max-width: none;
-  width: 120px;
+  width: 100px;
   min-height: none;
   max-height: none;
   height: 40px;
-  padding: 0 5%;
-  border-radius: 2px;
   border: none;
   background-color: #ff2052;
-  font-family: 'Sora', sans-serif;
-  font-weight: 400;
+  font-family: 'Supermercado One', cursive;
+  font-weight: none;
   color: white;
+}
+#Contact div .contact-ad {
+  width: 50%;
 }
 textarea {
   min-height: none;
   max-height: none;
   height: 200px;
-  min-width: none;
-  max-width: none;
-  width: 400px;
+  min-width: 350px;
+  max-width: 600px;
+  width: 50%;
   display: block;
 }
 .photo-container {

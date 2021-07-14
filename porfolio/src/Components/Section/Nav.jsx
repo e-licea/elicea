@@ -1,32 +1,69 @@
 import React, { useState, useEffect } from 'react'
-import UseWindowSize from '../Hooks/UseWindowSize'
 import { Link } from 'react-scroll';
 import { Link as L } from 'react-router-dom'
 
-//bit.dev imports
+//Icons
+import github from '../../img/icons/github.svg'
+import up from '../../img/icons/up.svg'
+import down from '../../img/icons/down.svg'
+//Hooks
+import useWindowSize from '../Hooks/UseWindowSize'
+import useScroll from '../Hooks/UseScroll'
 
 export default function Nav() {
 
     const [ windowSize, setWindowSize ] = useState(0)
-    const winSize = UseWindowSize()
+    const winSize = useWindowSize()
+
+    const [scroll, setScroll] = useState(0);
+    let winScroll = useScroll();
+
+    const [ hideMenu, setHideMenu ] = useState(false);
 
     useEffect(async () => {
             setWindowSize(winSize.width)
             //console.log(windowSize)
-    }, [winSize.width])
+            setScroll(winScroll)
+            //console.log(scroll)
+            if(windowSize > 1000){
+                setHideMenu(true)
+            }
+    }, [winSize.width, winScroll])
 
-    
+    function hideTheMenu(){
+        console.log(hideMenu)
+        setHideMenu(!hideMenu);
+        
+    }
 
     return (
 
-            <div className = 'Nav'>
+            <div className = {!hideMenu?'hideTheMenu':'Nav'} >
+                <div className='social-media'>
+                    <a target = '_blank'  href="https://github.com/e-licea"><img src={github} alt="" /></a>
+                </div>
                 <ul>
-                    <li><Link to = 'About' smooth = {true} duration = {300} offset={-100}>About</Link></li>
-                    <li><Link to = 'Skills' smooth = {true} duration = {300} offset={-100}>Skills</Link></li>
-                    <li><Link to = 'Projects' smooth = {true} duration = {300} offset={-100}>Projects</Link></li>
-                    <li><Link to = 'Contact' smooth = {true} duration = {300} offset={-100}>Contact</Link></li>
+                    <li><Link to = 'Intro' smooth = {true} duration = {300} offset={0}>Intro</Link></li>
+                    <li><Link to = 'Skills' smooth = {true} duration = {300} offset={0}>Skills</Link></li>
+                    <li><Link to = 'Projects' smooth = {true} duration = {300} offset={0}>Projects</Link></li>
+                    <li><Link to = 'Contact' smooth = {true} duration = {300} offset={0}>Contact</Link></li>
                     {/*<li><L to = '/the-lab' >Blog</L></li>*/}
+                    {
+                    scroll > 350? 
+                        <li id = {!hideMenu? 'Back2Top': 'back2Top'}>
+                            <Link to='Jumbotron' smooth ={true} duration = {300} offset = {-50}>
+                                <img src={up} alt="" />    
+                            </Link>
+                        </li>:null
+                    }
+                    {
+                    windowSize < 1001? 
+                        <div onClick = {hideTheMenu} id = {!hideMenu? 'HideMenu': 'hideMenu'}>
+                            <img src={hideMenu?down:up} alt="" />    
+                        </div>:null
+                    }
                 </ul>
+
 
             </div>
 

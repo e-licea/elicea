@@ -29,7 +29,12 @@ export default function Contact() {
 
     return (
         <div id = 'Contact'>
-            <h3 className="Main-h3">Contact</h3>
+            <h3 className="Main-h3"># Contact</h3>
+            <div>
+
+            <div className = 'contact-ad'>
+                Something goes here
+            </div>
             <form onSubmit = {onSubmit} >
                 <label>Name :
                     <input type="text"
@@ -65,6 +70,7 @@ export default function Contact() {
                 </label>
                 <button>Submit</button>
             </form>
+            </div>
         </div>
     )
 }

@@ -7,15 +7,18 @@
     padding-bottom: 10%;
     @media @tablet {
         margin: 0;
+        padding: 0 1%;
         .w(100%, none, none);
     }
 }
 
 .Main-h3{
-    .font-size(2rem);
+    .font-size(1.7rem);
     margin: 3% 0;
+    .font-style(@Super, none);
+
 }
-#About, #Skills, #Projects, #Contact{
+#Intro, #Skills, #Projects, #Contact{
     padding: 2%;
 }
 
@@ -27,7 +30,7 @@
     position: relative;
     .font-style(@Super, regular);
     @media @tablet {
-        .h(380px, 250px, 500px);
+        .h(340px, 250px, 500px);
     }
 }
 
@@ -111,7 +114,7 @@
 }
 //ABOUT SECTION
 
-#About{
+#Intro{
     .bg(@infrared);
     color: @white;
     &:hover{
@@ -133,7 +136,7 @@
         }
         .SkillCard{
             margin-top: 2%;
-            margin-bottom: 4%;
+            margin-bottom: 1%;
             display: inline-block;
             .w(140px, none, none)!important;
             .h(180px, none, none);
@@ -148,11 +151,12 @@
                 .h(130px, none, none);
 
                 img{
-                    .w(100px, none, none);
-                    .h(100px, none, none);
+                    .w(70px, none, none);
+                    .h(70px, none, none);
                     margin: 0 auto;
                 }
                 p{
+                    font-size: 1rem;
                     text-align: center;
                 }
             }
@@ -202,29 +206,35 @@
 #Contact{
     .bg(black);
     color: white;
-    form{
-        .flex-flow(column, wrap, center);
-        .w(50%, 350px, 600px);
-        label{
-            .padding(0);
-            input{
-                display: block;
+    div{
+        .flex-flow(row, no-wrap, space-evenly);
+        form{
+            .flex-flow(column, wrap, center);
+            width: 50%;
+            label{
+                
+                input{
+                    display: block;
+                    .w(50%, 350px, 600px);
+                }
+            }
+            button{
+                .w(100px, none, none);
+                .h(40px, none, none);
+                border: none;
+                .bg(@infrared);
+                .font-style(@Super, none);
+                color: white;
             }
         }
-        button{
-            .w(120px, none, none);
-            .h(40px, none, none);
-            padding: 0 5%;
-            border-radius: 2px;
-            border: none;
-            .bg(@infrared);
-            .font-style(@Sora, 400);
-            color: white;
+
+        .contact-ad{
+            width: 50%;
         }
     }
 }
 textarea{
     .h(200px, none, none);
-    .w(400px, none, none);
+    .w(50%, 350px, 600px);
     display: block;
 }

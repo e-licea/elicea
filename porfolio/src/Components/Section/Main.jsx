@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {  useEffect, useState } from 'react'
 
 //import Components
 import Projects from './Projects';
@@ -9,8 +9,13 @@ import Contact from './Contact';
 import About from './About';
 import Skills from './Skills';
 
+//Hooks 
+
 
 export default function Main() {
+
+
+
     return (
             <>
                 <div className = 'Main'>
