@@ -82,18 +82,22 @@
   flex-direction: column-reverse;
 }
 .hideTheMenu #HideMenu {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
   cursor: pointer;
   position: fixed;
-  bottom: 0;
-  left: 130px;
+  bottom: 280px;
+  left: 10px;
   height: 30px;
   width: 30px;
   background-color: navy;
 }
 .hideTheMenu #HideMenu img {
-  padding-top: 5px;
-  height: 20px;
-  width: 20px;
+  padding-top: 0;
+  width: 15px;
+  height: 15px;
 }
 .hideTheMenu ul {
   position: relative;
@@ -104,9 +108,10 @@
   height: 100%;
 }
 .hideTheMenu #Back2Top {
+  cursor: pointer;
   position: fixed;
-  left: 160px;
-  bottom: 0px;
+  left: 10px;
+  bottom: 310px;
   width: 30px;
   height: 30px;
   display: inline-block;
@@ -116,7 +121,8 @@
 }
 .hideTheMenu #Back2Top a img {
   padding: 0;
-  width: 14px;
+  width: 15px;
+  height: 15px;
 }
 .hideTheMenu .social-media {
   width: 100%;
@@ -148,8 +154,8 @@
 @media (max-width: 1000px) {
   .Nav {
     opacity: 0.94;
-    bottom: 0px;
-    left: 10px;
+    bottom: 60px;
+    left: 40px;
     margin: 0;
     min-width: none;
     max-width: none;
@@ -220,8 +226,8 @@
 .Nav #hideMenu {
   cursor: pointer;
   position: fixed;
-  bottom: 250px;
-  left: 130px;
+  bottom: 280px;
+  left: 10px;
   height: 30px;
   width: 30px;
   background-color: navy;
@@ -242,12 +248,21 @@
 }
 @media (max-width: 1000px) {
   .Nav #back2Top {
+    cursor: pointer;
     position: fixed;
-    left: 160px;
-    bottom: 0px;
+    left: 10px;
+    bottom: 310px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    background-color: #ff2052;
   }
-  .Nav #back2Top a {
-    font-size: 1.5rem;
+  .Nav #back2Top a img {
+    padding: 0;
+    width: 15px;
+    height: 15px;
   }
 }
 .Nav #back2Top:hover {
@@ -270,7 +285,8 @@
 @media (max-width: 1000px) {
   .Nav #back2Top a img {
     padding: 0;
-    width: 14px;
+    width: 15px;
+    height: 15px;
   }
 }
 .Nav li {
