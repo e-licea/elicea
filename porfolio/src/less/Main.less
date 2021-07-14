@@ -25,12 +25,12 @@
 #Jumbotron{
     .bg(#272727);
     .w(100%, none, none);
-    .h(600px, 250px, 500px);
+    .h(400px, 250px, 500px);
     .flex-flow(row, wrap, none);
     position: relative;
     .font-style(@Super, regular);
     @media @tablet {
-        .h(340px, 250px, 500px);
+        .h(300px, 250px, 500px);
     }
 }
 
@@ -45,20 +45,20 @@
 }
 
 #term, .type{
-    .font-size(1.7rem);
+    .font-size(1.4rem);
     @media @tablet {
-        .font-size(1.4rem);
+        .font-size(1rem);
     }
 
 }
 
 .type{
     position: absolute;
-    left: 195px;
+    left: 165px;
     top: 45px;
     color: white;
     @media @tablet {
-        left: 165px;
+        left: 120px;
         
     }
 }
@@ -117,6 +117,10 @@
 #Intro{
     .bg(@infrared);
     color: @white;
+    p{
+        font-size: 1.1rem;
+        @media @tablet {font-size: 1rem;}
+    }
     &:hover{
         opacity: .9;
     };
@@ -133,6 +137,9 @@
             text-align: center;
             .w(100%, none, none);
             .c(#353535);
+        }
+        .os-skills, .fe-skills, .be-skills{
+            .flex-flow(row, wrap, space-evenly);
         }
         .SkillCard{
             margin-top: 2%;
@@ -188,8 +195,19 @@
         h4{
             margin: 4% 0;
         }
+        p{
+            font-size: 1rem;
+        }
+
+        ul{
+            list-style: lower-roman;
+            li{
+                font-size: 1rem;
+            }
+        }
         a{
             padding: 1%;
+            font-size: 1rem;
             &:last-child{
                 border-left: #272727 2px solid;
             }
@@ -207,16 +225,18 @@
     .bg(black);
     color: white;
     div{
-        .flex-flow(row, no-wrap, space-evenly);
+        .flex-flow(row, no-wrap, space-around);
         @media @tablet {
-            .flex-flow(column, no-wrap, space-around);
+            .flex-flow(column-reverse, no-wrap, space-around);
+            align-items: center;
 
         }
         form{
             .flex-flow(column, wrap, center);
-            width: 50%;
+            align-items: center;
+            width: 100%;
             label{
-                
+                font-size: 1rem;
                 input{
                     display: block;
                     .w(50%, 320px, 600px);
@@ -229,11 +249,26 @@
                 .bg(@infrared);
                 .font-style(@Super, none);
                 color: white;
+                font-size: 1rem;
+
             }
         }
 
         .contact-ad{
             width: 50%;
+            padding: 4%;
+            font-size: 1rem;
+            .flex-flow(column, no-wrap, space-evenly);
+            @media @tablet {
+            }
+            img{
+                width: 270px;
+                height: 200px;
+
+            }
+            p{
+                text-align: center;
+            }
         }
     }
 }

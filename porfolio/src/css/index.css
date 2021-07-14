@@ -38,23 +38,31 @@
   min-width: auto;
   max-width: 1200px;
   width: 100%;
-  top: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: no-wrap;
   position: relative;
   margin: 0 auto;
-  padding-left: 2%;
-  padding-right: 2%;
+  padding: 50px 2%;
 }
 @media (max-width: 1000px) {
   .Section {
-    top: 0;
+    min-width: none !important;
+    max-width: none !important;
+    width: 75% !important;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 750px) {
   .Section {
+    min-width: none !important;
+    max-width: none !important;
+    width: 90% !important;
+  }
+}
+@media (max-width: 550px) {
+  .Section {
+    padding: 0;
     min-width: none !important;
     max-width: none !important;
     width: 100% !important;
@@ -82,22 +90,19 @@
   flex-direction: column-reverse;
 }
 .hideTheMenu #HideMenu {
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
   cursor: pointer;
   position: fixed;
   bottom: 280px;
   left: 10px;
   height: 30px;
   width: 30px;
-  background-color: navy;
+  opacity: 0.94;
 }
 .hideTheMenu #HideMenu img {
+  margin: 0%;
   padding-top: 0;
-  width: 15px;
-  height: 15px;
+  height: 30px;
+  width: 30px;
 }
 .hideTheMenu ul {
   position: relative;
@@ -117,6 +122,7 @@
   display: inline-block;
   text-align: center;
   line-height: 30px;
+  opacity: 0.94;
   background-color: #ff2052;
 }
 .hideTheMenu #Back2Top a img {
@@ -150,10 +156,10 @@
   min-height: none;
   max-height: none;
   height: max-content;
+  opacity: 0.94;
 }
 @media (max-width: 1000px) {
   .Nav {
-    opacity: 0.94;
     bottom: 60px;
     left: 40px;
     margin: 0;
@@ -164,7 +170,7 @@
     max-height: none;
     height: 250px;
     background-color: #ff2052;
-    box-shadow: -8px 0 6px -6px black;
+    box-shadow: 8px 0 6px -6px black;
     flex-direction: column-reverse;
   }
 }
@@ -230,18 +236,18 @@
   left: 10px;
   height: 30px;
   width: 30px;
-  background-color: navy;
+  opacity: 0.94;
 }
 .Nav #hideMenu img {
-  padding-top: 5px;
-  height: 20px;
-  width: 20px;
+  height: 30px;
+  width: 30px;
 }
 .Nav #back2Top {
   width: 30px;
   height: 30px;
   display: inline-block;
   text-align: center;
+  opacity: 0.94;
   line-height: 30px;
   background-color: #ff2052;
   color: white;
@@ -368,7 +374,7 @@
   width: 100%;
   min-height: 250px;
   max-height: 500px;
-  height: 600px;
+  height: 400px;
   display: flex;
   flex-direction: row;
   justify-content: none;
@@ -381,7 +387,7 @@
   #Jumbotron {
     min-height: 250px;
     max-height: 500px;
-    height: 340px;
+    height: 300px;
   }
 }
 #term {
@@ -393,23 +399,23 @@
 }
 #term,
 .type {
-  font-size: 1.7rem;
+  font-size: 1.4rem;
 }
 @media (max-width: 1000px) {
   #term,
   .type {
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
 }
 .type {
   position: absolute;
-  left: 195px;
+  left: 165px;
   top: 45px;
   color: white;
 }
 @media (max-width: 1000px) {
   .type {
-    left: 165px;
+    left: 120px;
   }
 }
 #close,
@@ -483,6 +489,14 @@
   background-color: #ff2052;
   color: #ffffff;
 }
+#Intro p {
+  font-size: 1.1rem;
+}
+@media (max-width: 1000px) {
+  #Intro p {
+    font-size: 1rem;
+  }
+}
 #Intro:hover {
   opacity: 0.9;
 }
@@ -501,6 +515,14 @@
   max-width: none;
   width: 100%;
   color: #353535;
+}
+#Skills #CardContainer .os-skills,
+#Skills #CardContainer .fe-skills,
+#Skills #CardContainer .be-skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 #Skills #CardContainer .SkillCard {
   margin-top: 2%;
@@ -573,8 +595,18 @@
 #Projects .project-overview h4 {
   margin: 4% 0;
 }
+#Projects .project-overview p {
+  font-size: 1rem;
+}
+#Projects .project-overview ul {
+  list-style: lower-roman;
+}
+#Projects .project-overview ul li {
+  font-size: 1rem;
+}
 #Projects .project-overview a {
   padding: 1%;
+  font-size: 1rem;
 }
 #Projects .project-overview a:last-child {
   border-left: #272727 2px solid;
@@ -590,15 +622,16 @@
 #Contact div {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-wrap: no-wrap;
 }
 @media (max-width: 1000px) {
   #Contact div {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: space-around;
     flex-wrap: no-wrap;
+    align-items: center;
   }
 }
 #Contact div form {
@@ -606,7 +639,11 @@
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
-  width: 50%;
+  align-items: center;
+  width: 100%;
+}
+#Contact div form label {
+  font-size: 1rem;
 }
 #Contact div form label input {
   display: block;
@@ -626,9 +663,23 @@
   font-family: 'Supermercado One', cursive;
   font-weight: none;
   color: white;
+  font-size: 1rem;
 }
 #Contact div .contact-ad {
   width: 50%;
+  padding: 4%;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-wrap: no-wrap;
+}
+#Contact div .contact-ad img {
+  width: 270px;
+  height: 200px;
+}
+#Contact div .contact-ad p {
+  text-align: center;
 }
 textarea {
   min-height: none;
@@ -643,9 +694,6 @@ textarea {
   position: relative;
   overflow: hidden;
   background-color: black;
-  min-height: 450px;
-  max-height: 450px;
-  height: auto;
 }
 .photo-container img {
   min-width: none;

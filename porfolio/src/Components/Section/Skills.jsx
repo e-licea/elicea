@@ -3,24 +3,25 @@ import React from 'react'
 
 const skills = [
     {
-        skill: "PostgreSql",
-        end: 'db',
-        img: 'https://drive.google.com/uc?id=14pQLaTTiy67h49lhaq5AcZkt1mfPPiSY',
-        description: [
-            "Setting up setting up express servers with route handlers.",
-            "Connecting RESTful APIs with sql databases for persistence.",
-            "User authentication with JSON tokens or sessions. ",
-            "Back-end app testing with Jest  "
-    
-    ]
-    },
-    {
         skill: "Git",
         end: 'skill',
         img: 'https://drive.google.com/uc?id=1XZwPysnRZtGF2Prdpvs7q2uJdv8aLQc5',
         description: [
             "Adaptive to git commands and version control flow.",
             "Handling conflicts carefully and strategically",
+    ]
+    },    {
+        skill: "Python",
+        end: 'back',
+        img: 'https://drive.google.com/uc?id=1fTphCmnvi2z2j07oAtUb_yhxZ6GosYWc',
+        description: [
+            "Data Scraping and browser automation with Selenium.",
+            "Adding SQL databases and models for persistence",
+            "Creating user authentication with JSON web tokens and sessions. ",
+            "Adding SQL databases and models for persistence",
+            "Creating user authentication with JSON web tokens and sessions. ",
+            "Testing back end applications with Jest"
+    
     ]
     },
     {
@@ -86,13 +87,25 @@ const skills = [
 
     {
         skill: "MySql",
-        end: 'db',
+        end: 'back',
         img: 'https://drive.google.com/uc?id=1I-dL0bosBKwooPJlz8e7YiKj1rhcYro-',
         description: [
             "D",
             "Adding SQL databases and models for persistence",
             "Creating user authentication with JSON web tokens and sessions. ",
             "Testing back end applications with Jest"
+    
+    ]
+    },    
+    {
+        skill: "PostgreSql",
+        end: 'back',
+        img: 'https://drive.google.com/uc?id=14pQLaTTiy67h49lhaq5AcZkt1mfPPiSY',
+        description: [
+            "Setting up setting up express servers with route handlers.",
+            "Connecting RESTful APIs with sql databases for persistence.",
+            "User authentication with JSON tokens or sessions. ",
+            "Back-end app testing with Jest  "
     
     ]
     },
@@ -129,20 +142,6 @@ const skills = [
         img: 'https://drive.google.com/uc?id=1A0ykVzN7X0M7a8XySQhJNRx8NYSpE1Qi',
         description: [
             "D",
-            "Adding SQL databases and models for persistence",
-            "Creating user authentication with JSON web tokens and sessions. ",
-            "Testing back end applications with Jest"
-    
-    ]
-    },
-    {
-        skill: "Python",
-        end: 'back',
-        img: 'https://drive.google.com/uc?id=1fTphCmnvi2z2j07oAtUb_yhxZ6GosYWc',
-        description: [
-            "Data Scraping and browser automation with Selenium.",
-            "Adding SQL databases and models for persistence",
-            "Creating user authentication with JSON web tokens and sessions. ",
             "Adding SQL databases and models for persistence",
             "Creating user authentication with JSON web tokens and sessions. ",
             "Testing back end applications with Jest"
@@ -198,6 +197,7 @@ export default function Skills() {
                     */}
                     <div>
                         <h4>Operating Systems / Kernels</h4>
+                        <div className="os-skills">
                         {
                             skills.map((skill)=>{
                                 if(skill.end == 'os'){
@@ -214,9 +214,11 @@ export default function Skills() {
                                 }
                             })
                         }
+                        </div>
                     </div>
                     <div>
                         <h4>Front-End</h4>
+                        <div className="fe-skills">
                         {
                             skills.map((skill)=>{
                                 if(skill.end == 'front'){
@@ -233,10 +235,12 @@ export default function Skills() {
                                 }
                             })
                         }
+                        </div>
 
                     </div>
                     <div>
                         <h4>Back-End</h4>
+                        <div className="be-skills">
                         {
                             skills.map((skill)=>{
                                 if(skill.end == 'back'){
@@ -253,25 +257,7 @@ export default function Skills() {
                                 }
                             })
                         }
-                    </div>
-                    <div>
-                        <h4>Persistence</h4>
-                        {
-                            skills.map((skill)=>{
-                                if(skill.end == 'db'){
-                                    return(
-                                    <div className = 'SkillCard'>
-                                        <div className='img-con' >
-                                            <img
-                                            src={skill.img}
-                                            alt=""/>
-                                            <p>{skill.skill}</p>
-                                        </div>
-                                    </div>
-                                    )
-                                }
-                            })
-                        }
+                        </div>
                     </div>
 
 

@@ -6,6 +6,7 @@ import { Link as L } from 'react-router-dom'
 import github from '../../img/icons/github.svg'
 import up from '../../img/icons/up.svg'
 import down from '../../img/icons/down.svg'
+
 //Hooks
 import useWindowSize from '../Hooks/UseWindowSize'
 import useScroll from '../Hooks/UseScroll'
@@ -59,7 +60,7 @@ export default function Nav() {
                     {
                     windowSize < 1001? 
                         <div onClick = {hideTheMenu} id = {!hideMenu? 'HideMenu': 'hideMenu'}>
-                            <img src={hideMenu?down:up} alt="" />    
+                            <img src='https://drive.google.com/uc?id=1a7S10pCf-TbUwIxZc1HWBgVcKEqLyJWa' alt="" />    
                         </div>:null
                     }
                 </ul>

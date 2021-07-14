@@ -13,20 +13,18 @@
     .l-shadow();
     flex-direction: column-reverse;
     #HideMenu{
-        .rotate(90deg);
         cursor: pointer;
         position: fixed;
         bottom: 280px;
         left: 10px;
         height: 30px;
         width: 30px;
-        
-        .bg(navy);
-
+        opacity: .94;
         img{
+            margin: 0%;
             padding-top: 0;
-            width: 15px;
-            height: 15px;
+            height: 30px;
+            width: 30px;
         }
     }
     ul{
@@ -45,6 +43,8 @@
         display: inline-block;
         text-align: center;
         line-height: 30px;
+        opacity: .94;
+
         .bg(@infrared);
         a{
             img{
@@ -78,16 +78,17 @@
     margin-top: 1%;
     .w(250px, none, none);
     .h(max-content, none, none);
+    opacity: .94;
+
     @media @tablet {
         
-        opacity: .94;
         bottom: 60px;
         left:40px;
         margin: 0;
         .w(150px, none, none);
         .h(250px, none, none);
         .bg(@infrared);
-        .l-shadow();
+        .r-shadow();
         flex-direction: column-reverse;
 
 
@@ -146,12 +147,10 @@
         left: 10px;
         height: 30px;
         width: 30px;
-        .bg(navy);
- 
+        opacity: .94; 
         img{
-            padding-top: 5px;
-            height: 20px;
-            width: 20px;
+            height: 30px;
+            width: 30px;
         }
 
     }
@@ -161,6 +160,7 @@
         height: 30px;
         display: inline-block;
         text-align: center;
+        opacity: .94;
         line-height: 30px;
         .bg(@infrared);
         color: white;
@@ -180,7 +180,6 @@
                     padding: 0;
                     width: 15px;
                     height: 15px;
-
                 }
             }
         }

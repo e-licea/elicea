@@ -33,7 +33,8 @@ export default function Contact() {
             <div>
 
             <div className = 'contact-ad'>
-                Something goes here
+                <img src="https://drive.google.com/uc?id=1BjFn_Ip0HjCSbYyKf3aKCs4OGa-azoRP" alt="" />
+                <p>Thank you for visiting! Come back and check back soon for more updates!</p>
             </div>
             <form onSubmit = {onSubmit} >
                 <label>Name :
