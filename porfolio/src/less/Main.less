@@ -208,6 +208,10 @@
     color: white;
     div{
         .flex-flow(row, no-wrap, space-evenly);
+        @media @tablet {
+            .flex-flow(column, no-wrap, space-around);
+
+        }
         form{
             .flex-flow(column, wrap, center);
             width: 50%;
@@ -215,7 +219,7 @@
                 
                 input{
                     display: block;
-                    .w(50%, 350px, 600px);
+                    .w(50%, 320px, 600px);
                 }
             }
             button{
@@ -235,6 +239,6 @@
 }
 textarea{
     .h(200px, none, none);
-    .w(50%, 350px, 600px);
+    .w(50%, 320px, 600px);
     display: block;
 }

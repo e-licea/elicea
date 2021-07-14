@@ -75,7 +75,8 @@
   height: 250px;
   margin: 0;
   position: fixed;
-  bottom: -250px;
+  left: 0;
+  bottom: -300px;
   left: 10px;
   box-shadow: -8px 0 6px -6px black;
   flex-direction: column-reverse;
@@ -576,6 +577,14 @@
   justify-content: space-evenly;
   flex-wrap: no-wrap;
 }
+@media (max-width: 1000px) {
+  #Contact div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: no-wrap;
+  }
+}
 #Contact div form {
   display: flex;
   flex-direction: column;
@@ -585,7 +594,7 @@
 }
 #Contact div form label input {
   display: block;
-  min-width: 350px;
+  min-width: 320px;
   max-width: 600px;
   width: 50%;
 }
@@ -609,7 +618,7 @@ textarea {
   min-height: none;
   max-height: none;
   height: 200px;
-  min-width: 350px;
+  min-width: 320px;
   max-width: 600px;
   width: 50%;
   display: block;
