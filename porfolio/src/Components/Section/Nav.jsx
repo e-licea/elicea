@@ -40,6 +40,8 @@ export default function Nav() {
     return (
 
             <div className = {!hideMenu?'hideTheMenu':'Nav'} >
+
+                { windowSize < 1001? null : <h4>Esteban Licea Jr.</h4>} 
                 <div className='social-media'>
                     <a target = '_blank'  href="https://github.com/e-licea"><img src={github} alt="" /></a>
                 </div>

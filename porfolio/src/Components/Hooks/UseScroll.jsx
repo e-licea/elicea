@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 export default function useScroll() {
     
     //initial state of scroll position (at the top)
-    const [scroll, setScroll] = useState(null);
+    const [scroll, setScroll] = useState(0);
     const [prevScroll, setPrevScroll ] = useState(0);
 
     useEffect(() => {
