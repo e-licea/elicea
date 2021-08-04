@@ -44,7 +44,6 @@
         text-align: center;
         line-height: 30px;
         opacity: .94;
-
         .bg(@infrared);
         a{
             img{
@@ -58,16 +57,13 @@
     
 }
 .social-media{
-    width: 100%;
     padding: 1%;
-    .flex-flow(row, no-wrap, right);
-    height: 35px;
-    width: 35px;
+    width: 100%;
     a{
         width: 100%;
-        text-align: right;
         height: 20px;
         width: 20px;
+        float: right;
 
         img{
             height: 20px;
@@ -85,7 +81,10 @@
     .w(250px, none, none);
     .h(max-content, none, none);
     opacity: .94;
-
+    h4{
+        width: 100%;
+        text-align: right;
+    }
     @media @tablet {
         
         bottom: 60px;

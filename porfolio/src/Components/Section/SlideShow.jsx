@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { useSpring, animated } from 'react-spring'
-import { Link } from 'react-router-dom';
 
 
 export default class SlideShow extends Component {
@@ -37,13 +36,13 @@ export default class SlideShow extends Component {
     if (e.target.id != 'next'){
       console.log('prev')
       this.setState({
-        active: this.state.active.id == 0? imgArr[0] : imgArr[this.state.active.id - 1],
+        active: this.state.active.id == 0? imgArr[1] : imgArr[this.state.active.id - 1],
       })
     }
     else {
       console.log('next')
       this.setState({
-        active: this.state.active.id == 0? imgArr[0] : imgArr[this.state.active.id + 1],
+        active: this.state.active.id == 1? imgArr[0] : imgArr[this.state.active.id + 1],
       })
     }
     
@@ -80,10 +79,10 @@ export default class SlideShow extends Component {
           <ul>
           {this.state.active.technologies.map(index=><li>{index}</li>)}
           </ul>
-          {this.state.active.deploy && this.state.active.src? 
+          {this.state.active.deploy || this.state.active.src? 
           <>
           <a target='_blank' href = {this.state.active.src}>Source</a>
-          <a target='_blank' href = {this.state.active.deploy}>Deployed here.</a>
+          <a target='_blank' href = {this.state.active.deploy}>Deploy</a>
           </>
           :null}
           
@@ -123,5 +122,14 @@ const imgArr = [
     desc:'High Ground Restore is a simple front-end application for a starter roofing business. It\'s primary uses are for promoting roofing services, and educating possible clients on roof systems. The React app was carefully built so it is concise and easy to manuever across all platforms. It also has an easy to use contact form to develop relationships with site visitors. A bonus weather widget can be found on the site to let users determine wether or not it is a good day to do some roof work.',
     challenges: ['Creating branding from scratch.', 'Implementing a fully-functional contact form.'],
     technologies: ['ReactJS', 'React Libraries', 'Google Cloud API', 'Less CSS']
+  },
+  {
+    id: 1,
+    project: 'React Sneakers',
+    src:'https://github.com/e-licea/react-snkrz',
+    imgSrc: 'https://drive.google.com/uc?id=18AG0dPF4HT1unHd9VUP15I1G63ut4uGk',
+    desc:'React Sneakers is a small personal project that keeps track of sneaker information. It has two main sections. One section (Upcoming) that keeps track of upcoming shoe releases. It relies on a Node back-end api that scrapes sneaker websites for information, it then parses the information into JSON format, once in JSON format, it can provide information into the front-end. The second section (Home) has a quick search component that is able to search through a database of sneakers that will show users a custom profile on any sneaker that is searched.',
+    challenges: ['Converting code to asynchronous methods.', 'Parsing HTML into readable JSON format.'],
+    technologies: ['ReactJS', 'NodeJS', 'Express', 'Google Cloud API', 'Less CSS']
   }
 ]

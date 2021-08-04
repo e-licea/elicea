@@ -43,14 +43,14 @@
   justify-content: space-between;
   flex-wrap: no-wrap;
   position: relative;
-  margin: 0 auto;
-  padding: 50px 2%;
+  padding: 50px 5%;
 }
 @media (max-width: 1000px) {
   .Section {
     min-width: none !important;
     max-width: none !important;
     width: 75% !important;
+    margin: 0 auto;
   }
 }
 @media (max-width: 750px) {
@@ -131,20 +131,14 @@
   height: 15px;
 }
 .social-media {
-  width: 100%;
   padding: 1%;
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-  flex-wrap: no-wrap;
-  height: 35px;
-  width: 35px;
+  width: 100%;
 }
 .social-media a {
   width: 100%;
-  text-align: right;
   height: 20px;
   width: 20px;
+  float: right;
 }
 .social-media a img {
   height: 20px;
@@ -167,6 +161,10 @@
   max-height: none;
   height: max-content;
   opacity: 0.94;
+}
+.Nav h4 {
+  width: 100%;
+  text-align: right;
 }
 @media (max-width: 1000px) {
   .Nav {
@@ -341,18 +339,24 @@
   font-size: 1.3rem;
   min-width: none;
   max-width: none;
-  width: 70%;
+  width: 65%;
   position: absolute;
-  right: 0;
+  right: 100px;
   padding-bottom: 10%;
+  margin: 0 auto;
+}
+@media (max-width: 1250px) {
+  .Main {
+    right: 20px;
+  }
 }
 @media (max-width: 1000px) {
   .Main {
-    margin: 0;
     padding: 0 1%;
     min-width: none;
     max-width: none;
     width: 100%;
+    right: 0;
   }
 }
 .Main-h3 {
@@ -695,6 +699,7 @@ textarea {
 .photo-container {
   position: relative;
   overflow: hidden;
+  max-height: 600px;
   background-color: black;
 }
 .photo-container img {
@@ -796,14 +801,14 @@ textarea {
 body,
 .App,
 html,
-#root {
+#root,
+.Section {
   min-width: none;
   max-width: none;
   width: 100%;
   min-height: none;
   max-height: none;
-  height: auto;
-  margin: 0;
+  height: 100%;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
 }

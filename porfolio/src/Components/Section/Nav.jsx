@@ -19,9 +19,9 @@ export default function Nav() {
     const [scroll, setScroll] = useState(0);
     let winScroll = useScroll();
 
-    const [ hideMenu, setHideMenu ] = useState(false);
+    const [ hideMenu, setHideMenu ] = useState(true);
 
-    useEffect(async () => {
+    useEffect( () => {
             setWindowSize(winSize.width)
             //console.log(windowSize)
             setScroll(winScroll)
