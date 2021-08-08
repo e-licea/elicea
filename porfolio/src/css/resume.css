@@ -1,0 +1,85 @@
+span{
+    font-weight: 400;
+}
+
+.date{
+    font-weight: 300;
+    font-style: italic;
+}
+
+p{
+    font-weight: 300;
+}
+
+h1{
+    font-weight: 300;
+}
+
+h3{
+    border-bottom: dotted 1px black;
+}
+
+h4{
+    margin: 0;
+    font-weight: 300;
+}
+h5{
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+
+html{
+    height: 1300px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    height: 1100px;
+    max-width: 800px;
+    border: 2px solid black;
+    box-shadow: 10px 15px #888888;
+    background-color: white;
+    width: 80%;
+    padding: 3% 5% 8% 5%;
+    margin: 0 auto;
+    padding-bottom: 3%;    
+}
+
+header{
+    margin: 0 auto;
+    width: 70%;
+}
+
+#name{
+    text-align: center;
+
+}
+
+#contact-info{
+    text-align: center;
+}
+
+#xp-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.xp-job{
+    display: flex;
+}
+
+.xp-job-role{
+    width: 30%;
+    line-height: normal;
+    padding: 1%;
+}
+
+.xp-description{
+    width: 70%;
+    padding: 1%;
+}

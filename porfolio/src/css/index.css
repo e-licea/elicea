@@ -36,7 +36,7 @@
   max-height: none;
   height: auto;
   min-width: auto;
-  max-width: 1200px;
+  max-width: 900px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -347,7 +347,7 @@
 }
 @media (max-width: 1250px) {
   .Main {
-    right: 20px;
+    right: 0px;
   }
 }
 @media (max-width: 1000px) {
@@ -356,7 +356,8 @@
     min-width: none;
     max-width: none;
     width: 100%;
-    right: 0;
+    left: 0;
+    margin: 0 auto;
   }
 }
 .Main-h3 {

@@ -50,6 +50,7 @@ export default function Nav() {
                     <li><Link to = 'Skills' smooth = {true} duration = {300} offset={0}>Skills</Link></li>
                     <li><Link to = 'Projects' smooth = {true} duration = {300} offset={0}>Projects</Link></li>
                     <li><Link to = 'Contact' smooth = {true} duration = {300} offset={0}>Contact</Link></li>
+                    {/*<li><L to = '/the-lab' >Blog</L></li>
                     {/*<li><L to = '/the-lab' >Blog</L></li>*/}
                     {
                     scroll > 350? 
