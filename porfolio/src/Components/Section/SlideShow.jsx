@@ -116,21 +116,21 @@ const imgArr = [
   {
     id: 0,
     project: 'High Ground Restore',
-    deploy:'https://dreamy-pare-fd4639.netlify.app/',
+    deploy:'https://www.highgroundrestore.com',
     src:'https://github.com/e-licea/company/tree/master, https://github.com/e-licea/redux-teammanager-api',
     imgSrc: 'https://drive.google.com/uc?id=1fO0uTIUWbHLT9uucFNsmwkG4_JggXcq4',
-    desc:'High Ground Restore is a simple front-end application for a starter roofing business. It\'s primary uses are for promoting roofing services, and educating possible clients on roof systems. The React app was carefully built so it is concise and easy to manuever across all platforms. It also has an easy to use contact form to develop relationships with site visitors. A bonus weather widget can be found on the site to let users determine wether or not it is a good day to do some roof work.',
+    desc:'High Ground Restore is a simple front-end application for a starter roofing business. It\'s primary uses are for promoting roofing services, and educating possible clients on their own roof systems. The app was carefully built so it is concise and easy to manuever across all platforms through media queries. It also has an easy to use contact form that is able to send emails very easily to the companies inbox with EmailJS.',
     challenges: ['Creating branding from scratch.', 'Implementing a fully-functional contact form.'],
-    technologies: ['ReactJS', 'React Libraries', 'Google Cloud API', 'Less CSS']
+    technologies: ['React', 'Weather API', 'Google Cloud API', 'Less CSS']
   },
   {
     id: 1,
-    project: 'React Sneakers',
+    project: 'Sneaker Tool',
     src:'https://github.com/e-licea/react-snkrz',
     imgSrc: 'https://drive.google.com/uc?id=18AG0dPF4HT1unHd9VUP15I1G63ut4uGk',
-    desc:'React Sneakers is a small personal project that keeps track of sneaker information. It has two main sections. One section (Upcoming) that keeps track of upcoming shoe releases. It relies on a Node back-end api that scrapes sneaker websites for information, it then parses the information into JSON format, once in JSON format, it can provide information into the front-end. The second section (Home) has a quick search component that is able to search through a database of sneakers that will show users a custom profile on any sneaker that is searched.',
+    desc:'This app is a sneaker tool. It is a small application keeps track of sneaker information. It has two main sections. One section (Upcoming) that keeps track of upcoming shoe releases by making asynchronous calls to the web every time pagination is changed. The back-end is engineered to scrape information on sneaker websites, so the information can be parsed to JSON to create an api. The second section (Home) has a quick search component that is able to search through a database of sneakers that will show users a custom profile on pretty much any popular sneaker anyone can think of.',
     challenges: ['Converting code to asynchronous methods.', 'Parsing HTML into readable JSON format.'],
-    technologies: ['ReactJS', 'NodeJS', 'Express', 'Google Cloud API', 'Less CSS']
+    technologies: ['React', 'Cheerio', 'Node', 'Express', 'Google Cloud API', 'Less CSS']
   },
   {
     id: 2,
@@ -138,8 +138,9 @@ const imgArr = [
     src:'https://github.com/e-licea/react-snkrz',
     deploy: 'https://dreamy-pare-fd4639.netlify.app/',
     imgSrc: 'https://drive.google.com/uc?id=1LR-PbXy6fcdFiKFVEUmToIR1JYjRPc9b',
-    desc:'This project is another full-stack application. It is a team collaborator messenger much like Slack or Discord. The front-end is build with React and it uses Redux for state management since it is designed to be a larger application. The back-end is constructed with NodeJS and is able to keep data in persistance with a PostgreSQL database.',
-    challenges: ['Organizing Redux state', 'Authenticating entire application with JSON web tokens', 'Setting up Postgres database schema', ],
-    technologies: ['ReactJS', 'Redux', 'NodeJS', 'Express', 'Google Cloud API', 'Less CSS', 'PostgreSQL']
+    desc:'This project is a full-stack application. It is a team collaborator much like Slack or Discord. Users need to create an account to use the application. Once signed in, a user defaults with the rank of a \'Member\'. Members are able to message others individually, or they can create their own groups and collaborate amongst others. Users are also able to search through groups that they are able to join based on their rank. Admins and Moderators of the application will have more back-end privileges. The front-end of this application is build with React and it uses Redux for it\'s state management. The back-end is constructed with NodeJS and is able to keep data in persistance with a PostgreSQL database.',
+    challenges: ['Redux state', 'Adding Auth with JSON web tokens', 'Creating a logical Postgres database schema', ],
+    technologies: ['React', 'Redux', 'Node', 'Express', 'Google Cloud API', 'Less CSS', 'PostgreSQL'],
+    currentlyWorking:['Creating user profile', 'update, add, and delete functionalities']
   }
 ]

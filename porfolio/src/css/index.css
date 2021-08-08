@@ -339,7 +339,7 @@
   font-size: 1.3rem;
   min-width: none;
   max-width: none;
-  width: 65%;
+  width: 55%;
   position: absolute;
   right: 100px;
   padding-bottom: 10%;
@@ -347,7 +347,8 @@
 }
 @media (max-width: 1250px) {
   .Main {
-    right: 0px;
+    width: 60%;
+    right: px;
   }
 }
 @media (max-width: 1000px) {
@@ -805,11 +806,12 @@ html,
 #root,
 .Section {
   min-width: none;
-  max-width: none;
+  max-width: 1900px;
   width: 100%;
   min-height: none;
   max-height: none;
   height: 100%;
+  margin: 0 auto;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
 }
