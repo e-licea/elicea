@@ -136,7 +136,8 @@ const imgArr = [
     id: 2,
     project: 'Redux Team Collaborator',
     src:'https://github.com/e-licea/react-snkrz',
-    imgSrc: 'https://drive.google.com/uc?id=1LR-PbXy6fcdFiKFVEUmToIR1JYjRPc9b/view?usp=sharing',
+    deploy: 'https://dreamy-pare-fd4639.netlify.app/',
+    imgSrc: 'https://drive.google.com/uc?id=1LR-PbXy6fcdFiKFVEUmToIR1JYjRPc9b',
     desc:'This project is another full-stack application. It is a team collaborator messenger much like Slack or Discord. The front-end is build with React and it uses Redux for state management since it is designed to be a larger application. The back-end is constructed with NodeJS and is able to keep data in persistance with a PostgreSQL database.',
     challenges: ['Organizing Redux state', 'Authenticating entire application with JSON web tokens', 'Setting up Postgres database schema', ],
     technologies: ['ReactJS', 'Redux', 'NodeJS', 'Express', 'Google Cloud API', 'Less CSS', 'PostgreSQL']
