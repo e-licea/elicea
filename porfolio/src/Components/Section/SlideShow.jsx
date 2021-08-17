@@ -152,7 +152,7 @@ const imgArr = [
     project: 'Sneaker Tool',
     src:'https://github.com/e-licea/react-snkrz',
     imgSrc: SneakerResults,
-    desc:'This app is a sneaker tool. It is a small application keeps track of sneaker information. It has two main sections. One section (Upcoming) that keeps track of upcoming shoe releases by making asynchronous calls to the web every time pagination is changed. The back-end is engineered to scrape information on sneaker websites, so the information can be parsed to JSON to create an api. The second section (Home) has a quick search component that is able to search through a database of sneakers that will show users a custom profile on pretty much any popular sneaker anyone can think of.',
+    desc:'This app is a sneaker tool. It is a small application keeps track of relevant sneaker information. It deals with two main sections. The first section is where a user can research sneakers that are releasing in the near future. The second section allows for users to search through a database of sneakers to find out demographics of a specific shoe. Information can entail when the shoe was released, how much it is worth, sizes available, and even where it can be bought.',
     challenges: ['Converting code to asynchronous methods.', 'Parsing HTML into readable JSON format.'],
     technologies: ['React', 'Cheerio', 'Node', 'Express', 'Less CSS']
   },
@@ -162,7 +162,7 @@ const imgArr = [
     src:'https://github.com/e-licea/react-snkrz',
     deploy: 'https://dreamy-pare-fd4639.netlify.app/',
     imgSrc: TeamManager,
-    desc:'This project is a full-stack application. It is a team collaborator much like Slack or Discord. Users need to create an account to use the application. Once signed in, a user defaults with the rank of a \'Member\'. Members are able to message others individually, or they can create their own groups and collaborate amongst others. Users are also able to search through groups that they are able to join based on their rank. Admins and Moderators of the application will have more back-end privileges. The front-end of this application is build with React and it uses Redux for it\'s state management. The back-end is constructed with NodeJS and is able to keep data in persistance with a PostgreSQL database. The deployed version can be accessed with the username : mscott passkey: password.',
+    desc:'This project is a team collaborator inspired by Slack and Discord. This application allows for a team of productive people to message each other through group chats and direct messaging. Every team can have a main administrator who oversees the entire team and can elect moderators as well. Every member holds a rank that may come with limitations since the application is built with security in mind. Login Authentication is required as well as a consistent session token on every application request. You can try out the application live by clicking on the deploy link and logging in as Michael Scott:(username: mscott, passkey: password)',
     challenges: ['Redux state', 'Adding Auth with JSON web tokens', 'Creating a logical Postgres database schema' ],
     technologies: ['React', 'Redux', 'Node', 'Express', 'Less CSS', 'PostgreSQL'],
     currentlyWorking:['Creating user profile', 'update, add, and delete functionalities']
