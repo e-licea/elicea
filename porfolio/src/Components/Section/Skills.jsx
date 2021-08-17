@@ -1,5 +1,19 @@
 import React from 'react'
 
+import Python from '../../img/portfolioImg/python.png'
+import NodeJS from '../../img/portfolioImg/node.png'
+import PostgreSQL from '../../img/portfolioImg/postgresql.png'
+import MySQL from '../../img/portfolioImg/mysql.png'
+import react from '../../img/portfolioImg/react.svg'
+import Redux from '../../img/portfolioImg/redux.svg'
+import HTML from '../../img/portfolioImg/html.png'
+import CSS from '../../img/portfolioImg/css.png'
+import JS from '../../img/portfolioImg/js.png'
+import OSX from '../../img/portfolioImg/osx.png'
+import Windows from '../../img/portfolioImg/win.png'
+import Linux from '../../img/portfolioImg/linux.png'
+
+
 
 const skills = [
     {
@@ -13,7 +27,7 @@ const skills = [
     },    {
         skill: "Python",
         end: 'back',
-        img: 'https://drive.google.com/uc?id=1fTphCmnvi2z2j07oAtUb_yhxZ6GosYWc',
+        img: Python,
         description: [
             "Data Scraping and browser automation with Selenium.",
             "Adding SQL databases and models for persistence",
@@ -27,7 +41,7 @@ const skills = [
     {
         skill: "NodeJS",
         end: 'back',
-        img: 'https://drive.google.com/uc?id=1AnMDvTV_iM_O53ZzUBYQ3CdkU9ErSofk',
+        img: NodeJS,
         description: [
             "Setting up setting up express servers with route handlers.",
             "Connecting RESTful APIs with sql databases for persistence.",
@@ -39,7 +53,7 @@ const skills = [
     {
         skill: "HTML",
         end: 'front',
-        img: 'https://drive.google.com/uc?id=1bMowbcmamCaOtW7QSMNat5E2ekYPBsTc',
+        img: HTML,
         description: [
             "Setting up setting up express servers with route handlers.",
             "Connecting RESTful APIs with sql databases for persistence.",
@@ -51,7 +65,7 @@ const skills = [
     {
         skill: "CSS",
         end: 'front',
-        img: 'https://drive.google.com/uc?id=1oD2Vta5BIfuevMf6WINjkd966zYqiC6Q',
+        img: CSS,
         description: [
             "Setting up setting up express servers with route handlers.",
             "Connecting RESTful APIs with sql databases for persistence.",
@@ -63,7 +77,7 @@ const skills = [
     {
         skill: "JavaScript",
         end: 'front',
-        img: 'https://drive.google.com/uc?id=13bQU7v5XupVbNkmtb6GE7Wm03Uws75m7',
+        img: JS,
         description: [
             "Creating and deploying back end restful APIs with node express",
             "Adding SQL databases and models for persistence",
@@ -75,7 +89,7 @@ const skills = [
     {
         skill: "ReactJS",
         end: 'front',
-        img: 'https://drive.google.com/uc?id=1Os9iSrisdY138k3DwxKeCIbO_aoWJwVZ',
+        img: react,
         description: [
             "Working with functional and class components with dynamic state.",
             "Creating global state with useContext",
@@ -88,7 +102,7 @@ const skills = [
     {
         skill: "MySql",
         end: 'back',
-        img: 'https://drive.google.com/uc?id=1I-dL0bosBKwooPJlz8e7YiKj1rhcYro-',
+        img: MySQL,
         description: [
             "D",
             "Adding SQL databases and models for persistence",
@@ -100,7 +114,7 @@ const skills = [
     {
         skill: "PostgreSql",
         end: 'back',
-        img: 'https://drive.google.com/uc?id=14pQLaTTiy67h49lhaq5AcZkt1mfPPiSY',
+        img: PostgreSQL,
         description: [
             "Setting up setting up express servers with route handlers.",
             "Connecting RESTful APIs with sql databases for persistence.",
@@ -113,7 +127,7 @@ const skills = [
     {
         skill: "Mac OSX",
         end: 'os',
-        img: 'https://drive.google.com/uc?id=1VWhmdkQ6YmhkslFRt78B133z6zEelRWa',
+        img: OSX,
         description: [
             "D",
             "Adding SQL databases and models for persistence",
@@ -126,7 +140,7 @@ const skills = [
     {
         skill: "Windows10",
         end: 'os',
-        img: 'https://drive.google.com/uc?id=1A9CmHJRFKYx-MOyKtBQaN0KX9sN2kl6k',
+        img: Windows,
         description: [
             "D",
             "Adding SQL databases and models for persistence",
@@ -139,7 +153,7 @@ const skills = [
     {
         skill: "Linux",
         end: 'os',
-        img: 'https://drive.google.com/uc?id=1A0ykVzN7X0M7a8XySQhJNRx8NYSpE1Qi',
+        img: Linux,
         description: [
             "D",
             "Adding SQL databases and models for persistence",
@@ -151,7 +165,7 @@ const skills = [
     {
         skill: " React Redux",
         end: 'front',
-        img: 'https://drive.google.com/uc?id=1MOTxYJzHEhz36D4rVr7du70umvT-IH0F',
+        img: Redux,
         description: [
             "Creating and deploying back end restful APIs with node express",
             "Adding SQL databases and models for persistence",
