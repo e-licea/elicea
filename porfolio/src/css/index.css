@@ -188,7 +188,7 @@
   text-align: center;
   line-height: 30px;
   opacity: 0.94;
-  background-color: #ff2052;
+  background-color: var(--primary-background);
 }
 .hideTheMenu #Back2Top a img {
   padding: 0;
@@ -315,7 +315,6 @@
     display: inline-block;
     text-align: center;
     line-height: 30px;
-    background-color: #ff2052;
   }
   .Nav #back2Top a img {
     padding: 0;
