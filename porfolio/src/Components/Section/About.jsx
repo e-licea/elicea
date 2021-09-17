@@ -5,7 +5,7 @@ export default function About() {
         <div id = 'Intro'
         data-aos="fade-up-right" 
         data-aos-duration="600"
-        data-aos-offset="300"
+        data-aos-offset="600"
         >
             <h3 className="Main-h3"># Intro</h3>
 

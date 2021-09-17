@@ -34,7 +34,7 @@ export default function Contact() {
         <div 
         data-aos="fade-up-left" 
         data-aos-duration="600"
-        data-aos-offset="300" 
+        data-aos-offset="600" 
         id = 'Contact'>
             <h3 className="Main-h3"># Contact</h3>
             <div>
