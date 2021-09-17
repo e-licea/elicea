@@ -1,13 +1,27 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import Typical from 'react-typical';
+import { appContext } from '../Context/appContext';
 //bit.dev imports
 
 export default function Jumbotron() {
+
+    const darkMode = useContext(appContext).darkMode
+    const setDarkMode = useContext(appContext).setDarkMode
+    useEffect(() => {
+        
+        return darkMode
+        
+    }, [darkMode])
     return (
         <>
-        <div id = 'Jumbotron'>
+        <div 
+
+            id = 'Jumbotron'
+        >
            <ToolBar/>
-           <span id = 'term'>root@elicea:~#</span>
+           <span 
+ 
+           id = 'term'>root@elicea:~#</span>
                        <Typical
                 className = 'type'
                 wrapper = 'span'

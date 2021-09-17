@@ -1,20 +1,21 @@
 .Section{
-    .h(auto, none, none);
-    .w(100%, auto, 900px);
+    .w(100%);
+    .min-w(auto);
+    .max-w(900px);
     .flex-flow(row, no-wrap, space-between);
     position: relative;
     padding: 50px 5%;
     @media @tablet {
-         .w(75%, none, none)!important;
+         .w(75%)!important;
         margin: 0 auto;
 
     }
     @media @750px {
-        .w(90%, none, none)!important;
+        .w(90%)!important;
     }
     @media @mobile {
         padding: 0;
-        .w(100%, none, none)!important;
+        .w(100%)!important;
     }
 
 

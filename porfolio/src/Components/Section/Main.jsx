@@ -8,7 +8,8 @@ import Contact from './Contact';
 //bit.dev imports
 import About from './About';
 import Skills from './Skills';
-
+import ToggleDarkMode from '../utils/ToggleDarkMode'
+import ScrollAnimation from 'react-animate-on-scroll';
 //Hooks 
 
 
@@ -19,10 +20,10 @@ export default function Main() {
     return (
             <>
                 <div className = 'Main'>
-                    
+                    <ToggleDarkMode/>
                     <Jumbotron/>
-                    <About/>                    
-                    <Skills/>
+                    <About/>  
+                    <Skills/>                  
                     <Projects/>
                     <Contact/>       
                 </div>

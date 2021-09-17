@@ -31,7 +31,11 @@ export default function Contact() {
     }
 
     return (
-        <div id = 'Contact'>
+        <div 
+        data-aos="fade-in" 
+        data-aos-duration="600"
+        data-aos-offset="300" 
+        id = 'Contact'>
             <h3 className="Main-h3"># Contact</h3>
             <div>
 

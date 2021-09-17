@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { Link } from 'react-scroll';
 import { Link as L } from 'react-router-dom'
-
+import { appContext } from '../Context/appContext';
 //Icons
 import github from '../../img/icons/github.svg'
+import githubDark from '../../img/icons/dark/github.png'
+import githubLight from '../../img/icons/light/github.png'
 import up from '../../img/icons/up.svg'
 import down from '../../img/icons/down.svg'
 import menu from '../../img/portfolioImg/m-menu.svg'
@@ -20,17 +22,21 @@ export default function Nav() {
     const [scroll, setScroll] = useState(0);
     let winScroll = useScroll();
 
+    const darkMode = useContext(appContext).darkMode
+    const setDarkMode = useContext(appContext).setDarkMode
     const [ hideMenu, setHideMenu ] = useState(true);
 
     useEffect( () => {
             setWindowSize(winSize.width)
-            //console.log(windowSize)
+            //console.log(windowSize);
             setScroll(winScroll)
             //console.log(scroll)
             if(windowSize > 1000){
                 setHideMenu(true)
             }
     }, [winSize.width, winScroll])
+
+
 
     function hideTheMenu(){
         console.log(hideMenu)
@@ -44,7 +50,7 @@ export default function Nav() {
 
                 { windowSize < 1001? null : <h4>Esteban Licea Jr.</h4>} 
                 <div className='social-media'>
-                    <a target = '_blank'  href="https://github.com/e-licea"><img src={github} alt="" /></a>
+                    <a target = '_blank'  href="https://github.com/e-licea"><img src={darkMode?githubLight: githubDark} alt="" /></a>
                 </div>
                 <ul>
                     <li><Link to = 'Intro' smooth = {true} duration = {300} offset={0}>Intro</Link></li>

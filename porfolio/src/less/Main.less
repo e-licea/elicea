@@ -14,7 +14,7 @@
     }
     @media @tablet {
         padding: 0 1%;
-        .w(100%, none, none);
+        .w(100%);
         left: 0;
         margin: 0 auto;
 
@@ -25,6 +25,7 @@
     .font-size(1.7rem);
     margin: 3% 0;
     .font-style(@Super, none);
+    .c(var(--secondary-text));
 
 }
 #Intro, #Skills, #Projects, #Contact{
@@ -33,13 +34,17 @@
 
 #Jumbotron{
     .bg(#272727);
-    .w(100%, none, none);
-    .h(400px, 250px, 500px);
+    .w(100%);
+    .h(400px);
+    .min-h(250px);
+    .max-h(500px);
     .flex-flow(row, wrap, none);
     position: relative;
     .font-style(@Super, regular);
     @media @tablet {
-        .h(300px, 250px, 500px);
+        .h(300px);
+        .min-h(250px);
+        .max-h(500px);
     }
 }
 
@@ -75,16 +80,16 @@
 #close, #expand, #mini{
     margin-top: 15px;
     .padding(4px);
-    .w(15px, none, none);
-    .h(15px, none, none);
+    .w(15px);
+    .h(15px);
     border-radius: 50%;
     text-align: center;
     vertical-align: middle;
 }
 
 #close > img, #expand > img, #mini > img{
-    .w(5px, none, none);
-    .h(5px, none, none);
+    .w(5px);
+    .h(5px);
 
 }
 #close{
@@ -99,15 +104,15 @@
 }
 
 .ToolBar{
-    .w(100%, none, none);
-    .h(40px, none, none);
+    .w(100%);
+    .h(40px);
     .bg(#5c5c5c);
     position: absolute;
     top: 0;
     left: 0;
     div{
-        .h(40px, none, none);
-        .w(100px, none, none);
+        .h(40px);
+        .w(100px);
         .flex-flow(row, no-wrap, space-evenly);
         float: right;
 
@@ -119,12 +124,12 @@
     position: absolute;
     bottom: 5px;
     right: 20px;
-    .w(30%, none, none);
+    .w(30%);
 }
 //ABOUT SECTION
 
 #Intro{
-    .bg(@infrared);
+    .bg(var(--intro-component));
     color: @white;
     p{
         font-size: 1.1rem;
@@ -144,8 +149,8 @@
         .flex-flow(column, wrap, space-around);
         h4{
             text-align: center;
-            .w(100%, none, none);
-            .c(#353535);
+            .w(100%);
+            .c(var(--primary-text));
         }
         .os-skills, .fe-skills, .be-skills{
             .flex-flow(row, wrap, space-evenly);
@@ -154,21 +159,21 @@
             margin-top: 2%;
             margin-bottom: 1%;
             display: inline-block;
-            .w(140px, none, none)!important;
-            .h(180px, none, none);
+            .w(140px)!important;
+            .h(180px);
             @media @tablet {
                 
             }
             .padding(0);
-            .w(100%, none, none);
+            .w(100%);
             .img-con{
                 .flex-flow(column, no-wrap, space-evenly);
-                .w(130px, none, none);
-                .h(130px, none, none);
+                .w(130px);
+                .h(130px);
 
                 img{
-                    .w(70px, none, none);
-                    .h(70px, none, none);
+                    .w(70px);
+                    .h(70px);
                     margin: 0 auto;
                 }
                 p{
@@ -178,9 +183,9 @@
             }
             .skill-list{
                 .padding(0);
-                .w(65%, none, none);
+                .w(65%);
                 @media @tablet {
-                    .w(100%, none, none);
+                    .w(100%);
                     
                 }
                 li{
@@ -199,7 +204,8 @@
 #Projects{
     padding-bottom: 10%;
     .project-overview{
-        .h(max-content, none,none);
+        .h(max-content);
+        .c(var(--primary-text));
 
         h4{
             margin: 4% 0;
@@ -248,12 +254,15 @@
                 font-size: 1rem;
                 input{
                     display: block;
-                    .w(50%, 320px, 600px);
+                    .w(100%);
+                }
+                textarea{
+                    .w(100%);
                 }
             }
             button{
-                .w(100px, none, none);
-                .h(40px, none, none);
+                .w(100px);
+                .h(40px);
                 border: none;
                 .bg(@infrared);
                 .font-style(@Super, none);
@@ -277,6 +286,7 @@
 
             }
             p{
+                .c(var(--primary-text));
                 text-align: center;
                 margin: 3% 0;
             }
@@ -284,7 +294,9 @@
     }
 }
 textarea{
-    .h(200px, none, none);
-    .w(50%, 320px, 600px);
+    .h(200px);
+    .w(50%);
+    .min-w(320px);
+    .max-w(600px);
     display: block;
 }

@@ -3,8 +3,8 @@
     z-index: 9;
     align-items: center;
     .bg(yellow);
-    .w(150px, none, none);
-    .h(250px, none, none);
+    .w(150px);
+    .h(250px);
     margin: 0;
     position: fixed;
     left: 0;
@@ -31,7 +31,7 @@
         position: relative;
         list-style: none;
         text-align: center;
-        .h(100%, none, none);
+        .h(100%);
     }
     #Back2Top{
         cursor: pointer;
@@ -79,21 +79,22 @@
     z-index: 9;
     padding: 0;
     margin-top: 1%;
-    .w(250px, none, none);
-    .h(max-content, none, none);
+    .w(250px);
+    .h(max-content);
     opacity: .94;
     h4{
         width: 100%;
         text-align: right;
+        .c(var(--primary-text));
     }
     @media @tablet {
         
         bottom: 60px;
         left:40px;
         margin: 0;
-        .w(150px, none, none);
-        .h(250px, none, none);
-        .bg(@infrared);
+        .w(150px);
+        .h(250px);
+        .bg(var(--nav-links-on-hover));
         .r-shadow();
         flex-direction: column-reverse;
 
@@ -106,8 +107,8 @@
         background-size: cover;
         border-radius: 50%;
         overflow: hidden;
-        .w(14rem, none, none);
-        .h(14rem , none, none);
+        .w(14rem);
+        .h(14rem);
         margin: 0 auto;
         @media @tablet{
             width: 13rem;
@@ -125,12 +126,13 @@
         position: relative;
         list-style: none;
         text-align: right;
-        .w(100%, none, none);
+        .w(100%);
         margin-top: 4%;
+        .c(var(--primary-text));
         @media @tablet {
             margin: 0;
             text-align: center;
-            .h(100%, none, none);
+            .h(100%);
         }
     };
     #hideMenu{
@@ -149,14 +151,14 @@
     }
 
     #back2Top{
+        .fade-in(1s);
         width: 30px;
         height: 30px;
         display: inline-block;
-        text-align: center;
         opacity: .94;
         line-height: 30px;
-        .bg(@infrared);
-        color: white;
+        .bg(var(--back-to-top-button));
+
         @media @tablet {
             cursor: pointer;
             position: fixed;
@@ -177,7 +179,7 @@
             }
         }
         &:hover{
-            .bg(black);
+            .bg(var(--secondary-background));
         }
         a{
             display: inline-block;
@@ -212,7 +214,7 @@
         }
         .font-style(@Super, regular);
         &:hover{
-            .bg(@infrared);
+            .bg(var(--nav-links-on-hover));
             color: white;
             cursor: pointer;
 
@@ -220,7 +222,7 @@
         @media @tablet {
             .padding(-1%);
             .font-size(1.3rem);
-            .w(80px, none, none);
+            .w(80px);
             color: white;
             &:hover{
                 color: antiquewhite;
@@ -234,7 +236,7 @@
 
 #biz-card{
     .padding(0);
-    .w(100%, none, none);
+    .w(100%);
     @media @tablet {
         display: none;
     }
