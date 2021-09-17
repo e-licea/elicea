@@ -389,6 +389,8 @@
   --secondary-text: #81ff87;
   --primary-background: #19252b;
   --secondary-background: #81ff87;
+  --button-one: #cc95dd;
+  --button-two: #81ff87;
   --theme-button-background: #81ff87;
   --theme-button-color: #ffffff;
   --nav-links-on-hover: #cc95dd;
@@ -404,6 +406,8 @@
   --secondary-background: #0c0c0c;
   --nav-links-on-hover: #ff2052;
   --intro-component: #ff2052;
+  --button-one: #ff2052;
+  --button-two: black;
   --theme-button-background: #ff2052;
   --theme-button-color: #ffffff;
   --back-to-top-button: #ff2052;
@@ -770,6 +774,7 @@
 #Skills #CardContainer .SkillCard .img-con p {
   font-size: 1rem;
   text-align: center;
+  color: var(--secondary-text);
 }
 #Skills #CardContainer .SkillCard .skill-list {
   padding: 1%;
@@ -811,15 +816,15 @@
   font-size: 1rem;
 }
 #Projects .project-overview a:last-child {
-  border-left: #272727 2px solid;
+  border-left: var(--primary-text) 2px solid;
 }
 #coffee {
   margin: 1%;
   width: 30px;
 }
 #Contact {
-  background-color: black;
-  color: white;
+  background-color: var(--primary-background);
+  color: var(--primary-text);
 }
 #Contact div {
   display: flex;
@@ -858,10 +863,10 @@
   width: 100px;
   height: 40px;
   border: none;
-  background-color: #ff2052;
+  background-color: var(--button-one);
   font-family: 'Supermercado One', cursive;
   font-weight: none;
-  color: white;
+  color: var(--primary-text);
   font-size: 1rem;
 }
 #Contact div .contact-ad {

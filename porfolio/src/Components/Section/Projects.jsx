@@ -4,7 +4,7 @@ import SlideShow from './SlideShow'
 export default function Projects() {
     return (
         <div 
-        data-aos="fade-in" 
+        data-aos="fade-up-right" 
         data-aos-duration="600"
         data-aos-offset="300"     
         id = 'Projects'>

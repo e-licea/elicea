@@ -179,6 +179,7 @@
                 p{
                     font-size: 1rem;
                     text-align: center;
+                    .c(var(--secondary-text));
                 }
             }
             .skill-list{
@@ -224,7 +225,7 @@
             padding: 1%;
             font-size: 1rem;
             &:last-child{
-                border-left: #272727 2px solid;
+                border-left: var(--primary-text) 2px solid;
             }
         }
 
@@ -237,8 +238,8 @@
 }
 
 #Contact{
-    .bg(black);
-    color: white;
+    .bg(var(--primary-background));
+    .c(var(--primary-text));
     div{
         .flex-flow(row, no-wrap, space-around);
         @media @tablet {
@@ -264,9 +265,10 @@
                 .w(100px);
                 .h(40px);
                 border: none;
-                .bg(@infrared);
+                .bg(var(--button-one));
                 .font-style(@Super, none);
-                color: white;
+                .c(var(--primary-text));
+
                 font-size: 1rem;
 
             }

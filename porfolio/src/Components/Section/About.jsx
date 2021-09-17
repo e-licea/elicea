@@ -3,7 +3,7 @@ import React from 'react'
 export default function About() {
     return (
         <div id = 'Intro'
-        data-aos="fade-in" 
+        data-aos="fade-up-right" 
         data-aos-duration="600"
         data-aos-offset="300"
         >
