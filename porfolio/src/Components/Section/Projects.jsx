@@ -4,9 +4,9 @@ import SlideShow from './SlideShow'
 export default function Projects() {
     return (
         <div 
-        data-aos="fade-up-right" 
+        data-aos="fade-up" 
         data-aos-duration="600"
-        data-aos-offset="600"     
+        data-aos-offset="400"     
         id = 'Projects'>
             <h3 className="Main-h3"># Projects</h3>
             <SlideShow/>

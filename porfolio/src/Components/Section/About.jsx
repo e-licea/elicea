@@ -3,9 +3,9 @@ import React from 'react'
 export default function About() {
     return (
         <div id = 'Intro'
-        data-aos="fade-up-right" 
+        data-aos="fade-up" 
         data-aos-duration="600"
-        data-aos-offset="600"
+        data-aos-offset="400"
         >
             <h3 className="Main-h3"># Intro</h3>
 

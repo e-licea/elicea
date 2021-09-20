@@ -32,9 +32,9 @@ export default function Contact() {
 
     return (
         <div 
-        data-aos="fade-up-left" 
+        data-aos="fade-up" 
         data-aos-duration="600"
-        data-aos-offset="600" 
+        data-aos-offset="400" 
         id = 'Contact'>
             <h3 className="Main-h3"># Contact</h3>
             <div>

@@ -182,9 +182,9 @@ export default function Skills() {
 
     return (
         <div 
-        data-aos="fade-up-left" 
+        data-aos="fade-up" 
         data-aos-duration="600"
-        data-aos-offset="600"
+        data-aos-offset="400"
             id = 'Skills'>
             
             <h3 className="Main-h3"># Skills</h3>

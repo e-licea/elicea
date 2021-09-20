@@ -16,8 +16,8 @@ export default function Jumbotron() {
         <>
         <div 
             data-aos="flip-up" 
-            data-aos-duration="800"
-            data-aos-offset="300"
+            data-aos-duration="500"
+            data-aos-offset="100"
             id = 'Jumbotron'
         >
            <ToolBar/>

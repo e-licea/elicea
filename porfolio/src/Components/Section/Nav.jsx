@@ -62,7 +62,7 @@ export default function Nav() {
                     {
                     scroll > 350? 
                         <li id = {!hideMenu? 'Back2Top': 'back2Top'}>
-                            <Link to='Jumbotron' smooth ={true} duration = {300} offset = {-50}>
+                            <Link to='Jumbotron' smooth ={true} duration = {300} offset = {-100}>
                                 <img src={up} alt="" />    
                             </Link>
                         </li>:null

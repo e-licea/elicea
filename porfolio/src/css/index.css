@@ -112,7 +112,6 @@
   margin: 0 auto;
 }
 .Section {
-  width: 100%;
   max-width: auto;
   max-width: 900px;
   display: flex;
@@ -988,9 +987,16 @@ textarea {
 body,
 .App,
 html,
-#root,
-.Section {
+#root {
   width: 100%;
+  height: 100%;
+}
+body,
+.App,
+html,
+#root,
+.Main,
+.Section {
   background-color: var(--primary-background);
   max-width: 1900px;
   height: 100%;
