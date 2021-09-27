@@ -111,31 +111,91 @@
   position: relative;
   margin: 0 auto;
 }
-.Section {
-  max-width: auto;
-  max-width: 900px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: no-wrap;
+.Render {
+  height: 100%;
   position: relative;
   padding: 50px 5%;
+  color: white;
 }
 @media (max-width: 1000px) {
-  .Section {
+  .Render {
     width: 75% !important;
     margin: 0 auto;
   }
 }
 @media (max-width: 750px) {
-  .Section {
+  .Render {
     width: 90% !important;
   }
 }
 @media (max-width: 550px) {
-  .Section {
+  .Render {
     padding: 0;
     width: 100% !important;
+  }
+}
+.Nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (max-width: 1000px) {
+  .Nav {
+    bottom: 60px;
+    left: 40px;
+    margin: 0;
+    width: 150px;
+    height: 250px;
+    background-color: var(--nav-links-on-hover);
+    box-shadow: 8px 0 6px -6px black;
+    flex-direction: column-reverse;
+  }
+}
+.Nav ul {
+  width: 50%;
+  max-width: 600px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: none;
+  flex-wrap: space-evenly;
+  padding: 1%;
+}
+@media (max-width: 1000px) {
+  .Nav ul {
+    text-align: center;
+    height: 100%;
+  }
+}
+.Nav li {
+  font-family: 'Sora', sans-serif;
+  font-weight: 200;
+  font-size: 1.5rem;
+  line-height: 50px;
+  padding: 2%;
+  font-family: 'Supermercado One', cursive;
+  font-weight: regular;
+}
+.Nav li a {
+  margin-right: 2%;
+  text-decoration: none;
+  color: var(--primary-text);
+}
+.Nav li:hover {
+  background-color: var(--nav-links-on-hover);
+  color: white;
+  cursor: pointer;
+}
+@media (max-width: 1000px) {
+  .Nav li {
+    padding: 0%;
+    font-size: 1.3rem;
+    width: 80px;
+    color: white;
+  }
+  .Nav li:hover {
+    color: antiquewhite;
   }
 }
 .hideTheMenu {
@@ -154,21 +214,6 @@
   left: 10px;
   box-shadow: -8px 0 6px -6px black;
   flex-direction: column-reverse;
-}
-.hideTheMenu #HideMenu {
-  cursor: pointer;
-  position: fixed;
-  bottom: 280px;
-  left: 10px;
-  height: 30px;
-  width: 30px;
-  opacity: 0.94;
-}
-.hideTheMenu #HideMenu img {
-  margin: 0%;
-  padding-top: 0;
-  height: 30px;
-  width: 30px;
 }
 .hideTheMenu ul {
   position: relative;
@@ -194,12 +239,15 @@
   width: 15px;
   height: 15px;
 }
+.focused-link {
+  background-color: #ff2052;
+}
 .social-media {
-  padding: 5%;
-  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .social-media a {
-  width: 100%;
   height: 20px;
   width: 20px;
   float: right;
@@ -208,76 +256,7 @@
   height: 20px;
   width: 20px;
 }
-.Nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  flex-wrap: no-wrap;
-  align-items: center;
-  position: fixed;
-  z-index: 9;
-  padding: 0;
-  margin-top: 1%;
-  width: 250px;
-  height: max-content;
-  opacity: 0.94;
-}
-.Nav h4 {
-  width: 100%;
-  text-align: right;
-  color: var(--primary-text);
-}
-@media (max-width: 1000px) {
-  .Nav {
-    bottom: 60px;
-    left: 40px;
-    margin: 0;
-    width: 150px;
-    height: 250px;
-    background-color: var(--nav-links-on-hover);
-    box-shadow: 8px 0 6px -6px black;
-    flex-direction: column-reverse;
-  }
-}
-.Nav .profile-img {
-  background-image: url('https://drive.google.com/uc?id=1DQCBLj-hPM0BhA25ZBzXKEdjXlUe_fo2');
-  background-position: center;
-  background-size: cover;
-  border-radius: 50%;
-  overflow: hidden;
-  width: 14rem;
-  height: 14rem;
-  margin: 0 auto;
-}
-@media (max-width: 1000px) {
-  .Nav .profile-img {
-    width: 13rem;
-    height: 13rem;
-    display: none;
-  }
-}
-@media (max-width: 1000px) {
-  .Nav .profile-img {
-    width: 9rem;
-    height: 9rem;
-  }
-}
-.Nav ul {
-  position: relative;
-  list-style: none;
-  text-align: right;
-  width: 100%;
-  margin-top: 4%;
-  color: var(--primary-text);
-}
-@media (max-width: 1000px) {
-  .Nav ul {
-    margin: 0;
-    text-align: center;
-    height: 100%;
-  }
-}
-.Nav #hideMenu {
+#HideMenu {
   cursor: pointer;
   position: fixed;
   bottom: 280px;
@@ -286,11 +265,26 @@
   width: 30px;
   opacity: 0.94;
 }
-.Nav #hideMenu img {
+#HideMenu img {
+  margin: 0%;
+  padding-top: 0;
   height: 30px;
   width: 30px;
 }
-.Nav #back2Top {
+#hideMenu {
+  cursor: pointer;
+  position: fixed;
+  bottom: 280px;
+  left: 10px;
+  height: 30px;
+  width: 30px;
+  opacity: 0.94;
+}
+#hideMenu img {
+  height: 30px;
+  width: 30px;
+}
+#back2Top {
   animation: fadeIn 1s;
   -webkit-animation: fadeIn 1s;
   -moz-animation: fadeIn 1s;
@@ -304,7 +298,7 @@
   background-color: var(--back-to-top-button);
 }
 @media (max-width: 1000px) {
-  .Nav #back2Top {
+  #back2Top {
     cursor: pointer;
     position: fixed;
     left: 10px;
@@ -315,16 +309,16 @@
     text-align: center;
     line-height: 30px;
   }
-  .Nav #back2Top a img {
+  #back2Top a img {
     padding: 0;
     width: 15px;
     height: 15px;
   }
 }
-.Nav #back2Top:hover {
+#back2Top:hover {
   background-color: var(--secondary-background);
 }
-.Nav #back2Top a {
+#back2Top a {
   display: inline-block;
   line-height: 30px;
   width: 30px;
@@ -333,53 +327,16 @@
   font-size: 2rem;
   height: 100%;
 }
-.Nav #back2Top a img {
+#back2Top a img {
   padding-bottom: 10px;
   padding-right: 7px;
   width: 20px;
 }
 @media (max-width: 1000px) {
-  .Nav #back2Top a img {
+  #back2Top a img {
     padding: 0;
     width: 15px;
     height: 15px;
-  }
-}
-.Nav li {
-  font-family: 'Sora', sans-serif;
-  font-weight: 200;
-  font-size: 1.5rem;
-  line-height: 50px;
-  padding: 2%;
-  font-family: 'Supermercado One', cursive;
-  font-weight: regular;
-}
-.Nav li a {
-  margin-right: 2%;
-}
-.Nav li:hover {
-  background-color: var(--nav-links-on-hover);
-  color: white;
-  cursor: pointer;
-}
-@media (max-width: 1000px) {
-  .Nav li {
-    padding: 0%;
-    font-size: 1.3rem;
-    width: 80px;
-    color: white;
-  }
-  .Nav li:hover {
-    color: antiquewhite;
-  }
-}
-#biz-card {
-  padding: 1%;
-  width: 100%;
-}
-@media (max-width: 1000px) {
-  #biz-card {
-    display: none;
   }
 }
 .theme-dark {
@@ -389,10 +346,10 @@
   --secondary-background: #81ff87;
   --button-one: #cc95dd;
   --button-two: #81ff87;
-  --theme-button-background: #81ff87;
+  --theme-btn-background: #585858;
   --theme-button-color: #ffffff;
-  --nav-links-on-hover: #cc95dd;
-  --intro-component: #cc95dd;
+  --nav-links-on-hover: #ff2052;
+  --intro-component: #ff2052;
   --back-to-top-button: #cc95dd;
   --accent: #B8DBD9;
   --button-border: #B8DBD9;
@@ -406,7 +363,7 @@
   --intro-component: #ff2052;
   --button-one: #ff2052;
   --button-two: black;
-  --theme-button-background: #ff2052;
+  --theme-btn-background: #ff2052;
   --theme-button-color: #ffffff;
   --back-to-top-button: #ff2052;
   --accent: #DBE7E4;
@@ -416,15 +373,12 @@
   /** sunny side **/
   --blue-background: #ff2052;
   --blue-border: #424242;
-  --blue-color: #ff2052;
+  --theme-btn-background-light: #ff2052;
   --yellow-background: #ffffff;
   --yellow-border: #ffffff;
   /** dark side **/
-  --indigo-background: #808fc7;
-  --indigo-border: #5d6baa;
+  --theme-btn-background-dark: #5d6baa;
   --indigo-color: #6b7abb;
-  --gray-border: #e8e8ea;
-  --gray-dots: #e8e8ea;
 }
 @keyframes reverse {
   0% {
@@ -462,23 +416,20 @@
   min-height: 60px;
   position: relative;
   grid-area: toggle;
-  margin: 18px;
 }
 /* background */
 .toggle--label {
   width: 70px;
-  height: 34px;
+  height: 30px;
   overflow: hidden;
-  background: var(--indigo-color);
+  background: var(--theme-btn-background);
   border-radius: 100px;
-  border: 3px solid var(--indigo-border);
   display: flex;
   position: relative;
   transition: all 350ms ease-in;
 }
 .toggle--checkbox:checked + .toggle--label {
-  background: var(--blue-color);
-  border-color: var(--blue-border);
+  background: var(--theme-btn-background);
 }
 /* sun and moon */
 .toggle--checkbox:checked + .toggle--label:before {
@@ -571,6 +522,18 @@
   border-radius: 5px;
   background: white;
   transition: all 150ms ease-in;
+}
+#Featured {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+#Featured div {
+  width: 40%;
+  height: 300px;
+  background-color: #ff2052;
+  -webkit-clip-path: polygon(50% 10%, 75% 0, 100% 0, 100% 100%, 0 100%, 0 0, 25% 0);
+  clip-path: polygon(50% 10%, 75% 0, 100% 0, 100% 100%, 0 100%, 0 0, 25% 0);
 }
 .Main {
   margin-top: 1%;
@@ -942,6 +905,68 @@ textarea {
     width: 100%;
   }
 }
+/*
+ * react-calendar-heatmap styles
+ *
+ * All of the styles in this file are optional and configurable!
+ * The github and gitlab color scales are provided for reference.
+ */
+.react-calendar-heatmap text {
+  font-size: 10px;
+  fill: #aaa;
+}
+.react-calendar-heatmap .react-calendar-heatmap-small-text {
+  font-size: 5px;
+}
+.react-calendar-heatmap rect:hover {
+  stroke: #555;
+  stroke-width: 1px;
+}
+/*
+   * Default color scale
+   */
+.react-calendar-heatmap .color-empty {
+  fill: #eeeeee;
+}
+.react-calendar-heatmap .color-filled {
+  fill: [object Object];
+}
+/*
+   * Github color scale
+   */
+.react-calendar-heatmap .color-github-0 {
+  fill: #eeeeee;
+}
+.react-calendar-heatmap .color-github-1 {
+  fill: #d6e685;
+}
+.react-calendar-heatmap .color-github-2 {
+  fill: #8cc665;
+}
+.react-calendar-heatmap .color-github-3 {
+  fill: #44a340;
+}
+.react-calendar-heatmap .color-github-4 {
+  fill: #1e6823;
+}
+/*
+   * Gitlab color scale
+   */
+.react-calendar-heatmap .color-gitlab-0 {
+  fill: #ededed;
+}
+.react-calendar-heatmap .color-gitlab-1 {
+  fill: #acd5f2;
+}
+.react-calendar-heatmap .color-gitlab-2 {
+  fill: #7fa8d1;
+}
+.react-calendar-heatmap .color-gitlab-3 {
+  fill: #49729b;
+}
+.react-calendar-heatmap .color-gitlab-4 {
+  fill: #254e77;
+}
 @font-face {
   font-family: 'Ubuntu';
   font-style: italic;
@@ -985,11 +1010,15 @@ textarea {
   src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCv6KVjbNBYlgoCjC3Ttw.ttf) format('truetype');
 }
 body,
-.App,
 html,
 #root {
   width: 100%;
   height: 100%;
+  background-color: var(--primary-background);
+  color: var(--primary-text);
+}
+.App {
+  width: 90%;
 }
 body,
 .App,
@@ -997,9 +1026,8 @@ html,
 #root,
 .Main,
 .Section {
-  background-color: var(--primary-background);
-  max-width: 1900px;
   height: 100%;
+  max-width: 1900px;
   margin: 0 auto;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;

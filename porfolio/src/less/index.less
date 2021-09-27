@@ -2,12 +2,15 @@
 @import 'variables';
 @import 'mixins';
 @import 'App'; 
-@import 'Section';
+@import 'Render';
 @import 'Nav';
 @import 'Theme';
+@import 'Home';
 @import 'Main';
 @import 'SlideShow';
 @import 'TheLab';
+@import 'HeatMap';
+
 
 
 //Ubuntu font pack
@@ -15,16 +18,22 @@
 
 //Global styles
 
-body, .App, html, #root{
+body, html, #root{
     .w(100%);
     .h(100%);
+    .bg(var(--primary-background));
+    .c(var(--primary-text));
 }
 
-body, .App, html, #root,.Main, .Section{
 
-    .bg(var(--primary-background));
-    .max-w(1900px);
+.App{
+    .w(90%);
+}
+
+
+body, .App, html, #root,.Main, .Section{
     .h(100%);
+    .max-w(1900px);
     .centerWithMargin();
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300;

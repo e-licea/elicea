@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Section from './Components/Section/Section'
+import Render from './Components/Pages/Render'
 import { keepTheme } from './Components/utils/Themes'
 import { appContext } from './Components/Context/appContext'
 import "animate.css/animate.min.css";
@@ -24,7 +24,7 @@ function App() {
       setDarkMode: setDarkMode
     }}>
       <div  className="App" >
-        <Section/>
+        <Render/>
     </div>
     </appContext.Provider>
   );

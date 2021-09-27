@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function About() {
+export default function Intro() {
     return (
         <div id = 'Intro'
         data-aos="fade-up" 
@@ -9,7 +9,9 @@ export default function About() {
         >
             <h3 className="Main-h3"># Intro</h3>
 
-            
+            <p>
+                Greetings internet traveler! I am a software engineer based in Chicago, IL!
+            </p>
             <p>
                 I am driven by the world of computer science and all of it's components. My overall goal is to develop strong fundamental programming skills that will help me build more advanced skills to expand my scope of programming.
             </p>

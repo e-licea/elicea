@@ -14,6 +14,114 @@ import Windows from '../../img/portfolioImg/win.png'
 import Linux from '../../img/portfolioImg/linux.png'
 
 
+export default function Skills() {
+
+
+    return (
+        <div 
+        data-aos="fade-up" 
+        data-aos-duration="600"
+        data-aos-offset="400"
+            id = 'Skills'>
+            
+
+            <div id = 'CardContainer'>
+                <>
+                 {/* 
+                    <div>
+                       GENERAL SKILLS 
+                        {
+                            skills.map((skill)=>{
+                                if(skill.end == 'skill'){
+                                    return(
+                                    <div className = 'SkillCard'>
+                                        <div className='img-con'>
+                                            <img
+                                            src={skill.img}
+                                            alt=""/>
+                                            <p>{skill.skill}</p>
+                                        </div>
+                                        {description(skill.description)}
+                                    </div>
+                                    )
+                                }
+                            })
+                        }
+                    </div>
+                    */}
+                    <div>
+                        <h4>Operating Systems / Kernels</h4>
+                        <div className="os-skills">
+                        {
+                            skills.map((skill)=>{
+                                if(skill.end == 'os'){
+                                    return(
+                                    <div className = 'SkillCard'>
+                                        <div className='img-con' >
+                                            <img
+                                            src={skill.img}
+                                            alt=""/>
+                                            <p>{skill.skill}</p>
+                                        </div>
+                                    </div>
+                                    )
+                                }
+                            })
+                        }
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Front-End</h4>
+                        <div className="fe-skills">
+                        {
+                            skills.map((skill)=>{
+                                if(skill.end == 'front'){
+                                    return(
+                                    <div className = 'SkillCard'>
+                                        <div className='img-con'>
+                                            <img
+                                            src={skill.img}
+                                            alt=""/>
+                                            <p>{skill.skill}</p>
+                                        </div>
+                                    </div>
+                                    )
+                                }
+                            })
+                        }
+                        </div>
+
+                    </div>
+                    <div>
+                        <h4>Back-End</h4>
+                        <div className="be-skills">
+                        {
+                            skills.map((skill)=>{
+                                if(skill.end == 'back'){
+                                    return(
+                                    <div className = 'SkillCard'>
+                                        <div className='img-con'>
+                                            <img
+                                            src={skill.img}
+                                            alt=""/>
+                                            <p>{skill.skill}</p>
+                                        </div>
+                                    </div>
+                                    )
+                                }
+                            })
+                        }
+                        </div>
+                    </div>
+
+
+                </>
+
+            </div>
+        </div>
+    )
+}
+
 
 const skills = [
     {
@@ -176,116 +284,7 @@ const skills = [
     },
  ]
 
-
-export default function Skills() {
-
-
-    return (
-        <div 
-        data-aos="fade-up" 
-        data-aos-duration="600"
-        data-aos-offset="400"
-            id = 'Skills'>
-            
-            <h3 className="Main-h3"># Skills</h3>
-
-            <div id = 'CardContainer'>
-                <>
-                 {/* 
-                    <div>
-                       GENERAL SKILLS 
-                        {
-                            skills.map((skill)=>{
-                                if(skill.end == 'skill'){
-                                    return(
-                                    <div className = 'SkillCard'>
-                                        <div className='img-con'>
-                                            <img
-                                            src={skill.img}
-                                            alt=""/>
-                                            <p>{skill.skill}</p>
-                                        </div>
-                                        {description(skill.description)}
-                                    </div>
-                                    )
-                                }
-                            })
-                        }
-                    </div>
-                    */}
-                    <div>
-                        <h4>Operating Systems / Kernels</h4>
-                        <div className="os-skills">
-                        {
-                            skills.map((skill)=>{
-                                if(skill.end == 'os'){
-                                    return(
-                                    <div className = 'SkillCard'>
-                                        <div className='img-con' >
-                                            <img
-                                            src={skill.img}
-                                            alt=""/>
-                                            <p>{skill.skill}</p>
-                                        </div>
-                                    </div>
-                                    )
-                                }
-                            })
-                        }
-                        </div>
-                    </div>
-                    <div>
-                        <h4>Front-End</h4>
-                        <div className="fe-skills">
-                        {
-                            skills.map((skill)=>{
-                                if(skill.end == 'front'){
-                                    return(
-                                    <div className = 'SkillCard'>
-                                        <div className='img-con'>
-                                            <img
-                                            src={skill.img}
-                                            alt=""/>
-                                            <p>{skill.skill}</p>
-                                        </div>
-                                    </div>
-                                    )
-                                }
-                            })
-                        }
-                        </div>
-
-                    </div>
-                    <div>
-                        <h4>Back-End</h4>
-                        <div className="be-skills">
-                        {
-                            skills.map((skill)=>{
-                                if(skill.end == 'back'){
-                                    return(
-                                    <div className = 'SkillCard'>
-                                        <div className='img-con'>
-                                            <img
-                                            src={skill.img}
-                                            alt=""/>
-                                            <p>{skill.skill}</p>
-                                        </div>
-                                    </div>
-                                    )
-                                }
-                            })
-                        }
-                        </div>
-                    </div>
-
-
-                </>
-
-            </div>
-        </div>
-    )
-}
-
+ 
 function description(arr){
 
     return(

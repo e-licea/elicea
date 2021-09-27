@@ -29,11 +29,11 @@ export default function Jumbotron() {
                 wrapper = 'span'
                 loop = {Infinity}
                 steps = {[
-                    '  Hello! Glad you made it!',
+                    'Hello! Glad you made it!',
                     2000,
-                    '  I am a full stack software developer!',
+                    'I am a full stack software developer!',
                     2000,
-                    '  Let\'s innovate together!',
+                    'Let\'s innovate together!',
                     2000,
                 ]}
             />

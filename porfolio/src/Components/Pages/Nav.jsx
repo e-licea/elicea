@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { Link } from 'react-scroll';
-import { Link as L } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { appContext } from '../Context/appContext';
 //Icons
 import github from '../../img/icons/github.svg'
@@ -25,6 +24,7 @@ export default function Nav() {
     const darkMode = useContext(appContext).darkMode
     const setDarkMode = useContext(appContext).setDarkMode
     const [ hideMenu, setHideMenu ] = useState(true);
+    const [ focusedLink, setFocusedLink ] = useState('1');
 
     useEffect( () => {
             setWindowSize(winSize.width)
@@ -44,19 +44,27 @@ export default function Nav() {
         
     }
 
+    function handleFocusedLink(e){
+        setFocusedLink(e.target.id)
+        console.log(focusedLink)
+
+    }
+
+    function handleFocusedLinkStyle(e){
+        return focusedLink === e.target.id?
+        'focused-link'
+        :
+        null
+    }
     return (
 
             <div className = {!hideMenu?'hideTheMenu':'Nav'} >
 
-                { windowSize < 1001? null : <h4>Esteban Licea Jr.</h4>} 
-                <div className='social-media'>
-                    <a target = '_blank'  href="https://github.com/e-licea"><img src={darkMode?githubLight: githubDark} alt="" /></a>
-                </div>
                 <ul>
-                    <li><Link to = 'Intro' smooth = {true} duration = {300} offset={0}>Intro</Link></li>
-                    <li><Link to = 'Skills' smooth = {true} duration = {300} offset={0}>Skills</Link></li>
-                    <li><Link to = 'Projects' smooth = {true} duration = {300} offset={0}>Projects</Link></li>
-                    <li><Link to = 'Contact' smooth = {true} duration = {300} offset={0}>Contact</Link></li>
+                    <li id = '1' className = {handleFocusedLinkStyle} onClick={handleFocusedLink} ><Link to = '/' >Home</Link></li>
+                    <li id = '2' className = {handleFocusedLinkStyle} onClick={handleFocusedLink}><Link to = '/skills' >Skills</Link></li>
+                    <li id = '3' className = {handleFocusedLinkStyle} onClick={handleFocusedLink}><Link to = '/projects' >Projects</Link></li>
+                    <li id = '4' className = {handleFocusedLinkStyle} onClick={handleFocusedLink}><Link to = '/contact'>Contact</Link></li>
                     {/*<li><L to = '/the-lab' >Blog</L></li>
                     {/*<li><L to = '/the-lab' >Blog</L></li>*/}
                     {
@@ -74,7 +82,9 @@ export default function Nav() {
                         </div>:null
                     }
                 </ul>
-
+                <div className='social-media'>
+                    <a target = '_blank'  href="https://github.com/e-licea"><img src={darkMode?githubLight: githubDark} alt="" /></a>
+                </div>
 
             </div>
 
