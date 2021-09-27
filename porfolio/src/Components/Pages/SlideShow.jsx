@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
-import { useSpring, animated } from 'react-spring'
 
 //img
-import TeamManager from '../../img/portfolioImg/TeamManager.PNG'
-import SneakerResults from '../../img/portfolioImg/sneakerTool.PNG'
 import images from '../utils/images'
 
 
@@ -31,14 +28,14 @@ export default class SlideShow extends Component {
 
 
 
-  componentDidMount(){
-    console.log(this.state)
-    setInterval(()=>{
-      this.setState({
-        active: this.state.active.id == 2? imgArr[0] : imgArr[this.state.active.id + 1],
-      })
-    }, 10000)
-  }
+  // componentDidMount(){
+  //   console.log(this.state)
+  //   setInterval(()=>{
+  //     this.setState({
+  //       active: this.state.active.id == 2? imgArr[0] : imgArr[this.state.active.id + 1],
+  //     })
+  //   }, 10000)
+  // }
 
 
   handleImageLoaded() {
@@ -71,16 +68,16 @@ export default class SlideShow extends Component {
     return (
       <div id = 'SlideShow'>
         <div className="photo-container">
-          {/* <div 
+          <div 
             id = 'prev'
             onClick={this.onClick}
-            ></div> */}
+            ></div>
               <ActiveImg handleImageErrored ={this.handleImageErrored} handleImageLoaded = {this.handleImageLoaded} active = {this.state.active}/>
 
-          {/* <div 
+          <div 
             id = 'next'
             onClick={this.onClick}
-            ></div> */}
+            ></div>
 
         </div>
 
@@ -115,13 +112,8 @@ function ActiveImg(props){
   console.log(props)
   let { active, handleImageErrored, handleImageLoaded} = props
 
-  const springs = useSpring({
-    config: {delay: 10000, duration: 100},
-    to:{opacity: 1}, from: {opacity: 0}
-  })
 
   return(
-      <animated.div  style= {springs}>
         <img 
           id = {active.id} 
           src={active.imgSrc}
@@ -129,7 +121,6 @@ function ActiveImg(props){
           deploy={ active.deploy? active.deploy: null} alt={active.altImgSrc} 
           
           />
-      </animated.div>
   )
 }
 
@@ -151,7 +142,7 @@ const imgArr = [
     id: 1,
     project: 'Sneaker Tool',
     src:'https://github.com/e-licea/react-snkrz',
-    imgSrc: SneakerResults,
+    imgSrc: images.reactSnkrsMockup,
     desc:'This app is a sneaker tool. It is a small application keeps track of relevant sneaker information. It deals with two main sections. The first section is where a user can research sneakers that are releasing in the near future. The second section allows for users to search through a database of sneakers to find out demographics of a specific shoe. Information can entail when the shoe was released, how much it is worth, sizes available, and even where it can be bought.',
     challenges: ['Converting code to asynchronous methods.', 'Parsing HTML into readable JSON format.'],
     technologies: ['React', 'Cheerio', 'Node', 'Express', 'Less CSS']

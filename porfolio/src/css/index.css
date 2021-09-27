@@ -525,13 +525,19 @@
   }
 }
 #Featured div {
-  width: 50%;
+  width: 49%;
   height: 300px;
+  padding: 1%;
   background-color: #ff2052;
+}
+#Featured div img {
+  width: 50%;
+  margin: 0 auto;
 }
 @media (max-width: 1000px) {
   #Featured div {
     width: 100%;
+    margin: 1%;
   }
 }
 .Main {
@@ -859,10 +865,12 @@ textarea {
   position: relative;
   overflow: hidden;
   max-height: 600px;
+  width: 100%;
 }
 .photo-container img {
-  width: 100%;
-  height: 100%;
+  width: 65%;
+  display: block;
+  margin: 0 auto;
 }
 #next,
 #prev {
@@ -909,6 +917,9 @@ textarea {
  * All of the styles in this file are optional and configurable!
  * The github and gitlab color scales are provided for reference.
  */
+.react-calendar-heatmap {
+  width: 100%;
+}
 .react-calendar-heatmap text {
   font-size: 10px;
   fill: #aaa;

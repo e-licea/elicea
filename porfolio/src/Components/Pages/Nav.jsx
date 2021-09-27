@@ -63,7 +63,6 @@ export default function Nav() {
                 <ul>
                     <li id = '1' className = {handleFocusedLinkStyle} onClick={handleFocusedLink} ><Link to = '/' >Home</Link></li>
                     <li id = '3' className = {handleFocusedLinkStyle} onClick={handleFocusedLink}><Link to = '/projects' >Projects</Link></li>
-                    <li id = '4' className = {handleFocusedLinkStyle} onClick={handleFocusedLink}><Link to = '/contact'>Contact</Link></li>
                     {/*<li><L to = '/the-lab' >Blog</L></li>
                     {/*<li><L to = '/the-lab' >Blog</L></li>*/}
                     {
