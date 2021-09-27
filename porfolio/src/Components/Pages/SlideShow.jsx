@@ -4,7 +4,7 @@ import { useSpring, animated } from 'react-spring'
 //img
 import TeamManager from '../../img/portfolioImg/TeamManager.PNG'
 import SneakerResults from '../../img/portfolioImg/sneakerTool.PNG'
-import hgr from '../../img/portfolioImg/hgr.PNG'
+import images from '../utils/images'
 
 
 export default class SlideShow extends Component {
@@ -30,7 +30,7 @@ export default class SlideShow extends Component {
 
 
 
-/*
+
   componentDidMount(){
     console.log(this.state)
     setInterval(()=>{
@@ -39,7 +39,7 @@ export default class SlideShow extends Component {
       })
     }, 10000)
   }
-*/
+
 
   handleImageLoaded() {
     this.setState({ imageStatus: "loaded" });
@@ -71,16 +71,16 @@ export default class SlideShow extends Component {
     return (
       <div id = 'SlideShow'>
         <div className="photo-container">
-          <div 
+          {/* <div 
             id = 'prev'
             onClick={this.onClick}
-            ></div>
+            ></div> */}
               <ActiveImg handleImageErrored ={this.handleImageErrored} handleImageLoaded = {this.handleImageLoaded} active = {this.state.active}/>
 
-          <div 
+          {/* <div 
             id = 'next'
             onClick={this.onClick}
-            ></div>
+            ></div> */}
 
         </div>
 
@@ -142,7 +142,7 @@ const imgArr = [
     project: 'High Ground Restore',
     deploy:'https://www.highgroundrestore.com',
     src:'https://github.com/e-licea/company/tree/master, https://github.com/e-licea/redux-teammanager-api',
-    imgSrc: hgr,
+    imgSrc: images.hgrMockup,
     desc:'High Ground Restore is a simple front-end application for a starter roofing business. It\'s primary uses are for promoting roofing services, and educating possible clients on their own roof systems. The app was carefully built so it is concise and easy to manuever across all platforms through media queries. It also has an easy to use contact form that is able to send emails very easily to any inbox',
     challenges: ['Creating branding from scratch.', 'Implementing a fully-functional contact form.'],
     technologies: ['React', 'Weather API', 'Less CSS']
@@ -161,7 +161,7 @@ const imgArr = [
     project: 'Redux Team Collaborator',
     src:'https://github.com/e-licea/react-snkrz',
     deploy: 'https://dreamy-pare-fd4639.netlify.app/',
-    imgSrc: TeamManager,
+    imgSrc: images.rTeamMockup,
     desc:'This project is a team collaborator inspired by Slack and Discord. This application allows for a team of productive people to message each other through group chats and direct messaging. Every team can have a main administrator who oversees the entire team and can elect moderators as well. Every member holds a rank that may come with limitations since the application is built with security in mind. Login Authentication is required as well as a consistent session token on every application request. You can try out the application live by clicking on the deploy link and logging in as Michael Scott:(username: mscott, passkey: password)',
     challenges: ['Redux state', 'Adding Auth with JSON web tokens', 'Creating a logical Postgres database schema' ],
     technologies: ['React', 'Redux', 'Node', 'Express', 'Less CSS', 'PostgreSQL'],

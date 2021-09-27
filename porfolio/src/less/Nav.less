@@ -4,27 +4,19 @@
     .flex(row);
     justify-content: space-between;
     @media @tablet {
-        
-        bottom: 60px;
-        left:40px;
-        margin: 0;
-        .w(150px);
-        .h(250px);
-        .bg(var(--nav-links-on-hover));
-        .r-shadow();
-        flex-direction: column-reverse;
-
 
     }
   
     ul{
         .w(50%);
+        .margin(0);
         .max-w(600px);
         list-style: none;
         .flex-flow(row, space-evenly, none);
         .padding(0);
         @media @tablet {
             text-align: center;
+            .w(80%);
             .h(100%);
         }
     };
@@ -35,7 +27,7 @@
         .font-style(@Sora, 200);
         .font-size(1.5rem);
         line-height: 50px;
-        padding: 2%;
+        .padding(1%);
         a{
             margin-right: 2%;
             text-decoration: none;
@@ -50,7 +42,7 @@
         };
         @media @tablet {
             .padding(-1%);
-            .font-size(1.3rem);
+            .font-size(1rem);
             .w(80px);
             color: white;
             &:hover{

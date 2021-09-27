@@ -1,13 +1,16 @@
 #Featured{
     .w(100%);
     .flex(row);
+    justify-content: space-evenly;
+    @media @tablet {
+        .flex(column);
+    }
     div{
-        .w(40%);
+        .w(50%);
         .h(300px);
         .bg(@infrared);
-        -webkit-clip-path: polygon(50% 10%, 75% 0, 100% 0, 100% 100%, 0 100%, 0 0, 25% 0); 
-        clip-path: polygon(50% 10%, 75% 0, 100% 0, 100% 100%, 0 100%, 0 0, 25% 0);
-
-
+        @media @tablet {
+            .w(100%);
+        }
     }
 }
