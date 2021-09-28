@@ -41,6 +41,25 @@
     .flex-flow(row, wrap, none);
     position: relative;
     .font-style(@Super, regular);
+    #callToAction{
+        position: absolute;
+        bottom: 50px;
+        right: 200px;
+        z-index: 9;
+        .flex(row);
+        .w(max-content);
+        @media @tablet{
+            bottom: 20px;
+            right: 60px;
+        }
+        a{
+            .w(150px);
+            .padding(5%);
+            border-radius: 5px;
+            .margin(2%);
+            .bg(var(--primary-background));
+        }
+    }
     @media @tablet {
         .h(300px);
         .min-h(250px);

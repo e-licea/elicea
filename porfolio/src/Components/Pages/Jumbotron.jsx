@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 import Typical from 'react-typical';
 import { appContext } from '../Context/appContext';
 //bit.dev imports
@@ -37,6 +38,12 @@ export default function Jumbotron() {
                     2000,
                 ]}
             />
+
+            <div id = 'callToAction'>
+                <Link to ='/projects'> View Projects</Link>
+                <Link to ='/contact'> Contact Me</Link>
+
+            </div>
 
 
         </div>
