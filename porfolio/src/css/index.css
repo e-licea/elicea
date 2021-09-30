@@ -1,11 +1,4 @@
-/* less imports */
-@font-face {
-  font-family: 'Supermercado One';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/supermercadoone/v12/OpNXnpQWg8jc_xps_Gi14kVVEXOn60Y.ttf) format('truetype');
-}
+
 .b-shadow {
   box-shadow: 0 8px 6px -6px black;
 }
@@ -107,10 +100,6 @@
 .centerWithMargin {
   margin: 0 auto;
 }
-.App {
-  position: relative;
-  margin: 0 auto;
-}
 .Render {
   height: 100%;
   position: relative;
@@ -158,12 +147,10 @@
   }
 }
 .Nav li {
-  font-family: 'Sora', sans-serif;
-  font-weight: 200;
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 50px;
   padding: 1%;
-  font-family: 'Supermercado One', cursive;
+  font-family: 'ModeNine Font';
   font-weight: regular;
 }
 .Nav li a {
@@ -576,7 +563,7 @@
 .Main-h3 {
   font-size: 1.7rem;
   margin: 3% 0;
-  font-family: 'Supermercado One', cursive;
+  font-family: 'ModeNine Font';
   font-weight: none;
   color: var(--secondary-text);
 }
@@ -594,18 +581,23 @@
   min-height: 250px;
   max-height: 500px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: none;
   flex-wrap: wrap;
-  position: relative;
-  font-family: 'Supermercado One', cursive;
+  font-family: 'ModeNine Font';
   font-weight: regular;
+}
+@media (max-width: 1000px) {
+  #Jumbotron {
+    max-height: 250px;
+    min-height: 250px;
+    max-height: 500px;
+  }
 }
 #Jumbotron #callToAction {
   position: absolute;
   bottom: 50px;
   right: 200px;
-  z-index: 9;
   display: flex;
   flex-direction: row;
   width: max-content;
@@ -623,83 +615,100 @@
   margin: 2%;
   background-color: var(--primary-background);
 }
-@media (max-width: 1000px) {
-  #Jumbotron {
-    height: 300px;
-    max-height: 250px;
-    min-height: 250px;
-    max-height: 500px;
-  }
-}
 #term {
-  position: absolute;
-  top: 45px;
-  left: 10px;
+  display: block;
+  height: 90%;
   color: #41ff51;
   position: relative;
+  padding: 1% 0;
+}
+.ityped-cursor {
+  font-size: 2.2rem;
+  opacity: 1;
+  -webkit-animation: blink 0.3s infinite;
+  -moz-animation: blink 0.3s infinite;
+  animation: blink 0.3s infinite;
+  animation-direction: alternate;
+}
+@keyframes blink {
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes blink {
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes blink {
+  100% {
+    opacity: 0;
+  }
 }
 #term,
-.type {
+#type {
   font-size: 1.4rem;
 }
 @media (max-width: 1000px) {
   #term,
-  .type {
+  #type {
     font-size: 1rem;
   }
 }
-.type {
-  position: absolute;
-  left: 165px;
-  top: 45px;
+#type {
   color: white;
-}
-@media (max-width: 1000px) {
-  .type {
-    left: 120px;
-  }
+  text-align: left;
+  line-height: 0.4em;
+  white-space: pre-wrap;
+  width: 800px;
+  height: 100%;
 }
 #close,
 #expand,
 #mini {
-  margin-top: 15px;
-  padding: 4px;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  text-align: center;
-  vertical-align: middle;
+  width: 20px;
 }
 #close > img,
 #expand > img,
 #mini > img {
-  width: 5px;
-  height: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  padding: 2px;
 }
-#close {
+#close > img {
   background-color: #fc5e5e;
 }
-#expand {
+#expand > img {
   background-color: #41ff51;
 }
-#mini {
+#mini > img {
   background-color: #fdbf4b;
 }
 .ToolBar {
   width: 100%;
   height: 40px;
   background-color: #5c5c5c;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.ToolBar div {
-  height: 40px;
-  width: 100px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: no-wrap;
+}
+.ToolBar p {
+  width: 33%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  line-height: 40px;
+}
+.ToolBar p:first-child {
+  visibility: hidden;
+}
+.ToolBar #windowControl {
+  width: 33%;
+}
+.ToolBar #windowControl div {
+  margin: 2%;
   float: right;
 }
 .cpu-gif {
@@ -860,7 +869,7 @@
   height: 40px;
   border: none;
   background-color: var(--button-one);
-  font-family: 'Supermercado One', cursive;
+  font-family: 'ModeNine Font';
   font-weight: none;
   color: var(--primary-text);
   font-size: 1rem;
@@ -948,7 +957,12 @@ textarea {
  * The github and gitlab color scales are provided for reference.
  */
 .react-calendar-heatmap {
-  width: 100%;
+  max-width: 650px;
+}
+@media (max-width: 1000px) {
+  .react-calendar-heatmap {
+    width: 100%;
+  }
 }
 .react-calendar-heatmap text {
   font-size: 10px;
@@ -1057,7 +1071,7 @@ html,
   color: var(--primary-text);
 }
 .App {
-  width: 90%;
+  max-width: 970px;
 }
 body,
 .App,
@@ -1066,12 +1080,7 @@ html,
 .Main,
 .Section {
   height: 100%;
-  max-width: 1900px;
   margin: 0 auto;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
-}
-html {
-  font-family: 'Sora', sans-serif;
-  font-weight: 200;
 }

@@ -1,8 +1,8 @@
 import React from 'react'
-import Intro from './Home/Intro'
-import Heatmap from './Home/Heatmap'
-import Featured from './Home/Featured'
-import Skills from './Skills'
+import Intro from './Intro'
+import Heatmap from './Heatmap'
+import Featured from './Featured'
+import Skills from '../Skills'
 import Jumbotron from './Jumbotron'
 
 export default function Home() {
@@ -12,7 +12,6 @@ export default function Home() {
             <Intro/>
             <Skills/>
             <Featured/>
-            <Heatmap/>
         </div>
     )
 }

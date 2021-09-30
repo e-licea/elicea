@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 
 //import Components
 import Nav from './Nav'
-import Home from './Home';
+import Home from './Home/Home';
 import TheLab from '../TheLab/TheLab'
 import ToggleDarkMode from '../utils/ToggleDarkMode';
 import Contact from './Contact';
@@ -16,11 +16,9 @@ export default function Render() {
         <div className = 'Render'>
             <ToggleDarkMode/>
             <Nav/>
-            <Route exact path = '/'  component = {Home}/>
-            <Route path = '/skills'  component = {Skills}/>
-            <Route path = '/projects'  component = {Projects}/>
-
-
+                <Route exact path = '/'  component = {Home}/>
+                <Route path = '/skills'  component = {Skills}/>
+                <Route path = '/projects'  component = {Projects}/>
             <Contact/>
             
         </div>
