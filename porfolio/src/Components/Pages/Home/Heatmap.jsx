@@ -1,55 +1,67 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 // Import the calendarheatmap
 import CalendarHeatmap from 'react-calendar-heatmap';
+import { getContributions } from '../../utils/requests';
 
-export default class Heatmap extends React.Component {
 
-    constructor(props, context) {
-        super(props, context);
-        
-        function getDummyDates(from, to, numberDates) {
-            numberDates = numberDates || 50;
-            let result = [];
-        
-            for(let i = 0; i < numberDates;i++){
-                result.push(
-                    {
-                        date: new Date(from.getTime() + Math.random() * (to.getTime() - from.getTime())),
-                        count: Math.floor(Math.random() * 6)
+
+
+export default function Heatmap() {
+
+    const [state, setState] = useState({
+        values: [],
+        numDays: 365,
+        startDate: '0000-00-00',
+        endDate: '0000-00-00',
+
+    })
+    
+    useEffect(async() => {
+        let contributions = await getContributions() 
+        setState({
+            values: await contributions, 
+            numDays:  contributions.length, 
+            startDate: contributions[0].date,
+            endDate: contributions[contributions.length-1].date
+        })
+    
+    }, [])
+
+    function onClick(){
+        console.log(state)
+    }
+    return (
+        <div 
+        data-aos="fade-up" 
+        data-aos-duration="600"
+        data-aos-offset="200"
+        style={{width: 700}}>
+            <h4>Contributions</h4>
+            <CalendarHeatmap
+                startDate = {state.startDate}
+                endDate ={state.endDate}
+                values={state.values}
+                onClick={onClick}
+                classForValue={(value) => {
+                    if (value.count === 0) {
+                      return 'color-empty';
                     }
-                );
-            }
-        
-            return result;
-        }
-        
-        this.state = {
-            // Some dates to render in the heatmap
-            values: getDummyDates(new Date(2016, 0, 1), new Date(2017, 2, 1), 500),
-            // How many days should be shown
-            numDays: 365
-        };
+                    if(value.count >= 3 ){
+                        return `color-github-${2}`;
+                    }
+                    if(value.count >= 5 ){
+                        return `color-github-${4}`;
+                    }if(value.count > 10 ){
+                        return `color-github-${3}`;
+                    }else{
+                        return `color-github-${1}`
+                    }
 
-        this.onClick = this.onClick.bind(this);
-    }
- 
-    onClick(value) {
-        console.log(value);
-    }
 
-    render() {
-        return (
-            <div style={{width: 700}}>
-                <h4>Contributions</h4>
-                <CalendarHeatmap
-                    endDate={new Date('2017-01-01')}
-                    numDays={this.state.numDays}
-                    values={this.state.values}
-                    onClick={this.onClick}
-                />
-            </div>
-        );
-    }
+                  }}
+            />
+        </div>
+    )
 }
 

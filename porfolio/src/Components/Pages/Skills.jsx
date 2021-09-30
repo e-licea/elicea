@@ -21,7 +21,7 @@ export default function Skills() {
         <div 
         data-aos="fade-up" 
         data-aos-duration="600"
-        data-aos-offset="400"
+        data-aos-offset="200"
             id = 'Skills'>
             
 

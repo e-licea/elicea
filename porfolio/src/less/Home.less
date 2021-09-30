@@ -7,19 +7,26 @@
     }
     div{
         .w(49%);
-        .h(300px);
-        .padding(1%);
+        .max-h(370px);
+        .flex(column);
+        .padding(2%);
         .bg(@infrared);
         h4{
 
         }
+        
         img{
             .w(50%);
             .centerWithMargin();
+        }
+        a{
+            .c(var(--primary-text));
+            .margin(2% 0);
         }
         @media @tablet {
             .w(100%);
             .margin(1%);
         }
+
     }
 }

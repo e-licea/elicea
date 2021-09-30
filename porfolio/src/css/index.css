@@ -339,6 +339,7 @@
   --theme-button-color: #ffffff;
   --nav-links-on-hover: #ff2052;
   --intro-component: #ff2052;
+  --heatmap-color-empty: #131e24;
   --back-to-top-button: #cc95dd;
   --accent: #B8DBD9;
   --button-border: #B8DBD9;
@@ -350,6 +351,7 @@
   --secondary-background: #0c0c0c;
   --nav-links-on-hover: #ff2052;
   --intro-component: #ff2052;
+  --heatmap-color-empty: #eeeeee;
   --button-one: #ff2052;
   --button-two: black;
   --theme-btn-background: #ff2052;
@@ -526,13 +528,19 @@
 }
 #Featured div {
   width: 49%;
-  height: 300px;
-  padding: 1%;
+  max-height: 370px;
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
   background-color: #ff2052;
 }
 #Featured div img {
   width: 50%;
   margin: 0 auto;
+}
+#Featured div a {
+  color: var(--primary-text);
+  margin: 2% 0;
 }
 @media (max-width: 1000px) {
   #Featured div {
@@ -950,14 +958,14 @@ textarea {
   font-size: 5px;
 }
 .react-calendar-heatmap rect:hover {
-  stroke: #555;
+  stroke: #8a0000;
   stroke-width: 1px;
 }
 /*
    * Default color scale
    */
 .react-calendar-heatmap .color-empty {
-  fill: #eeeeee;
+  fill: var(--heatmap-color-empty);
 }
 .react-calendar-heatmap .color-filled {
   fill: [object Object];
