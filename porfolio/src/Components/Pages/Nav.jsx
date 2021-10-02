@@ -24,8 +24,10 @@ export default function Nav() {
     const setDarkMode = useContext(appContext).setDarkMode
     const [ hideMenu, setHideMenu ] = useState(true);
     const [ focusedLink, setFocusedLink ] = useState('1');
+    
 
     function backToTopSmooth(e){
+        e.preventDefault();
         return window.scrollTo({
             top: 0,
             behavior: 'smooth',

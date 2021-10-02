@@ -12,7 +12,6 @@ export default function ToggleDarkMode(props) {
     const setDarkMode = useContext(appContext).setDarkMode
     const scroll = useScroll()
 
-    console.log(darkMode)
     
     const [ togClass, setTogClass ] = useState('dark');
     let theme = localStorage.getItem('theme');

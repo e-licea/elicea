@@ -1,10 +1,11 @@
 import axios from 'axios'
 
+//heroku deploy api baseUrl
 
 export async function getContributions(){
     const requestConfig = {
         method: 'get',
-        url: 'http://localhost:5002/api/scrapers/contributions',
+        url: 'https://online-port-api.herokuapp.com/api/scrapers/contributions',
         headers: {
             'Access-Control-Allow-Origin': '*'
         }

@@ -16,6 +16,9 @@ export default function Jumbotron() {
             cursorChar: '_',
             strings:[
                 'Hello and welcome in!...',
+                'I am a full-stack software developer.',
+                'Automation is the motivation!',
+                'Let\'s build something together!'
             ]
         }
 
