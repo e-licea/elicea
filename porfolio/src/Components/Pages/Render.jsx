@@ -17,6 +17,7 @@ export default function Render() {
                 <Route exact path = '/'  component = {Home}/>
                 <Route path = '/skills'  component = {Skills}/>
                 <Route path = '/projects'  component = {Projects}/>
+                <Route path = '/the-lab'  component = {TheLab}/>
             <Contact/>
             
         </div>

@@ -1,12 +1,43 @@
-.TheLab{
-    margin-top: 1%;
-    .font-size(1.3rem); 
-    .w(70%);
-    position: absolute;
-    right: 0;
-    padding-bottom: 10%;
+#TheLab{
+    .font-size(1rem); 
+    .w(100%);
+    .flex-flow(row, space-evenly, no-wrap);
+
+
     @media @tablet {
         margin: 0;
         .w(100%);
+    }
+
+
+}
+
+//TheLab.jsx - #theLab-search styles
+#theLab-search{
+    .padding(1%);
+}
+
+
+//TheLabRender.jsx styles
+#theLab-navigation{
+    border: 1px solid blueviolet;
+    .flex-flow(column, space-around, no-wrap);
+    align-content: center;
+    .w(20%);
+}
+//TheLabRender.jsx styles
+#theLab-render{
+    .padding(1%);
+    .w(80%);
+    #TheDay{
+        .w(100%);
+        display: flex;
+        justify-content: space-between;
+        span{
+            #weather-icon{
+                .w(30px);
+                .h(30px);
+            }
+        }
     }
 }

@@ -47,6 +47,7 @@ export default function Nav() {
                 }
                     <li id = '1' ><Link to = '/' >Home</Link></li>
                     <li id = '3'><Link to = '/projects' >Projects</Link></li>
+                    <li id = '3'><Link to = '/the-lab' >the Lab</Link></li>
                     {/*<li><L to = '/the-lab' >Blog</L></li>
                     {/*<li><L to = '/the-lab' >Blog</L></li>*/}
 

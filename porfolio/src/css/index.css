@@ -428,6 +428,9 @@
   padding: 2%;
   background-color: #ff2052;
 }
+#Featured div:hover {
+  opacity: 0.9;
+}
 #Featured div img {
   width: 50%;
   margin: 0 auto;
@@ -441,6 +444,25 @@
     width: 100%;
     margin-bottom: 2%;
   }
+}
+.Banner {
+  margin-top: 40px;
+  height: 200px;
+  border: 1px solid aqua;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  filter: grayscale();
+  display: flex;
+  flex-direction: row;
+  justify-content: no-wrap;
+  flex-wrap: space-around;
+}
+.Banner span {
+  display: inline-block;
+  color: white;
+  line-height: 200px;
+  font-size: 1.3rem;
 }
 .Main-h3 {
   font-size: 1.2rem;
@@ -581,6 +603,7 @@
   flex-wrap: wrap;
 }
 #Skills #CardContainer h4 {
+  font-size: 1rem;
   text-align: center;
   width: 100%;
   color: var(--primary-text);
@@ -776,19 +799,44 @@ textarea {
 #prev {
   left: 0;
 }
-.TheLab {
-  margin-top: 1%;
-  font-size: 1.3rem;
-  width: 70%;
-  position: absolute;
-  right: 0;
-  padding-bottom: 10%;
+#TheLab {
+  font-size: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: no-wrap;
+  flex-wrap: space-evenly;
 }
 @media (max-width: 1000px) {
-  .TheLab {
+  #TheLab {
     margin: 0;
     width: 100%;
   }
+}
+#theLab-search {
+  padding: 1%;
+}
+#theLab-navigation {
+  border: 1px solid blueviolet;
+  display: flex;
+  flex-direction: column;
+  justify-content: no-wrap;
+  flex-wrap: space-around;
+  align-content: center;
+  width: 20%;
+}
+#theLab-render {
+  padding: 1%;
+  width: 80%;
+}
+#theLab-render #TheDay {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#theLab-render #TheDay span #weather-icon {
+  width: 30px;
+  height: 30px;
 }
 /*
  * react-calendar-heatmap styles
@@ -917,7 +965,7 @@ body,
 .App,
 html,
 #root,
-.Main,
+#TheLab,
 .Section {
   height: 100%;
   margin: 0 auto;

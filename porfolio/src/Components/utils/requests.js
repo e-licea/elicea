@@ -19,3 +19,30 @@ export async function getContributions(){
         return err
     })
 }
+
+export async function getGeolocationInfo(location){
+    const { lon, lat} = location;
+    const authKey = 'fbdbbaee055943e884d61422210210'
+    const requestConfig = {
+        method: 'get',
+        headers: {
+            'Access-Control-Allow-Origin': '*'
+        },
+        params: {
+            key: authKey,
+            q: `${lat},${lon}`
+        },
+        url: `http://api.weatherapi.com/v1/current.json`,
+    }
+
+    return await axios.request(requestConfig)
+    .then(res=>{
+        console.log(res.data)
+        return res.data
+    })
+    .catch(err=>{
+        console.log(err)
+        return err
+    })
+
+}

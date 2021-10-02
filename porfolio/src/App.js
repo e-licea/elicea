@@ -18,12 +18,17 @@ function App() {
 
 
   const [darkMode, setDarkMode] = useState(false);
-
+  const [location, setLocation] = useState({
+    lon: '',
+    lat: ''
+  })
 
   return (
     <appContext.Provider value = {{
       darkMode: darkMode,
-      setDarkMode: setDarkMode
+      setDarkMode: setDarkMode,
+      location: location,
+      setLocation: setLocation
     }}>
       <div  className="App" >
         <Nav/>
