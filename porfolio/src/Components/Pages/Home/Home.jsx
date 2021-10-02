@@ -12,6 +12,7 @@ export default function Home() {
             <Intro/>
             <Skills/>
             <Featured/>
+            <Heatmap/>
         </div>
     )
 }

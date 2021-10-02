@@ -6,11 +6,11 @@
 
 .theme-dark {
     --primary-text: #dbdbdb;
-    --secondary-text: #81ff87;  
-    --primary-background: #19252b;
+    --secondary-text: #dbdbdb;  
+    --primary-background: #181818;
     --secondary-background: #81ff87;
 
-    --button-one: #cc95dd;
+    --button-one: @infrared;
     --button-two: #81ff87;
 
     --theme-btn-background: #585858 ;
@@ -19,9 +19,13 @@
     --nav-links-on-hover: @infrared;
 
     --intro-component: @infrared;
+    
+    //jumbotron
+    --call-to-action-btn: #41ff51;
+    --call-to-action-btn-secondary: #ffffff;
 
     //heatmap
-    --heatmap-color-empty: #131e24 ;
+    --heatmap-color-empty: #272626 ;
 
     --back-to-top-button: #cc95dd;
     --accent: #B8DBD9;
@@ -37,7 +41,11 @@
     --nav-links-on-hover: @infrared;
 
     --intro-component: @infrared;
-
+    
+    //jumbotron
+    --call-to-action-btn: #41ff51;
+    --call-to-action-btn-secondary: #ffffff;
+    
     //heatmap
     --heatmap-color-empty: #eeeeee ;
 
@@ -98,13 +106,18 @@
 }
   
 .container--toggle {
+    .padding(2%);
+    height: max-content;
+    z-index: 10;
     .max-w(200px);
-    float: right;
-    display: grid;
     place-items: center;
-    min-height: 60px;
-    position: relative;
-    grid-area: toggle;
+    position: fixed;
+    bottom: 0px;
+    right: 20px;
+    @media @mobile {
+        bottom: 0px;
+        top: none;
+    }
 }
 
 /* background */

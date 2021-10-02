@@ -18,67 +18,37 @@ export default function Nav() {
     const [ windowSize, setWindowSize ] = useState(0)
     const winSize = useWindowSize()
 
-    const [scroll, setScroll] = useState(0);
-    let winScroll = useScroll();
+    let scroll = useScroll();
 
     const darkMode = useContext(appContext).darkMode
     const setDarkMode = useContext(appContext).setDarkMode
     const [ hideMenu, setHideMenu ] = useState(true);
     const [ focusedLink, setFocusedLink ] = useState('1');
 
-    useEffect( () => {
-            setWindowSize(winSize.width)
-            //console.log(windowSize);
-            setScroll(winScroll)
-            //console.log(scroll)
-            if(windowSize > 1000){
-                setHideMenu(true)
-            }
-    }, [winSize.width, winScroll])
-
-
-
-    function hideTheMenu(){
-        console.log(hideMenu)
-        setHideMenu(!hideMenu);
-        
+    function backToTopSmooth(e){
+        return window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        })
     }
-
-    function handleFocusedLink(e){
-        setFocusedLink(e.target.id)
-        console.log(focusedLink)
-
-    }
-
-    function handleFocusedLinkStyle(e){
-        return focusedLink === e.target.id?
-        'focused-link'
-        :
-        null
-    }
+    
     return (
 
-            <div className = {!hideMenu?'hideTheMenu':'Nav'} >
+            <div className = 'Nav' style = {scroll > 350? {opacity: '.9'}:null} >
 
                 <ul>
-                    <li id = '1' className = {handleFocusedLinkStyle} onClick={handleFocusedLink} ><Link to = '/' >Home</Link></li>
-                    <li id = '3' className = {handleFocusedLinkStyle} onClick={handleFocusedLink}><Link to = '/projects' >Projects</Link></li>
+                {
+                    scroll > 350? 
+                        <li >
+                            <Link style = {{color: '#ff2052'}} onClick = {backToTopSmooth}> To Top</Link>
+                        </li>:null
+                }
+                    <li id = '1' ><Link to = '/' >Home</Link></li>
+                    <li id = '3'><Link to = '/projects' >Projects</Link></li>
                     {/*<li><L to = '/the-lab' >Blog</L></li>
                     {/*<li><L to = '/the-lab' >Blog</L></li>*/}
-                    {
-                    scroll > 350? 
-                        <li id = {!hideMenu? 'Back2Top': 'back2Top'}>
-                            <Link to='Jumbotron' smooth ={true} duration = {300} offset = {-100}>
-                                <img src={up} alt="" />    
-                            </Link>
-                        </li>:null
-                    }
-                    {
-                    windowSize < 1001? 
-                        <div onClick = {hideTheMenu} id = {!hideMenu? 'HideMenu': 'hideMenu'}>
-                            <img src={menu} alt="" />    
-                        </div>:null
-                    }
+
+
                 </ul>
                 <div className='social-media'>
                     <a target = '_blank'  href="https://github.com/e-licea"><img src={darkMode?githubLight: githubDark} alt="" /></a>

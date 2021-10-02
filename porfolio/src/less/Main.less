@@ -1,83 +1,27 @@
-.Main{
-    margin-top: 1%;
-    font-size: 1.3rem;
-    min-width: none;
-    max-width: none;
-    width: 55%;
-    position: absolute;
-    right: 100px;
-    padding-bottom: 10%;
-    margin: 0 auto;
-    @media @1250px{
-        width: 60%;
-        right: px;
-    }
-    @media @tablet {
-        padding: 0 1%;
-        .w(100%);
-        left: 0;
-        margin: 0 auto;
 
-    }
-}
 
 .Main-h3{
-    .font-size(1.7rem);
-    margin: 3% 0;
-    .font-style(@ModeNine, none);
-    .c(var(--secondary-text));
+    .font-size(1.2rem);
+    .w(max-content);
+    .c(var(--primary-text));
 
 }
 #Intro, #Skills, #Projects, #Contact{
     padding: 2%;
 }
 
-#Jumbotron{
-    .bg(#272727);
-    .w(100%);
-    .h(400px);
-    .min-h(250px);
-    .max-h(500px);
-    .flex-flow(column, wrap, none);
-    .font-style(@ModeNine, regular);
-    @media @tablet {
-        .min-h(250px);
-        .max-h(500px);
-    }
-    #callToAction{
-        position: absolute;
-        bottom: 50px;
-        right: 200px;
-        .flex(row);
-        .w(max-content);
-        @media @tablet{
-            bottom: 20px;
-            right: 60px;
-        }
-        a{
-            .w(150px);
-            .padding(5%);
-            border-radius: 5px;
-            .margin(2%);
-            .bg(var(--primary-background));
-        }
-    }
-
-}
-
 #term{
     display: block;
     .h(90%);
     color: #41ff51;
-    position: relative;
+    position: absolute;
+    top: 30px;
     .padding(1% 0);
-
-
 
 }
 
 .ityped-cursor {
-    font-size: 2.2rem;
+    font-size: 1.2rem;
     opacity: 1;
     -webkit-animation: blink 0.3s infinite;
     -moz-animation: blink 0.3s infinite;
@@ -104,7 +48,7 @@
 }
 
 #term, #type{
-    .font-size(1.4rem);
+    .font-size(1.2rem);
     @media @tablet {
         .font-size(1rem);
     }
@@ -252,6 +196,8 @@
 
 #Projects{
     padding-bottom: 10%;
+    margin-top: 30px;
+    
     .project-overview{
         .h(max-content);
         .c(var(--primary-text));
@@ -288,7 +234,9 @@
 #Contact{
     .bg(var(--primary-background));
     .c(var(--primary-text));
+    margin-bottom: 29px;
     div{
+
         .flex-flow(row, no-wrap, space-around);
         @media @tablet {
             .flex-flow(column-reverse, no-wrap, space-around);
@@ -298,9 +246,10 @@
         form{
             .flex-flow(column, wrap, center);
             align-items: center;
-            width: 100%;
+            width: 50%;
             label{
                 font-size: 1rem;
+                .w(100%);
                 input{
                     display: block;
                     .w(100%);
@@ -314,7 +263,6 @@
                 .h(40px);
                 border: none;
                 .bg(var(--button-one));
-                .font-style(@ModeNine, none);
                 .c(var(--primary-text));
 
                 font-size: 1rem;

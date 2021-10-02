@@ -1,8 +1,14 @@
 
 .Nav{
     .w(100%);
-    .flex(row);
+    opacity: .9;
+    max-width: 970px;
+    .bg(var(--primary-background));
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 8;
+    .flex-flow(row, space-around, none);
     @media @tablet {
 
     }
@@ -14,188 +20,35 @@
         list-style: none;
         .flex-flow(row, space-evenly, none);
         .padding(0);
-        @media @tablet {
-            text-align: center;
-            .w(80%);
-            .h(100%);
-        }
-    };
-
-
-    li{
-
-        .font-size(1rem);
-        line-height: 50px;
-        .padding(1%);
-        a{
-            margin-right: 2%;
-            text-decoration: none;
-            .c(var(--primary-text));
-        }
-        .font-style(@ModeNine, regular);
-        &:hover{
-            .bg(var(--nav-links-on-hover));
-            color: white;
-            cursor: pointer;
-
-        };
-        @media @tablet {
-            .padding(-1%);
-            .font-size(1rem);
-            .w(80px);
-            color: white;
-            &:hover{
-                color: antiquewhite;
+        li{
+            .w(max-content);
+            .padding(0px 2%);
+            a{
+                .c(var(--primary-text));
             }
 
         }
+
     };
-};
 
-.hideTheMenu{
-    .flex-flow(column-reverse, no-wrap, space-around);
-    z-index: 9;
-    align-items: center;
-    .bg(yellow);
-    .w(150px);
-    .h(250px);
-    margin: 0;
-    position: fixed;
-    left: 0;
-    bottom: -300px;
-    left: 10px;
-    .l-shadow();
-    flex-direction: column-reverse;
-
-    ul{
-        position: relative;
-        list-style: none;
-        text-align: center;
-        .h(100%);
-    }
-    #Back2Top{
-        cursor: pointer;
-        position: fixed;
-        left: 10px;
-        bottom: 310px;
-        width: 30px;
-        height: 30px;
-        display: inline-block;
-        text-align: center;
-        line-height: 30px;
-        opacity: .94;
-        .bg(var(--primary-background));
+    .social-media{
         a{
-            img{
-                padding: 0;
-                width: 15px;
-                height: 15px;
-            }
-        }
-    }
-
-    
-}
-.focused-link{
-    .bg(@infrared);
-}
-.social-media{
-    .flex(row);
-    align-items: center;
-    a{
-        height: 20px;
-        width: 20px;
-        float: right;
-
-        img{
             height: 20px;
             width: 20px;
-        }
-    }
-
-}
-
-#HideMenu{
-    cursor: pointer;
-    position: fixed;
-    bottom: 280px;
-    left: 10px;
-    height: 30px;
-    width: 30px;
-    opacity: .94;
-    img{
-        margin: 0%;
-        padding-top: 0;
-        height: 30px;
-        width: 30px;
-    }
-}
-
-#hideMenu{
-    cursor: pointer;
-    position: fixed;
-    bottom: 280px;
-    left: 10px;
-    height: 30px;
-    width: 30px;
-    opacity: .94; 
-    img{
-        height: 30px;
-        width: 30px;
-    }
-
-}
-
-#back2Top{
-    .fade-in(1s);
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    opacity: .94;
-    line-height: 30px;
-    .bg(var(--back-to-top-button));
-
-    @media @tablet {
-        cursor: pointer;
-        position: fixed;
-        left: 10px;
-        bottom: 310px;
-        width: 30px;
-        height: 30px;
-        display: inline-block;
-        text-align: center;
-        line-height: 30px;
-        a{
+    
             img{
-                padding: 0;
-                width: 15px;
-                height: 15px;
+                height: 20px;
+                width: 20px;
             }
-        }
-    }
-    &:hover{
-        .bg(var(--secondary-background));
-    }
-    a{
-        display: inline-block;
-        line-height: 30px;
-        width: 30px;
-        height: 30px;
-        text-align: center;
-        font-size: 2rem;
-        height: 100%;
-        img{
-            padding-bottom: 10px;
-            padding-right: 7px; 
-            width: 20px;  
-            @media @tablet {
-                padding: 0;
-                width: 15px;
-                height: 15px;
-
-            }    
         }
     
     }
-}
+
+};
+
+
+
+
+
+
 

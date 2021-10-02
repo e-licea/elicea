@@ -5,6 +5,8 @@ import { appContext } from './Components/Context/appContext'
 import "animate.css/animate.min.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import ToggleDarkMode from './Components/utils/ToggleDarkMode';
+import Nav from './Components/Pages/Nav';
 // ..
 AOS.init();
 
@@ -24,6 +26,8 @@ function App() {
       setDarkMode: setDarkMode
     }}>
       <div  className="App" >
+        <Nav/>
+        <ToggleDarkMode/>
         <Render/>
     </div>
     </appContext.Provider>

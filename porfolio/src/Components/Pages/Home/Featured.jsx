@@ -1,10 +1,28 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import images from '../../utils/images'
 import { Link } from 'react-router-dom'
 import ScrollToTop from '../../Hooks/ScrollToTop'
+import { init } from 'ityped'
 
 export default function Featured() {
+
+    useEffect(() => {
+
+        const header = document.querySelector('#FeaturedHeader');
+        init(header, {
+            showCursor: true,
+            cursorChar: '_',
+            loop: false,
+            strings:[
+                'Featured'
+            ]
+        })
+    }, [])
+
     return (
+        <>
+        <span className = 'Main-h3' id = 'FeaturedHeader'></span>
+
         <div 
         data-aos="fade-up" 
         data-aos-duration="600"
@@ -28,5 +46,6 @@ export default function Featured() {
                 
             </div>
         </div>
+        </>
     )
 }

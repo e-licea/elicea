@@ -14,8 +14,6 @@ import Projects from './Projects';
 export default function Render() {
     return (
         <div className = 'Render'>
-            <ToggleDarkMode/>
-            <Nav/>
                 <Route exact path = '/'  component = {Home}/>
                 <Route path = '/skills'  component = {Skills}/>
                 <Route path = '/projects'  component = {Projects}/>

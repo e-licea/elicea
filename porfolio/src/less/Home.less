@@ -1,13 +1,14 @@
 #Featured{
     .w(100%);
     .flex(row);
-    justify-content: space-evenly;
+    justify-content: space-between;
+    
     @media @tablet {
         .flex(column);
     }
     div{
         .w(49%);
-        .max-h(370px);
+        .h(max-content);
         .flex(column);
         .padding(2%);
         .bg(@infrared);
@@ -25,7 +26,7 @@
         }
         @media @tablet {
             .w(100%);
-            .margin(1%);
+            margin-bottom: 2%;
         }
 
     }

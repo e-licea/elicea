@@ -1,11 +1,8 @@
 .Render{
     .h(100%);
     position: relative;
-    padding: 50px 5%;
-    .c(white);
     @media @tablet {
         margin: 0 auto;
-
     }
     @media @750px {
         .w(90%)!important;
@@ -16,5 +13,54 @@
     }
 
 
+    //Terminal Jumbotron Styling
+
+
+#Jumbotron{
+    .bg(#272727);
+    margin-top: 30px;
+    .w(100%);
+    .h(400px);
+    .min-h(250px);
+    .max-h(500px);
+    .flex-flow(column, wrap, none);
+    position: relative;
+    @media @tablet {
+        .min-h(250px);
+        .max-h(500px);
+    }
+    #callToAction{
+        position: absolute;
+        bottom: 50px;
+        right: 170px;
+        .flex(row);
+        .w(max-content);
+        @media @tablet{
+            bottom: 20px;
+            right: 60px;
+        }
+        a{
+            .w(150px);
+            .padding(5%);
+            border-radius: 5px;
+            .margin(2%);
+            .bg(var(--call-to-action-btn));
+            text-decoration: none;
+
+        }
+    }
+
 }
 
+
+}
+
+
+#IntroHeader{
+
+}
+
+#IntroHeader, #ContactHeader{
+    .c(var(--primary-text));
+
+}

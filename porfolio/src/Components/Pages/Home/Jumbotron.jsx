@@ -16,7 +16,6 @@ export default function Jumbotron() {
             cursorChar: '_',
             strings:[
                 'Hello and welcome in!...',
-
             ]
         }
 
@@ -35,11 +34,13 @@ export default function Jumbotron() {
 
             <span id = 'term'>root@elicea:~# <span id="type"/> </span>
 
+{/*
             <div id = 'callToAction'>
-                <Link to ='/projects'> View Projects</Link>
+                <Link to ='/projects'> Projects</Link>
                 <Link to ='/contact'> Contact Me</Link>
-
             </div>
+*/}
+
 
 
         </div>

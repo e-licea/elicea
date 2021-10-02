@@ -1,4 +1,5 @@
-
+/* less imports */
+@import '../css/fonts.css';
 .b-shadow {
   box-shadow: 0 8px 6px -6px black;
 }
@@ -16,6 +17,9 @@
 }
 .r-b-shadow {
   box-shadow: 8px 8px 6px -6px black;
+}
+.Modenine {
+  font-family: 'Modenine';
 }
 @keyframes fadeIn {
   0% {
@@ -103,8 +107,6 @@
 .Render {
   height: 100%;
   position: relative;
-  padding: 50px 5%;
-  color: white;
 }
 @media (max-width: 1000px) {
   .Render {
@@ -122,11 +124,66 @@
     width: 100% !important;
   }
 }
-.Nav {
+.Render #Jumbotron {
+  background-color: #272727;
+  margin-top: 30px;
   width: 100%;
+  height: 400px;
+  max-height: 250px;
+  min-height: 250px;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  flex-wrap: wrap;
+  position: relative;
+}
+@media (max-width: 1000px) {
+  .Render #Jumbotron {
+    max-height: 250px;
+    min-height: 250px;
+    max-height: 500px;
+  }
+}
+.Render #Jumbotron #callToAction {
+  position: absolute;
+  bottom: 50px;
+  right: 170px;
   display: flex;
   flex-direction: row;
+  width: max-content;
+}
+@media (max-width: 1000px) {
+  .Render #Jumbotron #callToAction {
+    bottom: 20px;
+    right: 60px;
+  }
+}
+.Render #Jumbotron #callToAction a {
+  width: 150px;
+  padding: 5%;
+  border-radius: 5px;
+  margin: 2%;
+  background-color: var(--call-to-action-btn);
+  text-decoration: none;
+}
+#IntroHeader,
+#ContactHeader {
+  color: var(--primary-text);
+}
+.Nav {
+  width: 100%;
+  opacity: 0.9;
+  max-width: 970px;
+  background-color: var(--primary-background);
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 8;
+  display: flex;
+  flex-direction: row;
+  justify-content: none;
+  flex-wrap: space-around;
 }
 .Nav ul {
   width: 50%;
@@ -139,194 +196,35 @@
   flex-wrap: space-evenly;
   padding: 0;
 }
-@media (max-width: 1000px) {
-  .Nav ul {
-    text-align: center;
-    width: 80%;
-    height: 100%;
-  }
+.Nav ul li {
+  width: max-content;
+  padding: 0px 2%;
 }
-.Nav li {
-  font-size: 1rem;
-  line-height: 50px;
-  padding: 1%;
-  font-family: 'ModeNine Font';
-  font-weight: regular;
-}
-.Nav li a {
-  margin-right: 2%;
-  text-decoration: none;
+.Nav ul li a {
   color: var(--primary-text);
 }
-.Nav li:hover {
-  background-color: var(--nav-links-on-hover);
-  color: white;
-  cursor: pointer;
-}
-@media (max-width: 1000px) {
-  .Nav li {
-    padding: -1%;
-    font-size: 1rem;
-    width: 80px;
-    color: white;
-  }
-  .Nav li:hover {
-    color: antiquewhite;
-  }
-}
-.hideTheMenu {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: no-wrap;
-  z-index: 9;
-  align-items: center;
-  background-color: yellow;
-  width: 150px;
-  height: 250px;
-  margin: 0;
-  position: fixed;
-  left: 0;
-  bottom: -300px;
-  left: 10px;
-  box-shadow: -8px 0 6px -6px black;
-  flex-direction: column-reverse;
-}
-.hideTheMenu ul {
-  position: relative;
-  list-style: none;
-  text-align: center;
-  height: 100%;
-}
-.hideTheMenu #Back2Top {
-  cursor: pointer;
-  position: fixed;
-  left: 10px;
-  bottom: 310px;
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-  text-align: center;
-  line-height: 30px;
-  opacity: 0.94;
-  background-color: var(--primary-background);
-}
-.hideTheMenu #Back2Top a img {
-  padding: 0;
-  width: 15px;
-  height: 15px;
-}
-.focused-link {
-  background-color: #ff2052;
-}
-.social-media {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.social-media a {
-  height: 20px;
-  width: 20px;
-  float: right;
-}
-.social-media a img {
+.Nav .social-media a {
   height: 20px;
   width: 20px;
 }
-#HideMenu {
-  cursor: pointer;
-  position: fixed;
-  bottom: 280px;
-  left: 10px;
-  height: 30px;
-  width: 30px;
-  opacity: 0.94;
-}
-#HideMenu img {
-  margin: 0%;
-  padding-top: 0;
-  height: 30px;
-  width: 30px;
-}
-#hideMenu {
-  cursor: pointer;
-  position: fixed;
-  bottom: 280px;
-  left: 10px;
-  height: 30px;
-  width: 30px;
-  opacity: 0.94;
-}
-#hideMenu img {
-  height: 30px;
-  width: 30px;
-}
-#back2Top {
-  animation: fadeIn 1s;
-  -webkit-animation: fadeIn 1s;
-  -moz-animation: fadeIn 1s;
-  -o-animation: fadeIn 1s;
-  -ms-animation: fadeIn 1s;
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-  opacity: 0.94;
-  line-height: 30px;
-  background-color: var(--back-to-top-button);
-}
-@media (max-width: 1000px) {
-  #back2Top {
-    cursor: pointer;
-    position: fixed;
-    left: 10px;
-    bottom: 310px;
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    text-align: center;
-    line-height: 30px;
-  }
-  #back2Top a img {
-    padding: 0;
-    width: 15px;
-    height: 15px;
-  }
-}
-#back2Top:hover {
-  background-color: var(--secondary-background);
-}
-#back2Top a {
-  display: inline-block;
-  line-height: 30px;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  font-size: 2rem;
-  height: 100%;
-}
-#back2Top a img {
-  padding-bottom: 10px;
-  padding-right: 7px;
+.Nav .social-media a img {
+  height: 20px;
   width: 20px;
-}
-@media (max-width: 1000px) {
-  #back2Top a img {
-    padding: 0;
-    width: 15px;
-    height: 15px;
-  }
 }
 .theme-dark {
   --primary-text: #dbdbdb;
-  --secondary-text: #81ff87;
-  --primary-background: #19252b;
+  --secondary-text: #dbdbdb;
+  --primary-background: #181818;
   --secondary-background: #81ff87;
-  --button-one: #cc95dd;
+  --button-one: #ff2052;
   --button-two: #81ff87;
   --theme-btn-background: #585858;
   --theme-button-color: #ffffff;
   --nav-links-on-hover: #ff2052;
   --intro-component: #ff2052;
-  --heatmap-color-empty: #131e24;
+  --call-to-action-btn: #41ff51;
+  --call-to-action-btn-secondary: #ffffff;
+  --heatmap-color-empty: #272626;
   --back-to-top-button: #cc95dd;
   --accent: #B8DBD9;
   --button-border: #B8DBD9;
@@ -338,6 +236,8 @@
   --secondary-background: #0c0c0c;
   --nav-links-on-hover: #ff2052;
   --intro-component: #ff2052;
+  --call-to-action-btn: #41ff51;
+  --call-to-action-btn-secondary: #ffffff;
   --heatmap-color-empty: #eeeeee;
   --button-one: #ff2052;
   --button-two: black;
@@ -387,13 +287,20 @@
   display: none;
 }
 .container--toggle {
+  padding: 2%;
+  height: max-content;
+  z-index: 10;
   max-width: 200px;
-  float: right;
-  display: grid;
   place-items: center;
-  min-height: 60px;
-  position: relative;
-  grid-area: toggle;
+  position: fixed;
+  bottom: 0px;
+  right: 20px;
+}
+@media (max-width: 550px) {
+  .container--toggle {
+    bottom: 0px;
+    top: none;
+  }
 }
 /* background */
 .toggle--label {
@@ -505,7 +412,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 @media (max-width: 1000px) {
   #Featured {
@@ -515,7 +422,7 @@
 }
 #Featured div {
   width: 49%;
-  max-height: 370px;
+  height: max-content;
   display: flex;
   flex-direction: column;
   padding: 2%;
@@ -532,40 +439,13 @@
 @media (max-width: 1000px) {
   #Featured div {
     width: 100%;
-    margin: 1%;
-  }
-}
-.Main {
-  margin-top: 1%;
-  font-size: 1.3rem;
-  min-width: none;
-  max-width: none;
-  width: 55%;
-  position: absolute;
-  right: 100px;
-  padding-bottom: 10%;
-  margin: 0 auto;
-}
-@media (max-width: 1250px) {
-  .Main {
-    width: 60%;
-    right: px;
-  }
-}
-@media (max-width: 1000px) {
-  .Main {
-    padding: 0 1%;
-    width: 100%;
-    left: 0;
-    margin: 0 auto;
+    margin-bottom: 2%;
   }
 }
 .Main-h3 {
-  font-size: 1.7rem;
-  margin: 3% 0;
-  font-family: 'ModeNine Font';
-  font-weight: none;
-  color: var(--secondary-text);
+  font-size: 1.2rem;
+  width: max-content;
+  color: var(--primary-text);
 }
 #Intro,
 #Skills,
@@ -573,57 +453,16 @@
 #Contact {
   padding: 2%;
 }
-#Jumbotron {
-  background-color: #272727;
-  width: 100%;
-  height: 400px;
-  max-height: 250px;
-  min-height: 250px;
-  max-height: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: none;
-  flex-wrap: wrap;
-  font-family: 'ModeNine Font';
-  font-weight: regular;
-}
-@media (max-width: 1000px) {
-  #Jumbotron {
-    max-height: 250px;
-    min-height: 250px;
-    max-height: 500px;
-  }
-}
-#Jumbotron #callToAction {
-  position: absolute;
-  bottom: 50px;
-  right: 200px;
-  display: flex;
-  flex-direction: row;
-  width: max-content;
-}
-@media (max-width: 1000px) {
-  #Jumbotron #callToAction {
-    bottom: 20px;
-    right: 60px;
-  }
-}
-#Jumbotron #callToAction a {
-  width: 150px;
-  padding: 5%;
-  border-radius: 5px;
-  margin: 2%;
-  background-color: var(--primary-background);
-}
 #term {
   display: block;
   height: 90%;
   color: #41ff51;
-  position: relative;
+  position: absolute;
+  top: 30px;
   padding: 1% 0;
 }
 .ityped-cursor {
-  font-size: 2.2rem;
+  font-size: 1.2rem;
   opacity: 1;
   -webkit-animation: blink 0.3s infinite;
   -moz-animation: blink 0.3s infinite;
@@ -647,7 +486,7 @@
 }
 #term,
 #type {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 @media (max-width: 1000px) {
   #term,
@@ -799,6 +638,7 @@
 }
 #Projects {
   padding-bottom: 10%;
+  margin-top: 30px;
 }
 #Projects .project-overview {
   height: max-content;
@@ -830,6 +670,7 @@
 #Contact {
   background-color: var(--primary-background);
   color: var(--primary-text);
+  margin-bottom: 29px;
 }
 #Contact div {
   display: flex;
@@ -852,10 +693,11 @@
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  width: 100%;
+  width: 50%;
 }
 #Contact div form label {
   font-size: 1rem;
+  width: 100%;
 }
 #Contact div form label input {
   display: block;
@@ -869,8 +711,6 @@
   height: 40px;
   border: none;
   background-color: var(--button-one);
-  font-family: 'ModeNine Font';
-  font-weight: none;
   color: var(--primary-text);
   font-size: 1rem;
 }
@@ -956,13 +796,11 @@ textarea {
  * All of the styles in this file are optional and configurable!
  * The github and gitlab color scales are provided for reference.
  */
-.react-calendar-heatmap {
-  max-width: 650px;
+#Heatmap {
+  padding: 1%;
 }
-@media (max-width: 1000px) {
-  .react-calendar-heatmap {
-    width: 100%;
-  }
+.react-calendar-heatmap {
+  width: 100% !important;
 }
 .react-calendar-heatmap text {
   font-size: 10px;
@@ -1072,6 +910,8 @@ html,
 }
 .App {
   max-width: 970px;
+  position: relative;
+  font-family: 'Modenine';
 }
 body,
 .App,
@@ -1081,6 +921,5 @@ html,
 .Section {
   height: 100%;
   margin: 0 auto;
-  font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
 }

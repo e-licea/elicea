@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import Python from '../../img/portfolioImg/python.png'
 import NodeJS from '../../img/portfolioImg/node.png'
@@ -12,19 +12,35 @@ import JS from '../../img/portfolioImg/js.png'
 import OSX from '../../img/portfolioImg/osx.png'
 import Windows from '../../img/portfolioImg/win.png'
 import Linux from '../../img/portfolioImg/linux.png'
+import { init } from 'ityped'
 
 
 export default function Skills() {
+    
+    useEffect(() => {
+        
+        const header = document.querySelector('#SkillsHeader')
+        init(header, {
+            cursorChar: '_',
+            showCursor: true,
+            loop: false,
+            strings: [
+                'Skills'
+            ]
+        })
 
+    }, [])
 
     return (
-        <div 
-        data-aos="fade-up" 
-        data-aos-duration="600"
-        data-aos-offset="200"
+      <>
+            <span id = 'SkillsHeader' className = 'Main-h3' ></span>
+
+          <div 
+            data-aos="fade-up" 
+            data-aos-duration="600"
+            data-aos-offset="200"
             id = 'Skills'>
             
-
             <div id = 'CardContainer'>
                 <>
                  {/* 
@@ -119,7 +135,8 @@ export default function Skills() {
 
             </div>
         </div>
-    )
+      </>
+    )   
 }
 
 
