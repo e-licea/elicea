@@ -1,0 +1,33 @@
+#Featured{
+    .w(100%);
+    .flex(row);
+    justify-content: space-between;
+    
+    @media @tablet {
+        .flex(column);
+    }
+    div{
+        .w(49%);
+        .h(max-content);
+        .flex(column);
+        .padding(2%);
+        .bg(@infrared);
+        h4{
+
+        }
+        
+        img{
+            .w(50%);
+            .centerWithMargin();
+        }
+        a{
+            .c(var(--primary-text));
+            .margin(2% 0);
+        }
+        @media @tablet {
+            .w(100%);
+            margin-bottom: 2%;
+        }
+
+    }
+}

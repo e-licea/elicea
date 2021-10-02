@@ -1,105 +1,88 @@
-.Main{
-    margin-top: 1%;
-    font-size: 1.3rem;
-    min-width: none;
-    max-width: none;
-    width: 55%;
-    position: absolute;
-    right: 100px;
-    padding-bottom: 10%;
-    margin: 0 auto;
-    @media @1250px{
-        width: 60%;
-        right: px;
-    }
-    @media @tablet {
-        padding: 0 1%;
-        .w(100%);
-        left: 0;
-        margin: 0 auto;
 
-    }
-}
 
 .Main-h3{
-    .font-size(1.7rem);
-    margin: 3% 0;
-    .font-style(@Super, none);
-    .c(var(--secondary-text));
+    .font-size(1.2rem);
+    .w(max-content);
+    .c(var(--primary-text));
 
 }
 #Intro, #Skills, #Projects, #Contact{
     padding: 2%;
 }
 
-#Jumbotron{
-    .bg(#272727);
-    .w(100%);
-    .h(400px);
-    .min-h(250px);
-    .max-h(500px);
-    .flex-flow(row, wrap, none);
-    position: relative;
-    .font-style(@Super, regular);
-    @media @tablet {
-        .h(300px);
-        .min-h(250px);
-        .max-h(500px);
+#term{
+    display: block;
+    .h(90%);
+    color: #41ff51;
+    position: absolute;
+    top: 30px;
+    .padding(1% 0);
+
+}
+
+.ityped-cursor {
+    font-size: 1.2rem;
+    opacity: 1;
+    -webkit-animation: blink 0.3s infinite;
+    -moz-animation: blink 0.3s infinite;
+    animation: blink 0.3s infinite;
+    animation-direction: alternate;
+}
+ 
+@keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+ 
+@-webkit-keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+ 
+@-moz-keyframes blink {
+    100% {
+        opacity: 0;
     }
 }
 
-#term{
-    position: absolute;
-    top: 45px;
-    left: 10px;
-    color: #41ff51;
-    position: relative;
-
-
-}
-
-#term, .type{
-    .font-size(1.4rem);
+#term, #type{
+    .font-size(1.2rem);
     @media @tablet {
         .font-size(1rem);
     }
 
 }
 
-.type{
-    position: absolute;
-    left: 165px;
-    top: 45px;
+#type{
     color: white;
-    @media @tablet {
-        left: 120px;
-        
-    }
+    text-align: left;
+    line-height: .4em;
+    white-space: pre-wrap;
+    .w(800px);
+    .h(100%);
+
 }
 
 #close, #expand, #mini{
-    margin-top: 15px;
-    .padding(4px);
-    .w(15px);
-    .h(15px);
-    border-radius: 50%;
-    text-align: center;
-    vertical-align: middle;
+    .w(20px);
 }
 
 #close > img, #expand > img, #mini > img{
-    .w(5px);
-    .h(5px);
-
+    .w(15px);
+    .h(15px);
+    border-radius: 50%;
+    .padding(2px);
 }
-#close{
+#close > img{
     .bg(#fc5e5e);
 
 }
-#expand{
+#expand > img {
     .bg(#41ff51);
 }
-#mini{
+#mini > img{
     .bg(#fdbf4b);
 }
 
@@ -107,15 +90,24 @@
     .w(100%);
     .h(40px);
     .bg(#5c5c5c);
-    position: absolute;
-    top: 0;
-    left: 0;
-    div{
-        .h(40px);
-        .w(100px);
-        .flex-flow(row, no-wrap, space-evenly);
-        float: right;
+    .flex-flow(row, no-wrap, space-between);
 
+    p{
+        .w(33%);
+        .padding(0);
+        .margin(0);
+        text-align: center;
+        line-height: 40px;
+    &:first-child{
+            visibility: hidden;
+        }
+    }
+    #windowControl{
+        .w(33%);
+        div{
+            .margin(2%);
+            float: right;
+        }
     }
 
 }
@@ -204,6 +196,8 @@
 
 #Projects{
     padding-bottom: 10%;
+    margin-top: 30px;
+    
     .project-overview{
         .h(max-content);
         .c(var(--primary-text));
@@ -240,7 +234,9 @@
 #Contact{
     .bg(var(--primary-background));
     .c(var(--primary-text));
+    margin-bottom: 29px;
     div{
+
         .flex-flow(row, no-wrap, space-around);
         @media @tablet {
             .flex-flow(column-reverse, no-wrap, space-around);
@@ -250,9 +246,10 @@
         form{
             .flex-flow(column, wrap, center);
             align-items: center;
-            width: 100%;
+            width: 50%;
             label{
                 font-size: 1rem;
+                .w(100%);
                 input{
                     display: block;
                     .w(100%);
@@ -266,7 +263,6 @@
                 .h(40px);
                 border: none;
                 .bg(var(--button-one));
-                .font-style(@Super, none);
                 .c(var(--primary-text));
 
                 font-size: 1rem;

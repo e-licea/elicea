@@ -8,7 +8,6 @@ export default function Projects() {
         data-aos-duration="600"
         data-aos-offset="400"     
         id = 'Projects'>
-            <h3 className="Main-h3"># Projects</h3>
             <SlideShow/>
         </div>
     )

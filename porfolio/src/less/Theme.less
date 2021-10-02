@@ -1,18 +1,31 @@
+//colors
+@white: #ffffff;
+@charcoal: #262626;
+@infrared: #ff2052;
+@navy: #202c72;
+
 .theme-dark {
     --primary-text: #dbdbdb;
-    --secondary-text: #81ff87;  
-    --primary-background: #19252b;
+    --secondary-text: #dbdbdb;  
+    --primary-background: #181818;
     --secondary-background: #81ff87;
 
-    --button-one: #cc95dd;
+    --button-one: @infrared;
     --button-two: #81ff87;
 
-    --theme-button-background: #81ff87;
+    --theme-btn-background: #585858 ;
     --theme-button-color: #ffffff;
 
-    --nav-links-on-hover: #cc95dd;
+    --nav-links-on-hover: @infrared;
 
-    --intro-component: #cc95dd;
+    --intro-component: @infrared;
+    
+    //jumbotron
+    --call-to-action-btn: #41ff51;
+    --call-to-action-btn-secondary: #ffffff;
+
+    //heatmap
+    --heatmap-color-empty: #272626 ;
 
     --back-to-top-button: #cc95dd;
     --accent: #B8DBD9;
@@ -28,11 +41,19 @@
     --nav-links-on-hover: @infrared;
 
     --intro-component: @infrared;
+    
+    //jumbotron
+    --call-to-action-btn: #41ff51;
+    --call-to-action-btn-secondary: #ffffff;
+    
+    //heatmap
+    --heatmap-color-empty: #eeeeee ;
+
 
     --button-one: @infrared;
     --button-two: black;
 
-    --theme-button-background: @infrared;
+    --theme-btn-background: @infrared;
     --theme-button-color: #ffffff;
 
     --back-to-top-button: @infrared;
@@ -44,15 +65,13 @@
     /** sunny side **/
     --blue-background: @infrared;
     --blue-border: #424242;
-    --blue-color: @infrared;
+    --theme-btn-background-light: @infrared;
     --yellow-background: #ffffff;
     --yellow-border: #ffffff;
     /** dark side **/
-    --indigo-background: #808fc7;
-    --indigo-border: #5d6baa;
+    --theme-btn-background-dark: #5d6baa;
     --indigo-color: #6b7abb;
-    --gray-border: #e8e8ea;
-    --gray-dots: #e8e8ea;
+
 }
 
 @keyframes reverse {
@@ -87,32 +106,34 @@
 }
   
 .container--toggle {
+    .padding(2%);
+    height: max-content;
+    z-index: 10;
     .max-w(200px);
-    float: right;
-    display: grid;
     place-items: center;
-    min-height: 60px;
-    position: relative;
-    grid-area: toggle;
-    margin: 18px;
+    position: fixed;
+    bottom: 0px;
+    right: 20px;
+    @media @mobile {
+        bottom: 0px;
+        top: none;
+    }
 }
 
 /* background */
 .toggle--label {
     .w(70px);
-    .h(34px);
+    .h(30px);
     overflow: hidden;
-    background: var(--indigo-color);
+    background: var(--theme-btn-background);
     border-radius: 100px;
-    border: 3px solid var(--indigo-border);
     display: flex;
     position: relative;
     transition: all 350ms ease-in;
 }
 
 .toggle--checkbox:checked + .toggle--label {
-    background: var(--blue-color);
-    border-color: var(--blue-border);
+    background: var(--theme-btn-background);
 }
 
 /* sun and moon */

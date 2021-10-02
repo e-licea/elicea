@@ -2,37 +2,43 @@
 @import 'variables';
 @import 'mixins';
 @import 'App'; 
-@import 'Section';
+@import 'Render';
 @import 'Nav';
 @import 'Theme';
+@import 'Home';
 @import 'Main';
 @import 'SlideShow';
 @import 'TheLab';
+@import 'HeatMap';
 
+@import '../css/fonts.css';
 
 //Ubuntu font pack
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 
 //Global styles
 
-body, .App, html, #root{
+body, html, #root{
     .w(100%);
     .h(100%);
+    .bg(var(--primary-background));
+    .c(var(--primary-text));
 }
 
-body, .App, html, #root,.Main, .Section{
 
-    .bg(var(--primary-background));
-    .max-w(1900px);
+.App{
+    .max-w(970px);
+    position: relative;
+    .Modenine();
+
+}
+
+
+body, .App, html, #root, .Main, .Section{
     .h(100%);
     .centerWithMargin();
-    font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
 }
 
 
 
-
-html{
-    .font-style(@Sora, 200)
-}

@@ -43,6 +43,11 @@
 
 
 //fonts
+
+.Modenine{
+    font-family: 'Modenine';
+}
+
 .font-style(@font, @weight){
     font-family: @font;
     font-weight: @weight;
@@ -87,11 +92,16 @@
 }
 
 .padding(@p){
-    padding: 1% + @p;
+    padding: @p;
 }
 
 .margin(@m){
-    margin: 1% + @m;
+    margin: @m;
+}
+
+.flex(@flex){
+    display: flex;
+    flex-direction: @flex;
 }
 
 .flex-flow(@flow, @wrap, @space){
