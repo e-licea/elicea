@@ -5,9 +5,6 @@ import { appContext } from '../Context/appContext';
 import github from '../../img/icons/github.svg'
 import githubDark from '../../img/icons/dark/github.png'
 import githubLight from '../../img/icons/light/github.png'
-import up from '../../img/icons/up.svg'
-import down from '../../img/icons/down.svg'
-import menu from '../../img/portfolioImg/m-menu.svg'
 
 //Hooks
 import useWindowSize from '../Hooks/UseWindowSize'
@@ -36,7 +33,12 @@ export default function Nav() {
     
     return (
 
-            <div className = 'Nav' style = {scroll > 350? {opacity: '.9'}:null} >
+            <div 
+            data-aos="fade-down" 
+            data-aos-duration="400"
+            data-aos-offset="100"
+            className = 'Nav' 
+            style = {scroll > 350? {opacity: '.9'}:null} >
 
                 <ul>
                 {
@@ -47,6 +49,7 @@ export default function Nav() {
                 }
                     <li id = '1' ><Link to = '/' >Home</Link></li>
                     <li id = '3'><Link to = '/projects' >Projects</Link></li>
+                    
                     {/*<li><L to = '/the-lab' >Blog</L></li>
                     {/*<li><L to = '/the-lab' >Blog</L></li>*/}
 

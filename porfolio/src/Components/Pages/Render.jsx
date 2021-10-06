@@ -14,11 +14,11 @@ import Projects from './Projects';
 export default function Render() {
     return (
         <div className = 'Render'>
-                <Route exact path = '/'  component = {Home}/>
-                <Route path = '/skills'  component = {Skills}/>
-                <Route path = '/projects'  component = {Projects}/>
+            <Route exact path = '/'  component = {Home}/>
+            <Route path = '/skills'  component = {Skills}/>
+            <Route path = '/projects'  component = {Projects}/>
+            <Route path = '/the-lab'  component = {TheLab}/>
             <Contact/>
-            
         </div>
     )
 }

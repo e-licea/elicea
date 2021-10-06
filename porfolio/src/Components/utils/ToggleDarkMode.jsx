@@ -25,7 +25,6 @@ export default function ToggleDarkMode(props) {
             setTogClass('light')
             setDarkMode(false)
         }
-        console.log(scroll)
 
     }, [theme, scroll])
 
