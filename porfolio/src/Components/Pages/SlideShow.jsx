@@ -134,10 +134,10 @@ const imgArr = [
     deploy:'https://www.highgroundrestore.com',
     src:'https://github.com/e-licea/company/tree/master, https://github.com/e-licea/redux-teammanager-api',
     imgSrc: images.hgrMockup,
-    desc:'High Ground Restore is a simple front-end application for a starter roofing business. It\'s primary uses are for promoting roofing services, and educating possible clients on their own roof systems. The app was carefully built so it is concise and easy to manuever across all platforms through media queries. It also has an easy to use contact form that is able to send emails very easily to any inbox.',
-    challenges: ['Brand Creation'],
-    technologies: ['React', 'Weather API', 'Less CSS', 'Context API'],
-    currentlyWorking: ['SEO Implementation', 'Selling Ad Space']
+    desc:'High Ground Restore is a simple front-end application for a starter roofing business. It\'s primary uses are for promoting roofing services, and educating possible clients on their own roof systems through a spectrum of articles on the topics of roofing. It\'s back-end is made with Python Flask and is designed to handle functionalities like fetching articles from a database, and keep track of roofing materials for the company. The web application also has had a recent SEO update when it was migrated to NextJS.',
+    challenges: ['Brand Creation', 'NextJS Migration', 'Setting up Flask Server'],
+    technologies: ['React', 'NextJS', 'Flask', 'Weather API', 'Less CSS', 'Context API'],
+    currentlyWorking: ['SEO Implementation','Content Creation', 'Selling Ad Space']
   },
   {
     id: 1,

@@ -3,10 +3,8 @@ import { Route } from 'react-router-dom';
 
 
 //import Components
-import Nav from './Nav'
 import Home from './Home/Home';
 import TheLab from '../TheLab/TheLab'
-import ToggleDarkMode from '../utils/ToggleDarkMode';
 import Contact from './Contact';
 import Skills from './Skills';
 import Projects from './Projects';
