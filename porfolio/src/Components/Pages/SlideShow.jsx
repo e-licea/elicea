@@ -51,13 +51,13 @@ export default class SlideShow extends Component {
     if (e.target.id != 'next'){
       //console.log('prev')
       this.setState({
-        active: this.state.active.id == 0? imgArr[2] : imgArr[this.state.active.id - 1],
+        active: this.state.active.id == 0? imgArr[3] : imgArr[this.state.active.id - 1],
       })
     }
     else {
       //console.log('next')
       this.setState({
-        active: this.state.active.id == 2? imgArr[0] : imgArr[this.state.active.id + 1],
+        active: this.state.active.id == 3? imgArr[0] : imgArr[this.state.active.id + 1],
       })
     }
     
@@ -159,5 +159,16 @@ const imgArr = [
     challenges: ['Redux state', 'Authentication with JSON Web Tokens','Creating a reliable emoji api', 'Creating a logical Postgres database schema' ],
     technologies: ['React', 'Redux', 'Node','Yup Form Validator', 'Express', 'Less CSS', 'PostgreSQL'],
     currentlyWorking:['Creating user profile', 'Setting up a status feed page.']
+  },
+  {
+    id: 3,
+    project: 'Flask Blog Manager',
+    src:'https://github.com/e-licea/highgroundrestoreapi',
+    deploy: 'https://highgroundrestoreapi.herokuapp.com/login',
+    imgSrc: images.articleManagerMockup,
+    desc:'This Flask application was designed for managing and creating content for a blog website. The blog manager has protected endpoints with Flask sessions that require the proper credentials for write privileges inside the app. Once logged in, a user is able to create drafts, add content such as paragraphs and images, and then publish the article. When the article is published, it is immediately available to be read through the client api endpoints.',
+    challenges: ['Authentication with Flask Sessions','Serializing data to JSON', 'Creating a logical Postgres database schema' ],
+    technologies: ['Flask', 'Vanilla JS', 'DJango HTML', 'SQL Alchemy',  'Less CSS', 'PostgreSQL'],
+    currentlyWorking:['Adding additional edit functions']
   }
 ]//
