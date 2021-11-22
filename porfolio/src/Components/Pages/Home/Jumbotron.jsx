@@ -1,13 +1,9 @@
-import React, { useContext, useEffect } from 'react'
-import { Link } from 'react-router-dom';
-import { appContext } from '../../Context/appContext';
+import React, { useEffect } from 'react'
 //bit.dev imports
 import { init } from 'ityped';
 
 export default function Jumbotron() {
 
-    const darkMode = useContext(appContext).darkMode
-    const setDarkMode = useContext(appContext).setDarkMode
     useEffect(() => {
         
         const type = document.querySelector('#type');
@@ -28,23 +24,18 @@ export default function Jumbotron() {
     return (
         <>
         <div 
-            data-aos="flip-up" 
-            data-aos-duration="500"
-            data-aos-offset="100"
             id = 'Jumbotron'
         >
            <ToolBar/>
 
             <span id = 'term'>root@elicea:~# <span id="type"/> </span>
 
-{/*
-            <div id = 'callToAction'>
+            {/* <div id = 'callToAction'>
                 <Link to ='/projects'> Projects</Link>
                 <Link to ='/contact'> Contact Me</Link>
             </div>
-*/}
 
-
+ */}
 
         </div>
 

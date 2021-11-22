@@ -185,6 +185,11 @@
   justify-content: none;
   flex-wrap: space-around;
 }
+@media (max-width: 550px) {
+  .Nav {
+    bottom: 0 !important;
+  }
+}
 .Nav ul {
   width: 50%;
   margin: 0;

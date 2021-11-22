@@ -8,6 +8,7 @@ import react from '../../img/portfolioImg/react.svg'
 import Redux from '../../img/portfolioImg/redux.svg'
 import HTML from '../../img/portfolioImg/html.png'
 import CSS from '../../img/portfolioImg/css.png'
+import Flask from '../../img/portfolioImg/flask.png'
 import JS from '../../img/portfolioImg/js.png'
 import OSX from '../../img/portfolioImg/osx.png'
 import Windows from '../../img/portfolioImg/win.png'
@@ -149,7 +150,8 @@ const skills = [
             "Adaptive to git commands and version control flow.",
             "Handling conflicts carefully and strategically",
     ]
-    },    {
+    },    
+    {
         skill: "Python",
         end: 'back',
         img: Python,
@@ -160,6 +162,17 @@ const skills = [
             "Adding SQL databases and models for persistence",
             "Creating user authentication with JSON web tokens and sessions. ",
             "Testing back end applications with Jest"
+    
+    ]
+    },    
+    {
+        skill: "Flask",
+        end: 'back',
+        img: Flask,
+        description: [
+            "Endpoint Security with Sessions and JWTs",
+            "Database management with SQL Alchemy",
+
     
     ]
     },

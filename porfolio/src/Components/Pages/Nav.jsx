@@ -1,26 +1,21 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, {  useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { appContext } from '../Context/appContext';
 //Icons
-import github from '../../img/icons/github.svg'
 import githubDark from '../../img/icons/dark/github.png'
 import githubLight from '../../img/icons/light/github.png'
 
 //Hooks
-import useWindowSize from '../Hooks/UseWindowSize'
 import useScroll from '../Hooks/UseScroll'
+import useWindowSize from '../Hooks/UseWindowSize';
 
 export default function Nav() {
 
-    const [ windowSize, setWindowSize ] = useState(0)
-    const winSize = useWindowSize()
 
     let scroll = useScroll();
+    let width = useWindowSize().width
 
     const darkMode = useContext(appContext).darkMode
-    const setDarkMode = useContext(appContext).setDarkMode
-    const [ hideMenu, setHideMenu ] = useState(true);
-    const [ focusedLink, setFocusedLink ] = useState('1');
     
 
     function backToTopSmooth(e){
@@ -34,7 +29,7 @@ export default function Nav() {
     return (
 
             <div 
-            data-aos="fade-down" 
+            data-aos= {width > 600? "fade-down": "fade-up" }
             data-aos-duration="400"
             data-aos-offset="100"
             className = 'Nav' 

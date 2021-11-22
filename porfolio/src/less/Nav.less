@@ -7,11 +7,9 @@
     justify-content: space-between;
     position: fixed;
     top: 0;
+    @media @mobile {bottom: 0 !important;}
     z-index: 8;
     .flex-flow(row, space-around, none);
-    @media @tablet {
-
-    }
   
     ul{
         .w(50%);
