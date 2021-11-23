@@ -8,7 +8,6 @@ import { setTheme } from './Themes';
 
 export default function ToggleDarkMode(props) {
     
-    const darkMode = useContext(appContext).darkMode
     const setDarkMode = useContext(appContext).setDarkMode
     const scroll = useScroll()
 

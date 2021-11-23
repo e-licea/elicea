@@ -1,14 +1,15 @@
 //colors
 @white: #ffffff;
 @charcoal: #262626;
-@infrared: #ff2052;
+@infrared: #01B1FD;
 @navy: #202c72;
 
 .theme-dark {
     --primary-text: #dbdbdb;
     --secondary-text: #dbdbdb;  
-    --primary-background: #181818;
+    --primary-background: #0a101a;
     --secondary-background: #81ff87;
+
 
     --button-one: @infrared;
     --button-two: #81ff87;
@@ -106,17 +107,16 @@
 }
   
 .container--toggle {
-    .padding(2%);
+    .padding(1%);
     height: max-content;
     z-index: 10;
     .max-w(200px);
     place-items: center;
     position: fixed;
-    bottom: 0px;
-    right: 20px;
+    bottom: 25px;
+    right: 0px;
     @media @mobile {
-        bottom: 0px;
-        top: none;
+        bottom: 30px;
     }
 }
 

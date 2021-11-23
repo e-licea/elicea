@@ -18,6 +18,69 @@
 .r-b-shadow {
   box-shadow: 8px 8px 6px -6px black;
 }
+/* CSS */
+/* CSS */
+.button-48 {
+  appearance: none;
+  background-color: black;
+  border-width: 0;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Clarkson, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1em;
+  margin: 0;
+  opacity: 1;
+  outline: 0;
+  padding: 5%;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-rendering: geometricprecision;
+  text-transform: uppercase;
+  transition: opacity 300ms cubic-bezier(0.694, 0, 0.335, 1), background-color 100ms cubic-bezier(0.694, 0, 0.335, 1), color 100ms cubic-bezier(0.694, 0, 0.335, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+.button-48:before {
+  animation: opacityFallbackOut 0.5s step-end forwards;
+  backface-visibility: hidden;
+  background-color: #41ff51;
+  clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateZ(0);
+  transition: clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  width: 100%;
+}
+.button-48:hover:before {
+  color: black;
+  animation: opacityFallbackIn 0s step-start forwards;
+  clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+.button-48:after {
+  background-color: #FFFFFF;
+}
+.button-48 span {
+  z-index: 1;
+  position: relative;
+}
+.radial-gradient {
+  /*Fallback if gradeints don't work */
+  background: #9b59b6;
+  /*Linear gradient... */
+  background: radial-gradient(at 30% 30%, #01B1FD, #a058ff);
+}
 .Modenine {
   font-family: 'Modenine';
 }
@@ -126,6 +189,11 @@
 }
 .Render #Jumbotron {
   background-color: #272727;
+  border-radius: 4px 4px 0 0;
+  background-image: url('https://64.media.tumblr.com/478b9e77d884ae0cfb9abddeacfb4386/096155609c54ec12-fa/s500x750/6617fc3dbf71afc13cdb6507cb161c7920e5ffaf.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
   margin-top: 30px;
   width: 100%;
   height: 400px;
@@ -160,12 +228,13 @@
   }
 }
 .Render #Jumbotron #callToAction a {
-  width: 150px;
   padding: 5%;
-  border-radius: 5px;
-  margin: 2%;
-  background-color: var(--call-to-action-btn);
+  margin: 3%;
   text-decoration: none;
+  color: white;
+}
+.Render #Jumbotron #callToAction a:hover {
+  color: black;
 }
 #IntroHeader,
 #ContactHeader {
@@ -175,10 +244,13 @@
   width: 100%;
   opacity: 0.9;
   max-width: 970px;
-  background-color: var(--primary-background);
+  background-color: #5f5f5f;
   justify-content: space-between;
+  border-radius: 4px 4px 0 0;
+  padding: 0 5px 0 0;
+  height: 30px;
   position: fixed;
-  top: 0;
+  bottom: 0;
   z-index: 8;
   display: flex;
   flex-direction: row;
@@ -187,7 +259,7 @@
 }
 @media (max-width: 550px) {
   .Nav {
-    bottom: 0 !important;
+    bottom: 0!important;
   }
 }
 .Nav ul {
@@ -219,14 +291,14 @@
 .theme-dark {
   --primary-text: #dbdbdb;
   --secondary-text: #dbdbdb;
-  --primary-background: #181818;
+  --primary-background: #0a101a;
   --secondary-background: #81ff87;
-  --button-one: #ff2052;
+  --button-one: #01B1FD;
   --button-two: #81ff87;
   --theme-btn-background: #585858;
   --theme-button-color: #ffffff;
-  --nav-links-on-hover: #ff2052;
-  --intro-component: #ff2052;
+  --nav-links-on-hover: #01B1FD;
+  --intro-component: #01B1FD;
   --call-to-action-btn: #41ff51;
   --call-to-action-btn-secondary: #ffffff;
   --heatmap-color-empty: #272626;
@@ -239,24 +311,24 @@
   --secondary-text: #000000;
   --primary-background: #ffffff;
   --secondary-background: #0c0c0c;
-  --nav-links-on-hover: #ff2052;
-  --intro-component: #ff2052;
+  --nav-links-on-hover: #01B1FD;
+  --intro-component: #01B1FD;
   --call-to-action-btn: #41ff51;
   --call-to-action-btn-secondary: #ffffff;
   --heatmap-color-empty: #eeeeee;
-  --button-one: #ff2052;
+  --button-one: #01B1FD;
   --button-two: black;
-  --theme-btn-background: #ff2052;
+  --theme-btn-background: #01B1FD;
   --theme-button-color: #ffffff;
-  --back-to-top-button: #ff2052;
+  --back-to-top-button: #01B1FD;
   --accent: #DBE7E4;
   --button-border: #5E4B56;
 }
 :root {
   /** sunny side **/
-  --blue-background: #ff2052;
+  --blue-background: #01B1FD;
   --blue-border: #424242;
-  --theme-btn-background-light: #ff2052;
+  --theme-btn-background-light: #01B1FD;
   --yellow-background: #ffffff;
   --yellow-border: #ffffff;
   /** dark side **/
@@ -292,19 +364,18 @@
   display: none;
 }
 .container--toggle {
-  padding: 2%;
+  padding: 1%;
   height: max-content;
   z-index: 10;
   max-width: 200px;
   place-items: center;
   position: fixed;
-  bottom: 0px;
-  right: 20px;
+  bottom: 25px;
+  right: 0px;
 }
 @media (max-width: 550px) {
   .container--toggle {
-    bottom: 0px;
-    top: none;
+    bottom: 30px;
   }
 }
 /* background */
@@ -415,6 +486,7 @@
 }
 #Featured {
   width: 100%;
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -426,12 +498,13 @@
   }
 }
 #Featured div {
+  color: white;
   width: 49%;
   height: max-content;
   display: flex;
   flex-direction: column;
   padding: 2%;
-  background-color: #ff2052;
+  background-color: #01B1FD;
 }
 #Featured div:hover {
   opacity: 0.9;
@@ -441,7 +514,8 @@
   margin: 0 auto;
 }
 #Featured div a {
-  color: var(--primary-text);
+  color: white;
+  font-size: 1.2rem;
   margin: 2% 0;
 }
 @media (max-width: 1000px) {
@@ -552,8 +626,9 @@
   background-color: #fdbf4b;
 }
 .ToolBar {
+  border-radius: 4px 4px 0 0;
   width: 100%;
-  height: 40px;
+  height: 30px;
   background-color: #5c5c5c;
   display: flex;
   flex-direction: row;
@@ -565,7 +640,7 @@
   padding: 0;
   margin: 0;
   text-align: center;
-  line-height: 40px;
+  line-height: 30px;
 }
 .ToolBar p:first-child {
   visibility: hidden;
@@ -576,6 +651,8 @@
 .ToolBar #windowControl div {
   margin: 2%;
   float: right;
+  display: flex;
+  flex-direction: row;
 }
 .cpu-gif {
   position: absolute;
@@ -586,9 +663,11 @@
 #Intro {
   background-color: var(--intro-component);
   color: #ffffff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #Intro p {
   font-size: 1.1rem;
+  line-height: 2;
 }
 @media (max-width: 1000px) {
   #Intro p {
@@ -662,11 +741,12 @@
   margin: 1;
 }
 #Skills #CardContainer .SkillCard .skill-list li #bullit {
-  color: #ff2052;
+  color: #01B1FD;
 }
 #Projects {
   padding-bottom: 10%;
   margin-top: 30px;
+  margin-bottom: 50px;
 }
 #Projects .project-overview {
   height: max-content;
@@ -698,9 +778,9 @@
 #Contact {
   background-color: var(--primary-background);
   color: var(--primary-text);
-  margin-bottom: 29px;
 }
 #Contact div {
+  margin-bottom: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -721,7 +801,7 @@
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  width: 50%;
+  width: 70%;
 }
 #Contact div form label {
   font-size: 1rem;
@@ -730,17 +810,20 @@
 #Contact div form label input {
   display: block;
   width: 100%;
+  background-color: var(--primary-background);
+  border: none;
 }
 #Contact div form label textarea {
   width: 100%;
+  background-color: var(--primary-background);
 }
-#Contact div form button {
-  width: 100px;
+#Contact div form a {
+  text-decoration: none;
   height: 40px;
-  border: none;
-  background-color: var(--button-one);
-  color: var(--primary-text);
-  font-size: 1rem;
+  line-height: 0px;
+}
+#Contact div form a:hover {
+  color: black;
 }
 #Contact div .contact-ad {
   width: 50%;
@@ -907,13 +990,13 @@ textarea {
   fill: #eeeeee;
 }
 .react-calendar-heatmap .color-github-1 {
-  fill: #d6e685;
+  fill: #9b59b6;
 }
 .react-calendar-heatmap .color-github-2 {
-  fill: #8cc665;
+  fill: #7fa8d1;
 }
 .react-calendar-heatmap .color-github-3 {
-  fill: #44a340;
+  fill: #254e77;
 }
 .react-calendar-heatmap .color-github-4 {
   fill: #1e6823;
@@ -1000,4 +1083,10 @@ html,
   height: 100%;
   margin: 0 auto;
   font-weight: 300;
+}
+#document,
+body,
+#root,
+.App {
+  height: 100% !important;
 }

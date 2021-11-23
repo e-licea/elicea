@@ -1,5 +1,6 @@
 #Featured{
     .w(100%);
+    cursor: pointer;
     .flex(row);
     justify-content: space-between;
     
@@ -7,6 +8,7 @@
         .flex(column);
     }
     div{
+        .c(white);
         .w(49%);
         .h(max-content);
         .flex(column);
@@ -24,7 +26,8 @@
             .centerWithMargin();
         }
         a{
-            .c(var(--primary-text));
+            .c(white);
+            .font-size(1.2rem);
             .margin(2% 0);
         }
         @media @tablet {

@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 import images from '../../utils/images'
 import { Link } from 'react-router-dom'
-import ScrollToTop from '../../Hooks/ScrollToTop'
 import { init } from 'ityped'
 
 export default function Featured() {
+
+    const history = useHistory()
 
     useEffect(() => {
 
@@ -14,21 +16,27 @@ export default function Featured() {
             cursorChar: '_',
             loop: false,
             strings:[
-                'Featured'
+                'Featured Projects'
             ]
         })
     }, [])
 
+    
+
+
+
     return (
         <>
         <span className = 'Main-h3' id = 'FeaturedHeader'></span>
-
         <div 
         data-aos="fade-up" 
         data-aos-duration="600"
         data-aos-offset="200"
         id = 'Featured'>
-            <div>
+            <div 
+                className = 'radial-gradient'
+                onClick = { e=> {e.preventDefault();history.push('/projects'); window.scrollTo(0,0)  }}
+            >
                 <h4>Featured Project</h4>
                 <img src={images.rTeamMockup} alt="" />
 
@@ -36,7 +44,10 @@ export default function Featured() {
                 <p>This build is a messenger tool where users can collaborate in groups or in pairs. Currently working on adding a status feed and shift the build more towards a social medial. Emojis have been implemented!.</p>
 
             </div>
-            <div>
+            <div 
+                className = 'radial-gradient'
+            >
+            
                 <h4>Currently Working On</h4>
                 <img src={images.reactSnkrsMockup} alt="" />
                 <Link to ='/projects' onClick={e=> window.scrollTo(0,0)}>Sneaker Tool</Link>

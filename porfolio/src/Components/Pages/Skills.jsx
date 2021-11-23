@@ -14,6 +14,7 @@ import OSX from '../../img/portfolioImg/osx.png'
 import Windows from '../../img/portfolioImg/win.png'
 import Linux from '../../img/portfolioImg/linux.png'
 import { init } from 'ityped'
+import { compareDocumentPosition } from 'domutils'
 
 
 export default function Skills() {
@@ -34,15 +35,15 @@ export default function Skills() {
 
     return (
       <>
-            <span id = 'SkillsHeader' className = 'Main-h3' ></span>
 
           <div 
             data-aos="fade-up" 
             data-aos-duration="600"
             data-aos-offset="200"
             id = 'Skills'>
+            <span id = 'SkillsHeader' className = 'Main-h3' ></span>
             
-            <div id = 'CardContainer'>
+            <div  id = 'CardContainer'>
                 <>
                  {/* 
                     <div>
@@ -73,13 +74,14 @@ export default function Skills() {
                             skills.map((skill)=>{
                                 if(skill.end == 'os'){
                                     return(
-                                    <div className = 'SkillCard'>
+                                    <div id = {skill.id}  className = 'SkillCard'>
                                         <div className='img-con' >
                                             <img
                                             src={skill.img}
                                             alt=""/>
                                             <p>{skill.skill}</p>
                                         </div>
+                                        <SkillHoverPane description = {description}/>
                                     </div>
                                     )
                                 }
@@ -94,13 +96,14 @@ export default function Skills() {
                             skills.map((skill)=>{
                                 if(skill.end == 'front'){
                                     return(
-                                    <div className = 'SkillCard'>
+                                    <div id = {skill.id}  className = 'SkillCard'>
                                         <div className='img-con'>
                                             <img
                                             src={skill.img}
                                             alt=""/>
                                             <p>{skill.skill}</p>
                                         </div>
+                                        <SkillHoverPane description = {description}/>
                                     </div>
                                     )
                                 }
@@ -116,13 +119,17 @@ export default function Skills() {
                             skills.map((skill)=>{
                                 if(skill.end == 'back'){
                                     return(
-                                    <div className = 'SkillCard'>
+                                    <div id = {skill.id} className = 'SkillCard'>
                                         <div className='img-con'>
                                             <img
                                             src={skill.img}
                                             alt=""/>
                                             <p>{skill.skill}</p>
                                         </div>
+                                        <SkillHoverPane 
+                                        description = {description}
+                                        
+                                        />
                                     </div>
                                     )
                                 }
@@ -140,9 +147,21 @@ export default function Skills() {
     )   
 }
 
+function SkillHoverPane(props){
+    const { description } = props;
+
+    console.log(description)
+    return(
+        <>
+
+        </>
+    )
+}
+
 
 const skills = [
     {
+        id :1,
         skill: "Git",
         end: 'skill',
         img: 'https://drive.google.com/uc?id=1XZwPysnRZtGF2Prdpvs7q2uJdv8aLQc5',
@@ -152,6 +171,7 @@ const skills = [
     ]
     },    
     {
+        id : 2,
         skill: "Python",
         end: 'back',
         img: Python,
@@ -166,6 +186,7 @@ const skills = [
     ]
     },    
     {
+        id : 3,
         skill: "Flask",
         end: 'back',
         img: Flask,
@@ -177,6 +198,7 @@ const skills = [
     ]
     },
     {
+        id : 4,
         skill: "NodeJS",
         end: 'back',
         img: NodeJS,
@@ -189,6 +211,7 @@ const skills = [
     ]
     },
     {
+        id : 5,
         skill: "HTML",
         end: 'front',
         img: HTML,
@@ -201,6 +224,7 @@ const skills = [
     ]
     },
     {
+        id : 6,
         skill: "CSS",
         end: 'front',
         img: CSS,
@@ -213,6 +237,7 @@ const skills = [
     ]
     },
     {
+        id : 7,
         skill: "JavaScript",
         end: 'front',
         img: JS,
@@ -225,6 +250,7 @@ const skills = [
     ]
     },
     {
+        id : 8,
         skill: "ReactJS",
         end: 'front',
         img: react,
@@ -238,7 +264,8 @@ const skills = [
     },
 
     {
-        skill: "MySql",
+        id : 9,
+        skill: "MySQL",
         end: 'back',
         img: MySQL,
         description: [
@@ -250,7 +277,8 @@ const skills = [
     ]
     },    
     {
-        skill: "PostgreSql",
+        id : 10,
+        skill: "PostgreSQL",
         end: 'back',
         img: PostgreSQL,
         description: [
@@ -263,6 +291,7 @@ const skills = [
     },
 
     {
+        id : 11,
         skill: "Mac OSX",
         end: 'os',
         img: OSX,
@@ -276,6 +305,7 @@ const skills = [
     },
 
     {
+        id : 12,
         skill: "Windows10",
         end: 'os',
         img: Windows,
@@ -289,6 +319,7 @@ const skills = [
     },
 
     {
+        id : 13,
         skill: "Linux",
         end: 'os',
         img: Linux,
@@ -301,6 +332,7 @@ const skills = [
     ]
     },
     {
+        id : 14,
         skill: " React Redux",
         end: 'front',
         img: Redux,

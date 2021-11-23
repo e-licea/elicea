@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 //bit.dev imports
 import { init } from 'ityped';
+import {Link} from 'react-router-dom'
 
 export default function Jumbotron() {
 
@@ -13,14 +14,18 @@ export default function Jumbotron() {
             strings:[
                 'Hello and welcome in!...',
                 'I am a full-stack software developer.',
-                'Automation is the motivation!',
-                'Let\'s build something together!'
+                'Let\'s create something together!',
+                "\'Knowledge is power!\' - Francis Bacon",
+                '\'First solve the problem, then write the code\' -John Johnson',
+                '\'Simplicity is the soul of efficiency.\' – Austin Freeman'
             ]
         }
 
         init(type, typeConfig)
         
     }, [])
+
+    
     return (
         <>
         <div 
@@ -30,12 +35,19 @@ export default function Jumbotron() {
 
             <span id = 'term'>root@elicea:~# <span id="type"/> </span>
 
-            {/* <div id = 'callToAction'>
-                <Link to ='/projects'> Projects</Link>
-                <Link to ='/contact'> Contact Me</Link>
+            <div id = 'callToAction'>
+
+                <Link className = 'button-48' role = 'button' to= '/projects' role="button">
+                    <span className="text">Projects</span>
+                </Link>
+
+                <Link className = 'button-48' to = '/contact'  role="button">
+                    <span className="text">Contact</span>
+                </Link>
+ 
             </div>
 
- */}
+
 
         </div>
 

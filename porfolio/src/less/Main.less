@@ -87,8 +87,9 @@
 }
 
 .ToolBar{
+    .b-r(4px 4px 0 0 );
     .w(100%);
-    .h(40px);
+    .h(30px);
     .bg(#5c5c5c);
     .flex-flow(row, no-wrap, space-between);
 
@@ -97,7 +98,7 @@
         .padding(0);
         .margin(0);
         text-align: center;
-        line-height: 40px;
+        line-height: 30px;
     &:first-child{
             visibility: hidden;
         }
@@ -107,6 +108,7 @@
         div{
             .margin(2%);
             float: right;
+            .flex(row);
         }
     }
 
@@ -123,9 +125,11 @@
 #Intro{
     .bg(var(--intro-component));
     color: @white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     p{
         font-size: 1.1rem;
         @media @tablet {font-size: 1rem;}
+        line-height: 2;
     }
     &:hover{
         opacity: .9;
@@ -198,6 +202,7 @@
 #Projects{
     padding-bottom: 10%;
     margin-top: 30px;
+    margin-bottom: 50px;
     
     .project-overview{
         .h(max-content);
@@ -235,9 +240,8 @@
 #Contact{
     .bg(var(--primary-background));
     .c(var(--primary-text));
-    margin-bottom: 29px;
     div{
-
+        margin-bottom: 50px;
         .flex-flow(row, no-wrap, space-around);
         @media @tablet {
             .flex-flow(column-reverse, no-wrap, space-around);
@@ -247,27 +251,27 @@
         form{
             .flex-flow(column, wrap, center);
             align-items: center;
-            width: 50%;
+            width: 70%;
             label{
                 font-size: 1rem;
                 .w(100%);
                 input{
                     display: block;
                     .w(100%);
+                    .bg(var(--primary-background));
+                    border: none;
+
                 }
                 textarea{
                     .w(100%);
+                    .bg(var(--primary-background));
                 }
             }
-            button{
-                .w(100px);
+            a{
+                text-decoration: none;
+                &:hover{.c(black);}
                 .h(40px);
-                border: none;
-                .bg(var(--button-one));
-                .c(var(--primary-text));
-
-                font-size: 1rem;
-
+                line-height: 0px;
             }
         }
 

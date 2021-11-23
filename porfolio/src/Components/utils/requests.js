@@ -5,7 +5,7 @@ import axios from 'axios'
 export async function getContributions(){
     const requestConfig = {
         method: 'get',
-        url: 'https://online-port-api.herokuapp.com/api/scrapers/contributions',
+        url: 'https://portfolio-api-nodejs.herokuapp.com/api/scrapers/contributions',
         headers: {
             'Access-Control-Allow-Origin': '*'
         }

@@ -20,6 +20,7 @@ export default function Heatmap() {
     
     useEffect(async() => {
         let contributions = await getContributions() 
+        console.log(await contributions)
         setState({
             values: await contributions, 
             numDays:  contributions.length, 
@@ -58,18 +59,22 @@ export default function Heatmap() {
                     values={state.values}
                     onClick={onClick}
                     classForValue={(value) => {
+                        console.log(value)
                         if (value.count === 0) {
                         return 'color-empty';
+                        }
+                        if(value.count<=2){
+                            return `color-github-${1}`
                         }
                         if(value.count >= 3 ){
                             return `color-github-${2}`;
                         }
                         if(value.count >= 5 ){
-                            return `color-github-${4}`;
-                        }if(value.count > 10 ){
                             return `color-github-${3}`;
+                        }if(value.count >= 10 ){
+                            return `color-github-${4}`;
                         }else{
-                            return `color-github-${1}`
+                            return `color-github-${4}`
                         }
 
 

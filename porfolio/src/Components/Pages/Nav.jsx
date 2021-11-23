@@ -22,16 +22,16 @@ export default function Nav() {
         e.preventDefault();
         return window.scrollTo({
             top: 0,
-            behavior: 'smooth',
         })
     }
     
     return (
 
             <div 
-            data-aos= {width > 600? "fade-down": "fade-up" }
-            data-aos-duration="400"
-            data-aos-offset="100"
+            data-aos = 'fade-up'
+            // data-aos= {width > 600? "fade-down": "fade-up" }
+            data-aos-duration="200" 
+            data-aos-offset="0"
             className = 'Nav' 
             style = {scroll > 350? {opacity: '.9'}:null} >
 
@@ -39,7 +39,7 @@ export default function Nav() {
                 {
                     scroll > 350? 
                         <li >
-                            <Link style = {{color: '#ff2052'}} onClick = {backToTopSmooth}> To Top</Link>
+                            <Link style = {{color: '#01B1FD'}} onClick = {backToTopSmooth}> To Top</Link>
                         </li>:null
                 }
                     <li id = '1' ><Link to = '/' >Home</Link></li>

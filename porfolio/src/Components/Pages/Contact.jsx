@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import emailjs from 'emailjs-com';
 import { init } from 'ityped';
+import { Link } from 'react-router-dom';
 
 export default function Contact() {
     
@@ -65,7 +66,7 @@ export default function Contact() {
                 <div className = 'contact-ad'>
                     <p>Thank you for visiting! Come back and check back soon for more updates!</p>
                 </div>
-                <form onSubmit = {onSubmit} >
+                <form >
                     <label>Name :
                         <input type="text"
                             onChange = {onChange}
@@ -79,7 +80,7 @@ export default function Contact() {
                         onChange = {onChange}
                         name = 'email'
                         value = {formData.email}
-                        placeholder ='youemail@email.com'
+                        placeholder ='youremail@email.com'
                         />
                     </label>
                     <label htmlFor="">Subject :
@@ -98,7 +99,7 @@ export default function Contact() {
                         placeholder = 'Your message here'
                         />
                     </label>
-                    <button>Submit</button>
+                    <Link onClick = {onSubmit} to ='/'  className = 'button-48'><span class="text">Submit</span></Link>
                 </form>
                 </>
             }
