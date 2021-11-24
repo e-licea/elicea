@@ -5,6 +5,7 @@
     .w(max-content);
     .c(var(--primary-text));
 
+
 }
 #Intro, #Skills, #Projects, #Contact{
     padding: 2%;
@@ -260,14 +261,26 @@
                     .w(100%);
                     .bg(var(--primary-background));
                     border: none;
+                    border-bottom: var(--border-bottom) 2px solid;
 
                 }
                 textarea{
                     .w(100%);
                     .bg(var(--primary-background));
+                    border: none;
+                    border-bottom: var(--border-bottom) 2px solid;
+                }
+                input:-internal-autofill-selected, textarea:-internal-autofill-selected  {
+                    .c(var(--primary-text));
+                }
+                textarea:focus, input:focus{
+                    .c(var(--primary-text));
+                    outline: none;
+                    
                 }
             }
             a{
+                margin: 2%;
                 text-decoration: none;
                 &:hover{.c(black);}
                 .h(40px);

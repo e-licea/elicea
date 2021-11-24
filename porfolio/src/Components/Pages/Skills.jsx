@@ -14,7 +14,6 @@ import OSX from '../../img/portfolioImg/osx.png'
 import Windows from '../../img/portfolioImg/win.png'
 import Linux from '../../img/portfolioImg/linux.png'
 import { init } from 'ityped'
-import { compareDocumentPosition } from 'domutils'
 
 
 export default function Skills() {
@@ -35,13 +34,13 @@ export default function Skills() {
 
     return (
       <>
+            <span id = 'SkillsHeader' className = 'Main-h3' ></span>
 
           <div 
             data-aos="fade-up" 
             data-aos-duration="600"
             data-aos-offset="200"
             id = 'Skills'>
-            <span id = 'SkillsHeader' className = 'Main-h3' ></span>
             
             <div  id = 'CardContainer'>
                 <>

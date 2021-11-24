@@ -293,6 +293,7 @@
   --secondary-text: #dbdbdb;
   --primary-background: #0a101a;
   --secondary-background: #81ff87;
+  --border-bottom: white;
   --button-one: #01B1FD;
   --button-two: #81ff87;
   --theme-btn-background: #585858;
@@ -311,6 +312,7 @@
   --secondary-text: #000000;
   --primary-background: #ffffff;
   --secondary-background: #0c0c0c;
+  --border-bottom: #9b59b6;
   --nav-links-on-hover: #01B1FD;
   --intro-component: #01B1FD;
   --call-to-action-btn: #41ff51;
@@ -490,6 +492,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 @media (max-width: 1000px) {
   #Featured {
@@ -812,12 +815,25 @@
   width: 100%;
   background-color: var(--primary-background);
   border: none;
+  border-bottom: var(--border-bottom) 2px solid;
 }
 #Contact div form label textarea {
   width: 100%;
   background-color: var(--primary-background);
+  border: none;
+  border-bottom: var(--border-bottom) 2px solid;
+}
+#Contact div form label input:-internal-autofill-selected,
+#Contact div form label textarea:-internal-autofill-selected {
+  color: var(--primary-text);
+}
+#Contact div form label textarea:focus,
+#Contact div form label input:focus {
+  color: var(--primary-text);
+  outline: none;
 }
 #Contact div form a {
+  margin: 2%;
   text-decoration: none;
   height: 40px;
   line-height: 0px;
@@ -958,7 +974,7 @@ textarea {
  * The github and gitlab color scales are provided for reference.
  */
 #Heatmap {
-  padding: 1%;
+  padding: 1% 1% 50px 1%;
 }
 .react-calendar-heatmap {
   width: 100% !important;
