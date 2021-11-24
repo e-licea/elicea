@@ -51,7 +51,7 @@ export default function Nav() {
 
                 </ul>
                 <div className='social-media'>
-                    <a target = '_blank'  href="https://github.com/e-licea"><img src={darkMode?githubLight: githubDark} alt="" /></a>
+                    <a target = '_blank'  href="https://github.com/e-licea"><img src={githubLight} alt="" /></a>
                 </div>
 
             </div>
@@ -59,3 +59,4 @@ export default function Nav() {
     )
 }
 
+//<img src={darkMode?githubLight: githubDark} alt="" />

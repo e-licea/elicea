@@ -28,7 +28,7 @@
   color: white;
   cursor: pointer;
   display: inline-block;
-  font-family: Clarkson, Helvetica, sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0;
@@ -83,6 +83,9 @@
 }
 .Modenine {
   font-family: 'Modenine';
+}
+.TitilliumWeb {
+  font-family: 'Titillium Web', sans-serif;
 }
 @keyframes fadeIn {
   0% {
@@ -278,7 +281,8 @@
   padding: 0px 2%;
 }
 .Nav ul li a {
-  color: var(--primary-text);
+  color: white;
+  font-family: 'Titillium Web', sans-serif;
 }
 .Nav .social-media a {
   height: 20px;
@@ -666,7 +670,7 @@
 #Intro {
   background-color: var(--intro-component);
   color: #ffffff;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Titillium Web', sans-serif;
 }
 #Intro p {
   font-size: 1.1rem;
@@ -816,10 +820,12 @@
   background-color: var(--primary-background);
   border: none;
   border-bottom: var(--border-bottom) 2px solid;
+  color: var(--primary-text);
 }
 #Contact div form label textarea {
   width: 100%;
   background-color: var(--primary-background);
+  color: var(--primary-text);
   border: none;
   border-bottom: var(--border-bottom) 2px solid;
 }
@@ -1077,6 +1083,13 @@ textarea {
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCv6KVjbNBYlgoCjC3Ttw.ttf) format('truetype');
 }
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/titilliumweb/v10/NaPecZTIAOhVxoMyOr9n_E7fRMQ.ttf) format('truetype');
+}
 body,
 html,
 #root {
@@ -1084,6 +1097,11 @@ html,
   height: 100%;
   background-color: var(--primary-background);
   color: var(--primary-text);
+}
+p,
+input,
+textarea {
+  font-family: 'Titillium Web', sans-serif !important;
 }
 .App {
   max-width: 970px;

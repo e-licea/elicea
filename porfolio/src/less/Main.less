@@ -126,7 +126,7 @@
 #Intro{
     .bg(var(--intro-component));
     color: @white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    .TitilliumWeb();
     p{
         font-size: 1.1rem;
         @media @tablet {font-size: 1rem;}
@@ -241,6 +241,7 @@
 #Contact{
     .bg(var(--primary-background));
     .c(var(--primary-text));
+    
     div{
         margin-bottom: 50px;
         .flex-flow(row, no-wrap, space-around);
@@ -262,11 +263,13 @@
                     .bg(var(--primary-background));
                     border: none;
                     border-bottom: var(--border-bottom) 2px solid;
+                    .c(var(--primary-text));
 
                 }
                 textarea{
                     .w(100%);
                     .bg(var(--primary-background));
+                    .c(var(--primary-text));
                     border: none;
                     border-bottom: var(--border-bottom) 2px solid;
                 }

@@ -16,6 +16,8 @@
 
 //Ubuntu font pack
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+//Titillium Web
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
 
 //Global styles
 
@@ -26,7 +28,9 @@ body, html, #root{
     .c(var(--primary-text));
 }
 
-
+p, input, textarea{
+    .TitilliumWeb()!important;
+}
 .App{
     .max-w(970px);
     position: relative;
