@@ -18,7 +18,12 @@
 .r-b-shadow {
   box-shadow: 8px 8px 6px -6px black;
 }
-/* CSS */
+.zoom {
+  transition: transform 0.2s;
+}
+.zoom:hover {
+  transform: scale(1.5);
+}
 /* CSS */
 .button-48 {
   appearance: none;
@@ -193,6 +198,7 @@
 .Render #Jumbotron {
   background-color: #272727;
   border-radius: 4px 4px 0 0;
+  margin-bottom: 50px;
   background-image: url('https://64.media.tumblr.com/478b9e77d884ae0cfb9abddeacfb4386/096155609c54ec12-fa/s500x750/6617fc3dbf71afc13cdb6507cb161c7920e5ffaf.gif');
   background-repeat: no-repeat;
   background-size: cover;
@@ -559,7 +565,7 @@
 #Skills,
 #Projects,
 #Contact {
-  padding: 2%;
+  margin-bottom: 50px;
 }
 #term {
   display: block;
@@ -669,6 +675,7 @@
 }
 #Intro {
   background-color: var(--intro-component);
+  padding: 2%;
   color: #ffffff;
   font-family: 'Titillium Web', sans-serif;
 }
@@ -728,8 +735,13 @@
   width: 70px;
   height: 70px;
   margin: 0 auto;
+  transition: transform 0.2s;
+}
+#Skills #CardContainer .SkillCard .img-con img:hover {
+  transform: scale(1.5);
 }
 #Skills #CardContainer .SkillCard .img-con p {
+  padding-top: 15px;
   font-size: 1rem;
   text-align: center;
   color: var(--secondary-text);
@@ -764,16 +776,24 @@
 }
 #Projects .project-overview p {
   font-size: 1rem;
+  line-height: 2;
 }
 #Projects .project-overview ul {
   list-style: lower-roman;
+  font-family: 'Titillium Web', sans-serif;
 }
 #Projects .project-overview ul li {
   font-size: 1rem;
 }
 #Projects .project-overview a {
+  margin: 5px;
   padding: 1%;
+  text-decoration: none;
   font-size: 1rem;
+  color: white;
+}
+#Projects .project-overview a:hover {
+  color: black;
 }
 #Projects .project-overview a:last-child {
   border-left: var(--primary-text) 2px solid;
@@ -1107,6 +1127,9 @@ textarea {
   max-width: 970px;
   position: relative;
   font-family: 'Modenine';
+}
+.extraBigLetter {
+  font-size: 2rem;
 }
 body,
 .App,

@@ -46,6 +46,7 @@ export default function Featured() {
             </div>
             <div 
                 className = 'radial-gradient'
+                onClick = { e=> {e.preventDefault();history.push('/projects'); window.scrollTo(0,0)  }}
             >
             
                 <h4>Currently Working On</h4>

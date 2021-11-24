@@ -6,27 +6,15 @@ import images from '../utils/images'
 
 export default class SlideShow extends Component {
 
-
   constructor(props){
     super(props)
+    console.log(props)
     this.state = {
-      imageStatus: "loading",
       active : imgArr[0],
       imgArr: imgArr,
     }
     this.onClick = this.onClick.bind(this);
-    this.handleImageErrored = this.handleImageErrored.bind(this);
-    this.handleImageLoaded = this.handleImageLoaded.bind(this);
   }
-
-
-  componentWillMount(){
-    console.log('The component will now mount')
-
-  }
-
-
-
 
   // componentDidMount(){
   //   console.log(this.state)
@@ -37,14 +25,6 @@ export default class SlideShow extends Component {
   //   }, 10000)
   // }
 
-
-  handleImageLoaded() {
-    this.setState({ imageStatus: "loaded" });
-  }
-
-  handleImageErrored() {
-    this.setState({ imageStatus: "failed to load" });
-  }
 
   onClick(e){
     e.preventDefault();
@@ -60,7 +40,6 @@ export default class SlideShow extends Component {
         active: this.state.active.id == 3? imgArr[0] : imgArr[this.state.active.id + 1],
       })
     }
-    
   }
 
 
@@ -72,7 +51,7 @@ export default class SlideShow extends Component {
             id = 'prev'
             onClick={this.onClick}
             ></div>
-              <ActiveImg handleImageErrored ={this.handleImageErrored} handleImageLoaded = {this.handleImageLoaded} active = {this.state.active}/>
+              <ActiveImg active = {this.state.active}/>
 
           <div 
             id = 'next'
@@ -96,8 +75,8 @@ export default class SlideShow extends Component {
           </ul>
           {this.state.active.deploy || this.state.active.src? 
           <>
-          <a target='_blank' href = {this.state.active.src}>Source</a>
-          <a target='_blank' href = {this.state.active.deploy}>Deploy</a>
+          <a target='_blank' href = {this.state.active.src} className = 'button-48'><span className="text">Source</span></a>
+          <a target='_blank' href = {this.state.active.deploy} className = 'button-48' ><span className="text">Deploy</span></a>
           </>
           :null}
           
@@ -126,7 +105,7 @@ function ActiveImg(props){
 
 
 
-const imgArr = [
+export const imgArr = [
 
   {
     id: 0,
@@ -134,7 +113,7 @@ const imgArr = [
     deploy:'https://www.highgroundrestore.com',
     src:'https://github.com/e-licea/company/tree/master, https://github.com/e-licea/redux-teammanager-api',
     imgSrc: images.hgrMockup,
-    desc:'High Ground Restore is a simple front-end application for a starter roofing business. It\'s primary uses are for promoting roofing services, and educating possible clients on their own roof systems through a spectrum of articles on the topics of roofing. It\'s back-end is made with Python Flask and is designed to handle functionalities like fetching articles from a database, and keep track of roofing materials for the company. The web application also has had a recent SEO update when it was migrated to NextJS.',
+    desc:'High Ground Restore is a roofing start up that is continuously growing. It aims to build strong branding from scratch that is built upon education and community. It is a front-end React application that utilizes NextJS framework for better SEO analytics. High Ground Restore is not just a company that offers roofing services, but also roofing education through it\'s wide variety of articles that are served through their back-end API that is made with Flask. This application was built with a long-term marketing goal to be able to serve customers to their satisfaction as well as keeping them updated on the topic of roofing.',
     challenges: ['Brand Creation', 'NextJS Migration', 'Setting up Flask Server'],
     technologies: ['React', 'NextJS', 'Flask', 'Weather API', 'Less CSS', 'Context API'],
     currentlyWorking: ['SEO Implementation','Content Creation', 'Selling Ad Space']
@@ -144,7 +123,7 @@ const imgArr = [
     project: 'Sneaker Tool',
     src:'https://github.com/e-licea/react-snkrz',
     imgSrc: images.reactSnkrsMockup,
-    desc:'This app is a sneaker tool. It is a small application keeps track of relevant sneaker information. It deals with two main sections. The first section is where a user can research sneakers that are releasing in the near future. The second section allows for users to search through a database of sneakers to find out demographics of a specific shoe. Information can entail when the shoe was released, how much it is worth, sizes available, and even where it can be bought.',
+    desc:'This app is a sneaker tool that is made for the most passionate sneaker fanatics. It\'s intent is to serve exclusive information that will help sneaker fanatics prepare for their next anticipated shoe release. It serves information such as retail pricing, release dates, colorways, and even a prediction on what sneaker organizations will be releasing which shoe. Even when no sneaker releases are taking place, users are still able to take advantage of the large sneakerpedia that this sneaker tool offers. A database is able to serve insights on almost any sneaker that is searched by the user. The convenience of such a tool can come in handy for people who make hustles from shoe resales or simply just to pull up a sneaker information to show a friend.',
     challenges: ['Web Scraping and parsing information to JSON with async'],
     technologies: ['React', 'Cheerio', 'Node', 'Express',  'Less CSS'],
     currentlyWorking: ['Deploying on a server with multiple open ports']

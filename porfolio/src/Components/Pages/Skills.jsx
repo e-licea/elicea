@@ -26,7 +26,7 @@ export default function Skills() {
             showCursor: true,
             loop: false,
             strings: [
-                'Skills'
+                'My Stack'
             ]
         })
 
@@ -65,7 +65,7 @@ export default function Skills() {
                             })
                         }
                     </div>
-                    */}
+                */}
                     <div>
                         <h4>Operating Systems / Kernels</h4>
                         <div className="os-skills">
@@ -109,7 +109,6 @@ export default function Skills() {
                             })
                         }
                         </div>
-
                     </div>
                     <div>
                         <h4>Back-End</h4>
@@ -136,10 +135,7 @@ export default function Skills() {
                         }
                         </div>
                     </div>
-
-
                 </>
-
             </div>
         </div>
       </>

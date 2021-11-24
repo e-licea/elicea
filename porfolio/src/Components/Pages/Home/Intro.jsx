@@ -48,7 +48,7 @@ export default function Intro() {
                     Greetings internet traveler! I am a full-stack software engineer based in Chicago, IL!
                 </p>
                 <p>
-                    I am driven by the world of computer science and all of it's underlying components. Learning every day and tackling the most abstract concepts of CS is what fuels me every day. My overall goal is to continue adding valuable skills to my stack so that I can contribute to the evolvement of cutting edge technologies like neural networks, automation,  and artificial intelligence.
+                    <span className = 'extraBigLetter'>L</span>ike your typical cliché programmer, I am driven by the world of computer science and all of it's underlying components. Learning every day and tackling the most abstract concepts of CS is what fuels me every day. My overall goal is to continue adding valuable skills to my stack so that I can contribute to the evolvement of cutting edge technologies.
                 </p>
                 <p>
       
