@@ -24,6 +24,9 @@
 .zoom:hover {
   transform: scale(1.5);
 }
+.shadow {
+  box-shadow: 8px 8px 20px -6px black;
+}
 /* CSS */
 .button-48 {
   appearance: none;
@@ -249,12 +252,90 @@
 #ContactHeader {
   color: var(--primary-text);
 }
+#Projects {
+  padding: 10px 10px 10% 10px;
+  border-radius: 7px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  background: radial-gradient(at 20% 20%, #01B1FD, #9b59b6);
+  box-shadow: 8px 8px 20px -6px black;
+}
+#Projects .project-overview {
+  height: max-content;
+  color: white;
+}
+#Projects .project-overview h4 {
+  margin: 4% 0;
+}
+#Projects .project-overview p {
+  font-size: 1rem;
+  line-height: 2;
+}
+#Projects .project-overview ul {
+  list-style: lower-roman;
+  font-family: 'Titillium Web', sans-serif;
+}
+#Projects .project-overview ul li {
+  font-size: 1rem;
+}
+#Projects .project-overview a {
+  margin: 5px;
+  padding: 1%;
+  text-decoration: none;
+  font-size: 1rem;
+  color: white;
+}
+#Projects .project-overview a:hover {
+  color: black;
+}
+#Projects .project-overview a:last-child {
+  border-left: var(--primary-text) 2px solid;
+}
+#projectLoading {
+  width: 20%;
+}
+#next,
+#prev {
+  cursor: pointer;
+  color: #ffffff;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  vertical-align: middle;
+  justify-content: center;
+}
+#next:hover,
+#prev:hover {
+  transition: transform 0.2s;
+}
+#next:hover:hover,
+#prev:hover:hover {
+  transform: scale(1.5);
+}
+#next img,
+#prev img {
+  filter: invert(1);
+}
+#next:hover,
+#prev:hover {
+  opacity: 0.97;
+}
+#next {
+  right: 0;
+}
+#prev {
+  left: 0;
+}
 .Nav {
   width: 100%;
   opacity: 0.9;
-  max-width: 970px;
+  max-width: 1000px;
   background-color: #5f5f5f;
   justify-content: space-between;
+  box-shadow: 8px 8px 20px -6px black;
   border-radius: 4px 4px 0 0;
   padding: 0 5px 0 0;
   height: 30px;
@@ -762,42 +843,6 @@
 #Skills #CardContainer .SkillCard .skill-list li #bullit {
   color: #01B1FD;
 }
-#Projects {
-  padding-bottom: 10%;
-  margin-top: 30px;
-  margin-bottom: 50px;
-}
-#Projects .project-overview {
-  height: max-content;
-  color: var(--primary-text);
-}
-#Projects .project-overview h4 {
-  margin: 4% 0;
-}
-#Projects .project-overview p {
-  font-size: 1rem;
-  line-height: 2;
-}
-#Projects .project-overview ul {
-  list-style: lower-roman;
-  font-family: 'Titillium Web', sans-serif;
-}
-#Projects .project-overview ul li {
-  font-size: 1rem;
-}
-#Projects .project-overview a {
-  margin: 5px;
-  padding: 1%;
-  text-decoration: none;
-  font-size: 1rem;
-  color: white;
-}
-#Projects .project-overview a:hover {
-  color: black;
-}
-#Projects .project-overview a:last-child {
-  border-left: var(--primary-text) 2px solid;
-}
 #coffee {
   margin: 1%;
   width: 30px;
@@ -805,6 +850,7 @@
 #Contact {
   background-color: var(--primary-background);
   color: var(--primary-text);
+  padding-bottom: 100px;
 }
 #Contact div {
   margin-bottom: 50px;
@@ -903,31 +949,6 @@ textarea {
   width: 65%;
   display: block;
   margin: 0 auto;
-}
-#next,
-#prev {
-  cursor: pointer;
-  color: #ffffff;
-  position: absolute;
-  background-color: #272727;
-  opacity: 0.84;
-  top: 0;
-  height: 100%;
-  max-height: 650px;
-  width: 60px;
-  text-align: center;
-  display: table-cell;
-  vertical-align: middle;
-}
-#next:hover,
-#prev:hover {
-  opacity: 0.97;
-}
-#next {
-  right: 0;
-}
-#prev {
-  left: 0;
 }
 #TheLab {
   font-size: 1rem;
@@ -1124,7 +1145,7 @@ textarea {
   font-family: 'Titillium Web', sans-serif !important;
 }
 .App {
-  max-width: 970px;
+  max-width: 1000px;
   position: relative;
   font-family: 'Modenine';
 }

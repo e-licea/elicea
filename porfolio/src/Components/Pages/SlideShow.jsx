@@ -1,103 +1,98 @@
-import React, { Component } from 'react'
-
+import React, { useContext } from 'react'
+import { appContext } from '../Context/appContext'
 //img
 import images from '../utils/images'
 
 
-export default class SlideShow extends Component {
 
-  constructor(props){
-    super(props)
-    console.log(props)
-    this.state = {
-      active : imgArr[0],
-      imgArr: imgArr,
-    }
-    this.onClick = this.onClick.bind(this);
-  }
+export default function SlideShow(){
 
-  // componentDidMount(){
-  //   console.log(this.state)
-  //   setInterval(()=>{
-  //     this.setState({
-  //       active: this.state.active.id == 2? imgArr[0] : imgArr[this.state.active.id + 1],
-  //     })
-  //   }, 10000)
-  // }
+  
 
+  const activeProject = useContext(appContext).activeProject
+  const setActiveProject = useContext(appContext).setActiveProject
+  const projectLoading  = useContext(appContext).projectLoading
+  const setProjectLoading = useContext(appContext).setProjectLoading
 
-  onClick(e){
+  
+  async function onClick(e){
     e.preventDefault();
     if (e.target.id != 'next'){
       //console.log('prev')
-      this.setState({
-        active: this.state.active.id == 0? imgArr[3] : imgArr[this.state.active.id - 1],
-      })
+      setProjectLoading(true)
+      setActiveProject(activeProject.id == 0? projects[3] : projects[activeProject.id - 1])
+      setProjectLoading(false)
+
     }
     else {
       //console.log('next')
-      this.setState({
-        active: this.state.active.id == 3? imgArr[0] : imgArr[this.state.active.id + 1],
-      })
+      setProjectLoading(true)
+      setActiveProject(activeProject.id == 3? projects[0] : projects[activeProject.id + 1])
+      setProjectLoading(false)
     }
   }
 
 
-  render() {
-    return (
-      <div id = 'SlideShow'>
-        <div className="photo-container">
-          <div 
-            id = 'prev'
-            onClick={this.onClick}
-            ></div>
-              <ActiveImg active = {this.state.active}/>
-
-          <div 
-            id = 'next'
-            onClick={this.onClick}
-            ></div>
-
+  return (
+    <div id = 'SlideShow'>
+      <div className="photo-container">
+        <div 
+          id = 'prev'
+          onClick={onClick}>
+          <img src = {images.previous} alt = 'previous'/>
         </div>
-
-        <div className ='project-overview'>
-          <h4>{this.state.active.project}</h4>
-          <p>
-            {this.state.active.desc}
-          </p>
-          <h6>Challenges...</h6>
-          <ul>
-          {this.state.active.challenges.map(index=><li>{index}</li>)}
-          </ul>
-          <h6>Featured Technologies...</h6>
-          <ul>
-          {this.state.active.technologies.map(index=><li>{index}</li>)}
-          </ul>
-          {this.state.active.deploy || this.state.active.src? 
-          <>
-          <a target='_blank' href = {this.state.active.src} className = 'button-48'><span className="text">Source</span></a>
-          <a target='_blank' href = {this.state.active.deploy} className = 'button-48' ><span className="text">Deploy</span></a>
-          </>
-          :null}
-          
+            {projectLoading? <img id = 'projectLoading' src = {images.loading} alt = ''/>: <ActiveImg activeProject = {activeProject}/>}
+        <div 
+          id = 'next'
+          onClick={onClick}>
+          <img src = {images.next} alt = 'next'/>
         </div>
       </div>
-    )
-  }
+
+      <div className ='project-overview' key = {activeProject.id}>
+        <h4>{activeProject.project}</h4>
+        <p>
+          {activeProject.desc}
+        </p>
+        <h6>Challenges...</h6>
+        <ul>
+        {activeProject.challenges.map(index=><li>{index}</li>)}
+        </ul>
+        <h6>Featured Technologies...</h6>
+        <ul>
+        {activeProject.technologies.map(index=><li>{index}</li>)}
+        </ul>
+
+        <span>Some repository sources may be private. Please fill out a contact form to request exclusive access!</span>
+        {activeProject.deploy || activeProject.src? 
+        <>
+        <a target='_blank' href = {activeProject.src} className = 'button-48'><span className="text">Source</span></a>
+        {
+          activeProject.deploy?
+          <a target='_blank'  href = {activeProject.deploy} className = 'button-48' ><span className="text">Deploy</span></a>
+          :
+          <p>Deploy will be available soon!</p>
+        }
+        </>
+        :null}
+        
+      </div>
+    </div>
+  )
+
 }
 
-
 function ActiveImg(props){
-  console.log(props)
-  let { active, handleImageErrored, handleImageLoaded} = props
+  let { activeProject } = props
 
 
   return(
         <img 
-          id = {active.id} 
-          src={active.imgSrc}
-          alt={active.altImgSrc}
-          deploy={ active.deploy? active.deploy: null} alt={active.altImgSrc} 
+          key = {activeProject.id}
+          id = {activeProject.id} 
+          src={activeProject.imgSrc}
+          alt={activeProject.altImgSrc}
+          deploy={ activeProject.deploy? activeProject.deploy: null} alt={activeProject.altImgSrc} 
           
           />
   )
@@ -105,7 +100,7 @@ function ActiveImg(props){
 
 
 
-export const imgArr = [
+export const projects = [
 
   {
     id: 0,

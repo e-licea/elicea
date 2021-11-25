@@ -1,0 +1,76 @@
+
+
+#Projects{
+    padding: 10px 10px 10% 10px;
+    border-radius: 7px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    background: radial-gradient(at 20% 20%, @infrared, #9b59b6);
+    .shadow();
+    
+    .project-overview{
+        .h(max-content);
+        .c(white);
+        h4{
+            margin: 4% 0;
+        }
+        p{
+            font-size: 1rem;
+            line-height: 2;
+        }
+
+        ul{
+            list-style: lower-roman;
+            li{
+                font-size: 1rem;
+            }
+
+            .TitilliumWeb();
+        }
+        a{
+            margin: 5px;
+            padding: 1%;
+            text-decoration: none;
+            font-size: 1rem;
+            .c(white);
+            &:hover{.c(black);}
+            &:last-child{
+                border-left: var(--primary-text) 2px solid;
+            }
+        }
+
+    } 
+}
+
+
+#projectLoading{
+    .w(20%);
+}
+
+
+#next, #prev{
+    cursor: pointer;
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    .h(100%);
+    .w(60px);
+    .flex(column);
+    vertical-align: middle;
+    justify-content: center;
+    &:hover{.zoom();}
+    img{
+        filter: invert(1);
+    }
+    &:hover{
+        opacity: .97;
+    }
+}
+
+#next{
+    right: 0;
+}
+
+#prev{
+    left: 0;
+};

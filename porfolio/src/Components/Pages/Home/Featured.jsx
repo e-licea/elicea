@@ -1,8 +1,10 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import images from '../../utils/images'
 import { Link } from 'react-router-dom'
 import { init } from 'ityped'
+import { appContext } from '../../Context/appContext'
+import { projects } from '../SlideShow'
 
 export default function Featured() {
 
@@ -21,8 +23,17 @@ export default function Featured() {
         })
     }, [])
 
-    
+    const activeProject = useContext(appContext).activeProject
+    const setActiveProject = useContext(appContext).setActiveProject
 
+    
+    function onClick(e, id){
+        e.preventDefault();
+        window.scrollTo(0,0);
+        setActiveProject(projects[id])
+
+        return history.push('/projects')
+    }
 
 
     return (
@@ -35,7 +46,7 @@ export default function Featured() {
         id = 'Featured'>
             <div 
                 className = 'radial-gradient'
-                onClick = { e=> {e.preventDefault();history.push('/projects'); window.scrollTo(0,0)  }}
+                onClick = { e=> {onClick(e, 2)}}
             >
                 <h4>Featured Project</h4>
                 <img src={images.rTeamMockup} alt="" />
@@ -46,7 +57,7 @@ export default function Featured() {
             </div>
             <div 
                 className = 'radial-gradient'
-                onClick = { e=> {e.preventDefault();history.push('/projects'); window.scrollTo(0,0)  }}
+                onClick = { e=> {onClick(e, 1)}}
             >
             
                 <h4>Currently Working On</h4>

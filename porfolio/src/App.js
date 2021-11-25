@@ -7,7 +7,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import ToggleDarkMode from './Components/utils/ToggleDarkMode';
 import Nav from './Components/Pages/Nav';
-import { imgArr } from './Components/Pages/SlideShow';
+import { projects } from './Components/Pages/SlideShow';
 // ..
 AOS.init();
 
@@ -20,7 +20,8 @@ function App() {
   
   const [darkMode, setDarkMode] = useState(false);
   const [userLocation, setUserLocation]  = useState({});
-  const [activeProject, setActiveProject ] = useState(imgArr[0]);
+  const [activeProject, setActiveProject ] = useState(projects[0]);
+  const [projectLoading, setProjectLoading] = useState(false);
   const [location, setLocation] = useState({
     lon: '',
     lat: ''
@@ -35,7 +36,9 @@ function App() {
       userLocation: userLocation,
       setUserLocation: setUserLocation,
       activeProject: activeProject,
-      setActiveProject: setActiveProject
+      setActiveProject: setActiveProject,
+      projectLoading: projectLoading,
+      setProjectLoading: setProjectLoading
     }}>
       <div  className="App" >
         <Nav/>
