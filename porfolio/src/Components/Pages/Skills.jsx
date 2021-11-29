@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Python from '../../img/portfolioImg/python.png'
 import NodeJS from '../../img/portfolioImg/node.png'
@@ -17,20 +17,71 @@ import { init } from 'ityped'
 
 
 export default function Skills() {
+
+    const [hoverId, setHoverId] = useState([
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+    ])
+    
     
     useEffect(() => {
         
         const header = document.querySelector('#SkillsHeader')
-        init(header, {
+        const typeConfig = {
             cursorChar: '_',
-            showCursor: true,
             loop: false,
             strings: [
                 'My Stack'
             ]
-        })
+        }
+        init(header, typeConfig)
 
     }, [])
+        
+
+
+    function onMouseOver(e){
+
+        if(e.target.id !== ''){
+            let arr = hoverId
+            arr[e.target.id] = true
+            setHoverId(arr)
+        }
+    }
+
+    function onMouseOut(e){
+        setHoverId([
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ])
+    }
+
 
     return (
       <>
@@ -73,14 +124,20 @@ export default function Skills() {
                             skills.map((skill)=>{
                                 if(skill.end == 'os'){
                                     return(
-                                    <div id = {skill.id}  className = 'SkillCard'>
+                                    <div
+                                     id = {skill.id}  
+                                     className = 'SkillCard'
+                                     onMouseOver={onMouseOver}
+                                     onMouseOut={onMouseOut}
+                                     >
+
                                         <div className='img-con' >
                                             <img
                                             src={skill.img}
                                             alt=""/>
                                             <p>{skill.skill}</p>
                                         </div>
-                                        <SkillHoverPane description = {description}/>
+                                        <SkillHoverPane hoverId = {hoverId} id = {skill.id} description = {skill.description}/>
                                     </div>
                                     )
                                 }
@@ -95,14 +152,17 @@ export default function Skills() {
                             skills.map((skill)=>{
                                 if(skill.end == 'front'){
                                     return(
-                                    <div id = {skill.id}  className = 'SkillCard'>
+                                    <div id = {skill.id}  className = 'SkillCard'
+                                    onMouseOver={onMouseOver}
+                                    onMouseOut={onMouseOut}
+                                    >
                                         <div className='img-con'>
                                             <img
                                             src={skill.img}
                                             alt=""/>
                                             <p>{skill.skill}</p>
                                         </div>
-                                        <SkillHoverPane description = {description}/>
+                                        <SkillHoverPane hoverId = {hoverId} id = {skill.id} description = {skill.description}/>
                                     </div>
                                     )
                                 }
@@ -117,7 +177,10 @@ export default function Skills() {
                             skills.map((skill)=>{
                                 if(skill.end == 'back'){
                                     return(
-                                    <div id = {skill.id} className = 'SkillCard'>
+                                    <div id = {skill.id} className = 'SkillCard'
+                                    onMouseOver={onMouseOver}
+                                    onMouseOut={onMouseOut}
+                                    >
                                         <div className='img-con'>
                                             <img
                                             src={skill.img}
@@ -125,8 +188,9 @@ export default function Skills() {
                                             <p>{skill.skill}</p>
                                         </div>
                                         <SkillHoverPane 
-                                        description = {description}
-                                        
+                                        hoverId = {hoverId}
+                                        id = {skill.id}
+                                        description = {skill.description}
                                         />
                                     </div>
                                     )
@@ -143,13 +207,17 @@ export default function Skills() {
 }
 
 function SkillHoverPane(props){
-    const { description } = props;
+    const { description,hoverId, id } = props;
 
-    console.log(description)
+
+    console.log(hoverId[id])
     return(
-        <>
-
-        </>
+        <div className = {hoverId[id] === true? 'visible': 'invisible'} >
+            <ul>
+            <li>Can you see this ?</li>
+            {/* {description.map(li=>{ return <li>{li}</li>})} */}
+            </ul>
+        </div>
     )
 }
 

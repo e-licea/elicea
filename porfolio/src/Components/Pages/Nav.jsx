@@ -42,10 +42,10 @@ export default function Nav() {
                             <Link style = {{color: '#01B1FD'}} onClick = {backToTopSmooth}> To Top</Link>
                         </li>:null
                 }
-                    <li id = '1' ><Link to = '/' >Home</Link></li>
-                    <li id = '3'><Link to = '/projects' >Projects</Link></li>
+                    <li onClick = {backToTopSmooth} id = '1' ><Link to = '/' >Home</Link></li>
+                    <li onClick = {backToTopSmooth} id = '3'><Link to = '/projects' >Projects</Link></li>
                     
-                    {/*<li><L to = '/the-lab' >Blog</L></li>
+                    <li onClick = {backToTopSmooth} id = '2'><Link to = '/the-lab' >The Lab</Link></li>
                     {/*<li><L to = '/the-lab' >Blog</L></li>*/}
 
 

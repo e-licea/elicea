@@ -3,27 +3,26 @@ import { init } from 'ityped';
 
 export default function Banner(props) {
 
-    const { title, imgSrc} = props;
+    const { arr, imgSrc} = props;
 
     
     useEffect(() => {
         
-         const text = document.querySelector('.Banner > span')
+         const text = document.querySelector('.BannerSpan')
          init(text, {
              cursorChar: '_',
              showCursor: true,
              loop: false,
-             strings: [
-                 title
-             ]
+             strings: arr
          })
     }, [])
     
 
     
     return (
-        <div className = 'Banner' style = {{backgroundImage: `url(${imgSrc})` }}>
-            <span></span>
+        <div className = 'BannerContainer'>
+        <img className = 'BannerImg' src = {imgSrc}/>
+        <span className = 'BannerSpan' ></span>
         </div>
     )
 }

@@ -618,24 +618,29 @@
     margin-bottom: 2%;
   }
 }
-.Banner {
-  margin-top: 40px;
-  height: 200px;
+.BannerContainer {
+  position: relative;
+  margin-top: 20px;
+  height: 500px;
+  overflow: hidden;
   border: 1px solid aqua;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  filter: grayscale();
   display: flex;
-  flex-direction: row;
-  justify-content: no-wrap;
-  flex-wrap: space-around;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.Banner span {
+.BannerContainer .BannerImg {
+  position: absolute;
+  filter: blur(3px);
+  width: 100%;
+}
+.BannerContainer .BannerSpan {
+  position: absolute;
   display: inline-block;
   color: white;
-  line-height: 200px;
   font-size: 1.3rem;
+  background-color: black;
+  color: #a65ac9;
 }
 .Main-h3 {
   font-size: 1.2rem;

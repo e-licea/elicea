@@ -32,7 +32,6 @@ export default function Intro() {
     
         let newState = {x: mouseXpercentage, y:mouseYpercentage}
 
-        console.log(gradient)
         return setGradient(newState)
 
     }
@@ -45,16 +44,15 @@ export default function Intro() {
 
 
                 <p>
-                    Greetings internet traveler! I am a full-stack software engineer based in Chicago, IL!
+                <span className = 'extraBigLetter'>G</span>reetings internet traveler! I am a full-stack software engineer based in Chicago, IL!
                 </p>
                 <p>
-                    <span className = 'extraBigLetter'>L</span>ike your typical cliché programmer, I am driven by the world of computer science and all of it's underlying components. Learning every day and tackling the most abstract concepts of CS is what fuels me every day. My overall goal is to continue adding valuable skills to my stack so that I can contribute to the evolvement of cutting edge technologies.
+                    Like most programmers, I can read, write, and compile code into useful programs for humans to use. Unlike most, my drive comes from the immersive, abstract world of computer science. When you stop and look around a little, you can see that CS consists of a spectrum of different topics and `flavors` that anyone can take part in. I was fortunate to find my taste through automation a few years ago. The idea of getting rid of boring tasks, or upgrading workflows through automation was a turning point for me. This is why when I build web applications, I like to keep automation in mind as a core component because automation builds efficient applications. 
                 </p>
+
                 <p>
-      
-                </p>
-                <p>
-                    Contact me, let's get to work! <img id = 'coffee' src="https://media1.giphy.com/media/eNwO33cDf7H60uqErv/giphy.gif?cid=790b7611000c7bb538a0c0adb414c3dff4017f55bfee2371&rid=giphy.gif" alt="" />
+                Currently, I am finding great satisfaction in using my skills to service others by collaborating with their ideas to make awesome, everyday applications. Please contact me if with your inquiries, feedback, and awesome ideas.
+                     <img id = 'coffee' src="https://media1.giphy.com/media/eNwO33cDf7H60uqErv/giphy.gif?cid=790b7611000c7bb538a0c0adb414c3dff4017f55bfee2371&rid=giphy.gif" alt="" />
                 </p>
 
 

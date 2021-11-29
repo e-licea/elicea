@@ -1,17 +1,24 @@
- .Banner{
-    margin-top: 40px;
-    .h(200px);
+ .BannerContainer{
+     position: relative;
+     margin-top: 20px;
+    .h(500px);
+    overflow: hidden;
     border: 1px solid aqua;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    filter: grayscale();
-    .flex-flow(row, space-around, no-wrap);
-
-    span{
+    .flex(column);
+    align-items: center;
+    justify-content: center;
+    .BannerImg{
+        position: absolute;
+        filter: blur(3px);
+        .w(100%);
+    }
+    .BannerSpan{
+        position: absolute;
         display: inline-block;
         color: white;
-        line-height: 200px;
         font-size: 1.3rem;
+        .bg(black);
+        .c(#a65ac9);
+
     }
 }

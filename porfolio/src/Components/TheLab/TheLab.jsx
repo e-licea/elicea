@@ -1,6 +1,8 @@
 import React from 'react'
 
 import Banner from '../Reuseables/Banner';
+import images from '../utils/images';
+import SearchTheLab from './SearchTheLab';
 
 //components
 import TheLabNavigation from './TheLabNavigation';
@@ -14,14 +16,8 @@ export default function TheLab() {
 
     return (
         <>
-            <Banner title = 'The Lab' imgSrc = 'https://i.pinimg.com/originals/db/74/c1/db74c1d2a76d7ee5a81668f8b3c5378e.gif'/>
-            <label   id = 'theLab-search' htmlFor="">Search:
-            
-                <input 
-                   type="text"
-                    placeholder= 'the Lab...' 
-                />
-            </label>
+            <Banner arr = {['This is where the magic happens...']} imgSrc = {images.desktop}/>
+            <SearchTheLab/>
             <div id="TheLab">
                 <TheLabNavigation/>
                 <TheLabRender/>
