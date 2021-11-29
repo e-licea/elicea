@@ -11,7 +11,7 @@ export default function Banner(props) {
          const text = document.querySelector('.BannerSpan')
          init(text, {
              cursorChar: '_',
-             showCursor: true,
+             showCursor: false,
              loop: false,
              strings: arr
          })

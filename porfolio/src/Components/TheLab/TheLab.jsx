@@ -16,7 +16,7 @@ export default function TheLab() {
 
     return (
         <>
-            <Banner arr = {['This is where the magic happens...']} imgSrc = {images.desktop}/>
+            <Banner arr = {['Welcome to the Lab...']} imgSrc = {images.desktop}/>
             <SearchTheLab/>
             <div id="TheLab">
                 <TheLabNavigation/>
