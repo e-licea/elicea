@@ -45,7 +45,7 @@ export default function Nav() {
                     <li onClick = {backToTopSmooth} id = '1' ><Link to = '/' >Home</Link></li>
                     <li onClick = {backToTopSmooth} id = '3'><Link to = '/projects' >Projects</Link></li>
                     
-                    {/* <li onClick = {backToTopSmooth} id = '2'><Link to = '/the-lab' >The Lab</Link></li> */}
+                    <li onClick = {backToTopSmooth} id = '2'><Link to = '/the-lab' >The Lab</Link></li>
                     {/*<li><L to = '/the-lab' >Blog</L></li>*/}
 
 

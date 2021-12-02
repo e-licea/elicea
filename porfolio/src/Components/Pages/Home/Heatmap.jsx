@@ -27,15 +27,17 @@ export default function Heatmap() {
             endDate: contributions[contributions.length-1].date
         })
 
-        const header = document.querySelector('#ContributionsHeader');
-        init(header,{
-            cursorChar: '_',
-            showCursor: true,
-            loop: false,
-            strings: [
-                'Contributions'
-            ]
-        })
+        const header = await document.querySelector('#ContributionsHeader');
+        if(header){
+            init(header,{
+                cursorChar: '_',
+                showCursor: true,
+                loop: false,
+                strings: [
+                    'Contributions'
+                ]
+            })
+        }else{return null}
      
     }, [])
 

@@ -1,11 +1,14 @@
 import axios from 'axios'
 
 //heroku deploy api baseUrl
+const nodeBaseURL = 'https://portfolio-api-nodejs.herokuapp.com'
+const flaskBaseURL = 'https://portfolio-api-flask.herokuapp.com/api'
 
 export async function getContributions(){
     const requestConfig = {
         method: 'get',
-        url: 'https://portfolio-api-nodejs.herokuapp.com/api/scrapers/contributions',
+        baseURL: nodeBaseURL,
+        url: '/api/scrapers/contributions',
         headers: {
             'Access-Control-Allow-Origin': '*'
         }
@@ -45,4 +48,51 @@ export async function getGeolocationInfo(location){
         return err
     })
 
+}
+
+export async function getArticles(){
+    const requestConfig = {
+        method: 'get',
+        baseURL: flaskBaseURL,
+        url: '/client/articles',
+
+    }
+    return await axios.request(requestConfig)
+    .then(res=>{
+        return res.data
+    })
+    .catch(err=>{
+        return err
+    })
+}
+
+export async function getArticleContent(url){
+    const requestConfig = {
+        method: 'get',
+        baseURL: flaskBaseURL,
+        url: '/client/articles/' + url,
+
+    }
+    return await axios.request(requestConfig)
+    .then(res=>{
+        return res.data
+    })
+    .catch(err=>{
+        return err
+    })
+}
+
+export async function searchArticles(query){
+    const requestConfig = {
+        method: 'get',
+        baseURL: flaskBaseURL,
+        url: '/search/articles/'+query
+    }
+
+    return await axios.request(requestConfig)
+    .then(res=>{
+        return res.data
+    }).catch(err=>{
+        return err
+    })
 }

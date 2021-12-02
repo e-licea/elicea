@@ -184,6 +184,11 @@
 }
 @media (max-width: 1000px) {
   .Render {
+    padding: 5px;
+  }
+}
+@media (max-width: 1000px) {
+  .Render {
     margin: 0 auto;
   }
 }
@@ -381,10 +386,11 @@
 }
 .theme-dark {
   --primary-text: #dbdbdb;
-  --secondary-text: #dbdbdb;
+  --secondary-text: #81ff87;
   --primary-background: #0a101a;
   --secondary-background: #81ff87;
   --border-bottom: white;
+  --code-container: #0f1827;
   --button-one: #01B1FD;
   --button-two: #81ff87;
   --theme-btn-background: #585858;
@@ -400,9 +406,10 @@
 }
 .theme-light {
   --primary-text: #0c0c0c;
-  --secondary-text: #000000;
+  --secondary-text: #9b59b6;
   --primary-background: #ffffff;
   --secondary-background: #0c0c0c;
+  --code-container: #d8d4d4;
   --border-bottom: #9b59b6;
   --nav-links-on-hover: #01B1FD;
   --intro-component: #01B1FD;
@@ -621,26 +628,23 @@
 .BannerContainer {
   position: relative;
   margin-top: 20px;
-  height: 500px;
+  height: max-content;
   overflow: hidden;
-  border: 1px solid aqua;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .BannerContainer .BannerImg {
-  position: absolute;
   filter: blur(3px);
   width: 100%;
 }
 .BannerContainer .BannerSpan {
   position: absolute;
-  display: inline-block;
   color: white;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   background-color: black;
-  color: #a65ac9;
+  color: #ffffff;
 }
 .Main-h3 {
   font-size: 1.2rem;
@@ -962,6 +966,8 @@ textarea {
   flex-direction: row;
   justify-content: no-wrap;
   flex-wrap: space-evenly;
+  font-family: 'Titillium Web', sans-serif;
+  position: relative;
 }
 @media (max-width: 1000px) {
   #TheLab {
@@ -969,8 +975,69 @@ textarea {
     width: 100%;
   }
 }
-#theLab-search {
+.theLabPanel {
+  display: flex;
+  flex-direction: row;
+  padding: 2% 0;
+}
+.theLabPanel #TheDay {
+  width: 100%;
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+}
+.theLabPanel #TheDay span #weather-icon {
+  width: 30px;
+  height: 30px;
+}
+.theLabPanel #TheSearch {
+  display: flex;
+  flex-direction: row;
+  width: 430px;
+  height: 40px;
+  position: relative;
+}
+.theLabPanel #TheSearch input {
+  height: 40px;
+  width: 100%;
+  background-color: var(--code-container);
+  margin: 0;
+  color: var(--primary-text);
   padding: 1%;
+  border: none;
+}
+.theLabPanel #TheSearch input:focus {
+  border: none;
+}
+.theLabPanel #TheSearch span {
+  color: white;
+}
+.theLabPanel #TheSearch span:hover {
+  color: black;
+}
+.theLabPanel #TheSearch ul {
+  position: absolute;
+  background-color: red;
+  top: 40px;
+  left: 0px;
+  width: 100%;
+  height: max-content;
+  z-index: 2;
+  max-height: 400px;
+  overflow-y: scroll;
+  padding: 5px;
+  margin: 0;
+  background-color: var(--code-container);
+}
+.theLabPanel #TheSearch ul li {
+  padding: 0;
+  margin: 0;
+  border-bottom: dotted 1px var(--border-bottom);
+  cursor: pointer;
+}
+.theLabPanel #TheSearch ul li:hover {
+  background-color: var(--secondary-background);
+  color: var(--secondary-text);
 }
 #theLab-navigation {
   display: flex;
@@ -979,6 +1046,12 @@ textarea {
   flex-wrap: space-around;
   align-content: center;
   width: 25%;
+}
+@media (max-width: 750px) {
+  #theLab-navigation {
+    position: absolute;
+    width: 250px;
+  }
 }
 #theLab-navigation ul {
   margin: 0;
@@ -989,9 +1062,40 @@ textarea {
   flex-wrap: space-around;
   align-items: center;
   list-style: none;
+  background-color: var(--code-container);
+}
+#theLab-navigation ul .navigationHeader {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--secondary-text);
+  font-weight: bold;
+  padding: 1px 4px;
 }
 #theLab-navigation ul li {
   list-style: none;
+  width: 100%;
+  padding: 2px;
+}
+#theLab-navigation ul li:hover {
+  border-bottom: 1px solid var(--primary-code-text);
+}
+#theLab-navigation ul li a {
+  color: var(--primary-text);
+  width: 100%;
+}
+#theLab-navigation ul .social-media {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 5px;
+  margin: 0;
+  justify-content: flex-start;
+}
+#theLab-navigation ul .social-media img {
+  width: 25px;
+  height: 25px;
 }
 #theLab-render {
   padding: 1%;
@@ -1002,15 +1106,24 @@ textarea {
   flex-wrap: space-evenly;
   align-items: center;
 }
-#theLab-render #TheDay {
-  width: 100%;
-  margin: 1%;
-  display: flex;
-  justify-content: space-between;
+@media (max-width: 1000px) {
+  #theLab-render {
+    width: 100%;
+  }
 }
-#theLab-render #TheDay span #weather-icon {
-  width: 30px;
-  height: 30px;
+#theLab-render .article-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--border-bottom);
+  padding: 0 0 10px 0;
+  margin: 0 0 10px 0;
+}
+#theLab-render .article-details h3,
+#theLab-render .article-details p {
+  padding: 0;
+  margin: 0;
 }
 #theLab-render #theLab-homeImg {
   width: 100%;
@@ -1018,6 +1131,46 @@ textarea {
   margin: 0 auto;
   background: no-repeat center;
   background-size: 100% auto;
+}
+.code-container {
+  padding: 2%;
+  margin: 10px;
+  background-color: var(--code-container);
+  width: 100%;
+  color: var(--primary-code-text);
+  position: relative;
+}
+.code-container img {
+  position: absolute;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  bottom: 5px;
+  right: 5px;
+}
+.article-heading {
+  font-size: 1.2rem;
+  text-align: start;
+  width: 100%;
+  font-family: 'Modenine';
+  margin: 10px 0px;
+}
+.article-image {
+  max-width: 100%;
+  max-height: 400px;
+}
+@media (max-width: 1000px) {
+  .article-image {
+    max-height: 300px;
+  }
+}
+.article-paragraph {
+  text-indent: 2rem;
+}
+.article-checklist {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 /*
  * react-calendar-heatmap styles
@@ -1138,9 +1291,10 @@ textarea {
 }
 body,
 html,
-#root {
+#root,
+#TheLab {
   width: 100%;
-  height: 100%;
+  height: max-content;
   background-color: var(--primary-background);
   color: var(--primary-text);
 }
@@ -1163,7 +1317,6 @@ html,
 #root,
 #TheLab,
 .Section {
-  height: 100%;
   margin: 0 auto;
   font-weight: 300;
 }

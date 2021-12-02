@@ -25,8 +25,7 @@ export default function TheDay() {
         var crd = pos.coords;
       
         await setLocation({lat: crd.latitude, lon: crd.longitude})
-        await setUserLocation(await getGeolocationInfo(location))
-        console.log(userLocation)
+        return await setUserLocation(await getGeolocationInfo(location))
       }
       
       function errors(err) {
@@ -34,35 +33,44 @@ export default function TheDay() {
       }
 
 
-    useEffect(async () => {
+    // useEffect(async () => {
       
-        if (navigator.geolocation) {
-            navigator.permissions
-              .query({ name: "geolocation" })
-              .then(function (result) {
-                if (result.state === "granted") {
+    //     if (navigator.geolocation) {
+    //         navigator.permissions
+    //           .query({ name: "geolocation" })
+    //           .then(function (result) {
+    //             if (result.state === "granted") {
                     
-                  //If granted then you can directly call your function here
-                  return navigator.geolocation.getCurrentPosition(success);
-                } else if (result.state === "prompt") {
-                  navigator.geolocation.getCurrentPosition(success, errors, options);
-                } else if (result.state === "denied") {
-                  //If denied then you have to show instructions to enable location
-                  setLocation('denied')
-                }
-                result.onchange = function () {
-                  console.log(result.state);
-                };
-              });
-          } else {
-            alert("Sorry Not available!");
-          }
-    }, [])
+    //               //If granted then you can directly call your function here
+    //               return navigator.geolocation.getCurrentPosition(success);
+    //             } else if (result.state === "prompt") {
+    //               navigator.geolocation.getCurrentPosition(success, errors, options);
+    //             } else if (result.state === "denied") {
+    //               //If denied then you have to show instructions to enable location
+    //               setLocation('denied')
+    //             }
+    //             result.onchange = function () {
+    //               console.log(result.state);
+    //             };
+    //           });
+    //       } else {
+    //         alert("Sorry Not available!");
+    //       }
+
+        
+    //     return async ()=> {await setUserLocation(await getGeolocationInfo(location))}
+    // }, [options])
 
     return (
         <div id = 'TheDay'>
           
-            They Day
+            {
+              userLocation.current?
+              <>
+                <span>Location: </span>
+                <span>Current Temp: </span>
+              </>:null
+            }
           
         </div>
     )

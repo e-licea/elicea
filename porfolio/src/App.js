@@ -22,10 +22,13 @@ function App() {
   const [userLocation, setUserLocation]  = useState({});
   const [activeProject, setActiveProject ] = useState(projects[0]);
   const [projectLoading, setProjectLoading] = useState(false);
+  const [articles, setArticles] = useState([])
+  const [focusedArticle, setFocusedArticle] = useState({article_content: [], article_details:{}})
   const [location, setLocation] = useState({
     lon: '',
     lat: ''
   })
+
 
   return (
     <appContext.Provider value = {{
@@ -38,9 +41,14 @@ function App() {
       activeProject: activeProject,
       setActiveProject: setActiveProject,
       projectLoading: projectLoading,
-      setProjectLoading: setProjectLoading
+      setProjectLoading: setProjectLoading,
+      articles: articles,
+      setArticles: setArticles,
+      focusedArticle: focusedArticle,
+      setFocusedArticle: setFocusedArticle
     }}>
       <div  className="App" >
+    
         <Nav/>
         <ToggleDarkMode/>
         <Render/>

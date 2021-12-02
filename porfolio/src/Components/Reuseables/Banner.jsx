@@ -6,15 +6,20 @@ export default function Banner(props) {
     const { arr, imgSrc} = props;
 
     
-    useEffect(() => {
+    useEffect(async () => {
         
-         const text = document.querySelector('.BannerSpan')
-         init(text, {
-             cursorChar: '_',
-             showCursor: false,
-             loop: false,
-             strings: arr
-         })
+        let txt = document.querySelector('.BannerSpan')
+
+        if (txt){
+            init(document.querySelector('.BannerSpan'), {
+                cursorChar: '_',
+                showCursor: false,
+                loop: true,
+                strings: arr
+            })
+        }else{ return null}
+
+         return()=>{}
     }, [])
     
 

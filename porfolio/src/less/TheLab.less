@@ -2,7 +2,8 @@
     .font-size(1rem); 
     .w(100%);
     .flex-flow(row, space-evenly, no-wrap);
-
+    .TitilliumWeb();
+    position: relative;
 
     @media @tablet {
         margin: 0;
@@ -12,10 +13,69 @@
 
 }
 
-//TheLab.jsx - #theLab-search styles
-#theLab-search{
-    .padding(1%);
+//TheLabPanel.jsx styles
+
+.theLabPanel{
+    //TheDay.jsx - #-search styles
+    .flex(row);
+    .padding(2% 0);
+
+    #TheDay{
+        .w(100%);
+        .margin(1%);
+        .flex(column);
+        span{
+            #weather-icon{
+                .w(30px);
+                .h(30px);
+            }
+        }
+    }
+
+    //TheLab.jsx - #theLab-search styles
+    #TheSearch{
+        .flex(row);
+        .w(430px);
+        .h(40px);
+        position: relative;
+        input{
+            .h(40px);
+            .w(100%);
+            .bg(var(--code-container));
+            .margin(0);
+            .c(var(--primary-text));
+            .padding(1%);
+            border: none;
+            &:focus{border: none;}
+        }
+        span{
+            .c(white); &:hover{.c(black);}
+        }
+        ul{
+            position: absolute;
+            .bg(red);
+            top: 40px;
+            left: 0px;
+            .w(100%);
+            .h(max-content);
+            z-index: 2;
+            .max-h(400px);
+            overflow-y: scroll;
+            .padding(5px);
+            .margin(0);
+            .bg(var(--code-container));
+            li{
+                .padding(0);
+                .margin(0);
+                border-bottom: dotted 1px var(--border-bottom);
+                cursor: pointer;
+                &:hover{.bg(var(--secondary-background)); .c(var(--secondary-text))}
+            }
+        }
+    }
 }
+
+
 
 
 //TheLabRender.jsx styles
@@ -23,16 +83,48 @@
     .flex-flow(column, space-around, no-wrap);
     align-content: center;
     .w(25%);
+    @media @750px {
+        position: absolute;
+        .w(250px);
+    }
     ul{
+        .navigationHeader{
+            .w(100%);
+            .padding(0);
+            .margin(0);
+            .font-size(1.1rem);
+            .c(var(--secondary-text));
+            font-weight: bold;
+            .padding(1px 4px);
+
+        }
         .margin(0);
         .padding(0);
         .flex-flow(column, space-around, no-wrap);
         align-items: center;
         list-style: none;
+        .bg(var(--code-container));
         li{
             list-style: none;
-            a{
+            .w(100%);
+            .padding(2px);
+            &:hover{border-bottom: 1px solid var(--primary-code-text);}
 
+            a{
+                .c(var(--primary-text));
+                .w(100%);
+            }
+        }
+
+        .social-media{
+            .flex(row);
+            .w(100%);
+            .padding(5px);
+            .margin(0);
+            justify-content: flex-start;
+            img{
+                .w(25px);
+                .h(25px);
             }
         }
     }
@@ -41,20 +133,21 @@
 #theLab-render{
     .padding(1%);
     .w(75%);
+    @media @tablet{.w(100%);}
     .flex-flow(column, space-evenly, no-wrap);
     align-items: center;
-    #TheDay{
+
+    .article-details{
         .w(100%);
-        .margin(1%);
-        display: flex;
-        justify-content: space-between;
-        span{
-            #weather-icon{
-                .w(30px);
-                .h(30px);
-            }
-        }
+        .flex(column);
+        align-items: flex-start;
+        border-bottom: 1px solid var(--border-bottom);
+        .padding(0 0 10px 0);
+        .margin(0 0 10px 0);
+        h3,p{.padding(0);.margin(0);}
+
     }
+
     #theLab-homeImg{
         .w(100%);
         .h(500px);
@@ -63,4 +156,42 @@
         background: no-repeat center;
         background-size: 100% auto;
     }
+}
+
+.code-container{
+    .padding(2%);
+    .margin(10px);
+    .bg(var(--code-container));
+    .w(100%);
+    .c(var(--primary-code-text));
+    position: relative;
+    img{
+        position: absolute;
+        cursor: pointer;
+        .w(20px);
+        .h(20px);
+        bottom: 5px;
+        right: 5px;
+    }
+}
+
+.article-heading{
+    .font-size(1.2rem);
+    text-align: start;
+    .w(100%);
+    .Modenine();
+    .margin(10px 0px);
+}
+.article-image{
+    .max-w(100%);
+    .max-h(400px);
+    @media @tablet {.max-h(300px);}
+}
+.article-paragraph{
+    text-indent: 2rem;
+}
+
+.article-checklist{
+    .flex(column);
+    justify-content: flex-start;
 }
