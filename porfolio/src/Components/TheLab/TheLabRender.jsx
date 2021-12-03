@@ -1,74 +1,44 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
+import { Route, Switch } from 'react-router'
 import { appContext } from '../Context/appContext'
-import images from '../utils/images'
-import Code from './Code'
+import { getArticleContent } from '../utils/requests'
+import ArticleIndex from './ArticleIndex'
+import FocusedArticle from './FocusedArticle'
+
 import TheLabHome from './TheLabHome'
 
 //components
 
 
+
 export default function TheLabRender(props) {
 
     const focusedArticle = useContext(appContext).focusedArticle
+    const setFocusedArticle = useContext(appContext).setFocusedArticle
 
+    useEffect(async() => {
+        if(window.location.pathname.includes('documents')){
+            let article_id = window.location.pathname
+            article_id = article_id.split()
+            article_id = article_id[article_id.length-1]
+            console.log(article_id)
+        }
+    }, [focusedArticle])
+    
     return (
         <div id = 'theLab-render'>
-            {
-                focusedArticle.article_content.length > 0?
-                <>
-                    <ArticleDetails article_details={focusedArticle.article_details}/>
-                    <CreateArticleContent article_content = {focusedArticle.article_content} />
-                </>
-                :
-                <TheLabHome/>
-            }
+            <Switch>
+                <Route
+                exact path='/the-lab'
+                component = {TheLabHome}/>
+                <Route
+                exact path='/the-lab/article-index'
+                component = {ArticleIndex}/>
+                <Route
+                path ={'/the-lab/documents/:id'}
+                component ={FocusedArticle}/>
+            </Switch>
         </div>
     )
 }
 
-function ArticleDetails(props){
-    
-    const { article_details } = props;
-
-    return(
-        <div className = 'article-details'>
-            <h3>{article_details.title}</h3>
-            <p> Written By: {article_details.author}</p>
-            <p> Last Updated: {article_details.created_at}</p>
-
-        </div>
-    )
-}
-
-
-
-function CreateArticleContent(props){
-
-    const { article_content } = props;
-
-    function onClick(e){
-        e.preventDefault()
-    }
-
-    return(
-        <>
-
-            {
-                article_content.map(content =>{
-
-                    if(content.content_type == 'paragraph'){
-                        return(
-                            <>
-                                {content.heading !== null? <h3 className = 'article-heading'>{content.heading}</h3>: null}
-                                <span className = 'article-paragraph' dangerouslySetInnerHTML={{__html: `${content.content}`}}></span> 
-                            </>
-                        )
-                    }else if(content.content_type == 'code'){
-                        return <Code _html = {content.content}/>
-                    }else if(content.content_type == 'image')
-                        return <img className = 'article-image' src = {content.content} alt = ''/>
-                })
-            }
-        </>
-    )
-}

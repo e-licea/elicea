@@ -12,6 +12,8 @@ export default function TheLabNavigation() {
     const focusedArticle = useContext(appContext).focusedArticle
     const setFocusedArticle = useContext(appContext).setFocusedArticle
     const darkMode = useContext(appContext).darkMode
+    const [latestArticles, setLatestArticles] = useState([])
+    const [loading, setLoading] = useState(true)
 
     useEffect(async() => {
 
@@ -22,17 +24,16 @@ export default function TheLabNavigation() {
             _latestArticles = await _latestArticles.slice(0,9)
         }
         setLatestArticles(await _latestArticles)
-         
+        setLoading(false) 
 
-    }, [focusedArticle])
+    }, [loading])
 
-    const [latestArticles, setLatestArticles] = useState([])
 
     async function SwitchFocusedArticle(e){
         e.preventDefault()
-        console.log(e)
-        let url = await e.target.attributes[0].nodeValue
-        return await setFocusedArticle( await getArticleContent(url))
+        let id = e.target.id
+        let articleContent = await getArticleContent(id)
+        return await setFocusedArticle(await articleContent)
 
     }
 
@@ -45,31 +46,20 @@ export default function TheLabNavigation() {
         <div  id="theLab-navigation">
             
             <ul>
-            <li><Link onClick = {backToHome}  to = '/the-lab' >Home</Link></li>
-            <li><Link onClick = {backToHome}  to = '/the-lab' >Article Index</Link></li>
+            <li onClick = {backToHome}><Link to = '/the-lab' >Home</Link></li>
+            <li ><Link  to = '/the-lab/article-index' >Article Index</Link></li>
             <h6 className = 'navigationHeader'>Latest Articles</h6>
                 {
-                    latestArticles.length >0?
+                    !loading?
                         //get only 7 latest articles
                         latestArticles.map(article=>{
-                            return <li><Link 
-                                onClick = {SwitchFocusedArticle} 
-                                url ={`${article.url}`}   
+                            return <li onClick = {SwitchFocusedArticle} key = {article.id}><Link 
                                 id = {`${article.id}`} 
-                                to = {`/articles/${article.url}`} 
+                                to = {`/the-lab/documents/${article.id}`} 
                                 >{article.title}</Link></li>
                         })
                     :<img src = '' alt = 'loading' />
                 }
-            {/* <h6 className = 'navigationHeader'>Featured Articles</h6>
-                {
-                    articles.length >0?
-                    articles.map(article=>{
-                        return <li><Link onClick = {onClick} url ={`${article.url}`}   id = {`${article.id}`} to = {`/articles/${article.url}`} >{article.title}</Link></li>
-                    })
-                    :<img src = '' alt = 'loading' />
-                } */}
-
             <h6 className = 'navigationHeader'>Social Media</h6>
             <div className="social-media">
                 <a href="https://github.com/e-licea" target='_blank'><img src={darkMode? githubLight:githubDark}  alt="" /></a>
@@ -80,31 +70,3 @@ export default function TheLabNavigation() {
     )
 }
 
-
-const labNavLinks=[
-    {
-        id: 1,
-        a: 'Getting Started with Pi Zero',
-        path: '/articles/getting-started-with-pi-zero'
-    },
-    {
-        id: 2,
-        a: 'Learning Code for Beginners',
-        path: '/articles/learning-code-for-beginners'
-    },
-    {
-        id: 3,
-        a: '',
-        path: '/articles/getting-started-with-pi-zero'
-    },
-    {
-        id: 4,
-        a: 'Persistence and Databases',
-        path: '/articles/persistence-and-databases'
-    },
-    {
-        id: 5,
-        a: 'Basic Bash Commands',
-        path: '/articles/basic-bash-commands'
-    }
-]

@@ -66,11 +66,11 @@ export async function getArticles(){
     })
 }
 
-export async function getArticleContent(url){
+export async function getArticleContent(id){
     const requestConfig = {
         method: 'get',
         baseURL: flaskBaseURL,
-        url: '/client/articles/' + url,
+        url: `/client/articles/${id}` ,
 
     }
     return await axios.request(requestConfig)
@@ -78,7 +78,9 @@ export async function getArticleContent(url){
         return res.data
     })
     .catch(err=>{
-        return err
+        console.log(err)
+        //no articles found, returns empty array
+        return []
     })
 }
 
@@ -86,7 +88,7 @@ export async function searchArticles(query){
     const requestConfig = {
         method: 'get',
         baseURL: flaskBaseURL,
-        url: '/search/articles/'+query
+        url: `/search/articles/${query}`
     }
 
     return await axios.request(requestConfig)

@@ -99,7 +99,7 @@ export default function Contact() {
                         placeholder = 'Your message here'
                         />
                     </label>
-                    <Link onClick = {onSubmit} to ='/'  className = 'button-48'><span class="text">Submit</span></Link>
+                    <Link onClick = {onSubmit} to ='/'  className = 'button-48'><span className="text">Submit</span></Link>
                 </form>
                 </>
             }
