@@ -1015,10 +1015,11 @@ textarea {
 .theLabPanel #TheSearch span:hover {
   color: black;
 }
-.theLabPanel #TheSearch ul {
+.theLabPanel #TheSearch datalist {
   position: absolute;
   background-color: red;
   top: 40px;
+  display: block !important;
   left: 0px;
   width: 100%;
   height: max-content;
@@ -1029,13 +1030,13 @@ textarea {
   margin: 0;
   background-color: var(--code-container);
 }
-.theLabPanel #TheSearch ul li {
+.theLabPanel #TheSearch datalist option {
   padding: 0;
   margin: 0;
   border-bottom: dotted 1px var(--border-bottom);
   cursor: pointer;
 }
-.theLabPanel #TheSearch ul li:hover {
+.theLabPanel #TheSearch datalist option:hover {
   background-color: var(--secondary-background);
   color: var(--secondary-text);
 }
