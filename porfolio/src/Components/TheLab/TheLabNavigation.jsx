@@ -47,7 +47,7 @@ export default function TheLabNavigation() {
             
             <ul>
             <li onClick = {backToHome}><Link to = '/the-lab' >Home</Link></li>
-            <li ><Link  to = '/the-lab/article-index' >Article Index</Link></li>
+            {/* <li ><Link  to = '/the-lab/article-index' >Article Index</Link></li> */}
             <h6 className = 'navigationHeader'>Latest Articles</h6>
                 {
                     !loading?

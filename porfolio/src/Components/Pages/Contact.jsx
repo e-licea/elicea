@@ -1,11 +1,37 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import emailjs from 'emailjs-com';
 import { init } from 'ityped';
 import { Link } from 'react-router-dom';
+import * as yup from 'yup'
 
 export default function Contact() {
     
     const [ emailHasSent, setEmailHasSent ] = useState(false);
+    const form = useRef()
+
+    let schema = yup.object().shape({
+        name: yup.string().min(2).required(),
+        email: yup.string().email().required(),
+        subject: yup.string().min(2).required(),
+        message:yup.string().min(10).required(),
+    })
+
+    const [formValid, setFormValid] = useState(false);
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    })
+
+    useEffect(() => {
+        schema.isValid(formData)
+        .then(function(valid){
+            setFormValid(true);
+        }).catch(function(err){
+            setFormData(false);
+        })
+    }, [onChange])
 
     useEffect(() => {
         const header = document.querySelector('#ContactHeader')
@@ -19,29 +45,20 @@ export default function Contact() {
 
     }, [])
 
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-    })
-
     function onChange(e){
         setFormData({...formData,[e.target.name]:e.target.value});
-       
     }
     
     function onSubmit(e){
         e.preventDefault();
         console.log(formData);
         setEmailHasSent(true)
-        emailjs.sendForm('service_2xlw3um', 'template_5kptc2g', e.target, 'user_zmrJEylQGxnauacF4paiD')
+        emailjs.sendForm('service_38ycq2r', 'template_5kptc2g', form.current, 'user_zmrJEylQGxnauacF4paiD')
             .then((result) => {
                 console.log('SUCCESS!', result.status, result.text);
             }, (error) => {
                 console.log('FAILED...', error);
-            });
-
+            })
     }
 
     return (
@@ -54,7 +71,6 @@ export default function Contact() {
                 data-aos-offset="400" 
                 id = 'Contact'>
             <div>
-
            {
                emailHasSent?
                 <>
@@ -66,7 +82,7 @@ export default function Contact() {
                 <div className = 'contact-ad'>
                     <p>Thank you for visiting! Come back and check back soon for more updates!</p>
                 </div>
-                <form >
+                <form onSubmit={onSubmit} ref ={form}>
                     <label>Name :
                         <input type="text"
                             onChange = {onChange}
@@ -99,7 +115,7 @@ export default function Contact() {
                         placeholder = 'Your message here'
                         />
                     </label>
-                    <Link onClick = {onSubmit} to ='/'  className = 'button-48'><span className="text">Submit</span></Link>
+                    <button disabled={formValid?'false':'true'} className = 'button-48'><span className="text">Submit</span></button>
                 </form>
                 </>
             }
