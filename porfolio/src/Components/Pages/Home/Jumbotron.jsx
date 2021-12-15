@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 //bit.dev imports
 import { init } from 'ityped';
 import {Link} from 'react-router-dom'
+import res from '../../../img/_res.pdf'
 
 export default function Jumbotron() {
 
@@ -37,6 +38,10 @@ export default function Jumbotron() {
 
             <div id = 'callToAction'>
 
+                <a className = 'button-48' target='_blank' href={res}>
+                    <span className="text">Resume</span>
+                </a>
+
                 <Link className = 'button-48' role = 'button' to= '/projects' role="button">
                     <span className="text">Projects</span>
                 </Link>
@@ -44,7 +49,7 @@ export default function Jumbotron() {
                 <Link className = 'button-48' to = '/contact'  role="button">
                     <span className="text">Contact</span>
                 </Link>
- 
+
             </div>
 
 
