@@ -238,7 +238,7 @@
 @media (max-width: 1000px) {
   .Render #Jumbotron #callToAction {
     bottom: 20px;
-    right: 60px;
+    right: 90px;
   }
 }
 .Render #Jumbotron #callToAction a {
