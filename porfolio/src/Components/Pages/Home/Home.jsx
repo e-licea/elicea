@@ -9,9 +9,9 @@ export default function Home() {
     return (
         <div>
             <Jumbotron/>
+            <Featured/>
             <Intro/>
             <Skills/>
-            <Featured/>
             <Heatmap/>
         </div>
     )

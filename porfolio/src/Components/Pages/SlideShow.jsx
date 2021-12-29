@@ -125,11 +125,11 @@ export const projects = [
   },
   {
     id: 2,
-    project: 'Redux Social Platform',
+    project: 'The Social Platform',
     src:'https://github.com/e-licea/react-snkrz',
     deploy: 'https://dreamy-pare-fd4639.netlify.app/',
     imgSrc: images.rTeamMockup,
-    desc:'This project is a social platform much like slack or discord. The inspiration behind it was to create an app that encourages group productivity through social media. The app offers group messaging where users can create channels and add members to them. Each member holds a rank that will allow or disallow for admin functionalities such as adding or removing people from an existing group. Users are also able to unsend or edit messages if they needed to. In an attempt to make the application more engaging, an emoji system has been implemented along with a status feed (much like facebook\'s wall)currently in the works. The app can be tested with username: Tony and password: password',
+    desc:'The idea behind the Social Platform was creating a workspace much like Discord and Slack. In my experience I have used both platforms and became attracted to the way these services flowed. I became inspired to try creating my own workspace platform like these with a slight touch of Facebook. I think the hardest part about this project was building a minimalistic database schema that would make sense for the entire application. Although state management is a bit tedious, Redux was a great help. Currently, this application is being optimized and chat functionality is being constructed but a beta demo can be tested with the deploy link down below. Have at it!',
     challenges: ['Redux state', 'Authentication with JSON Web Tokens','Creating a reliable emoji api', 'Creating a logical Postgres database schema' ],
     technologies: ['React', 'Redux', 'Node','Yup Form Validator', 'Express', 'Less CSS', 'PostgreSQL'],
     currentlyWorking:['Creating user profile', 'Setting up a status feed page.']

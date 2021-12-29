@@ -48,23 +48,24 @@ export default function Featured() {
                 className = 'radial-gradient'
                 onClick = { e=> {onClick(e, 2)}}
             >
-                <h4>Featured Project</h4>
+                <h4>The Holy Grail!</h4>
                 <img src={images.rTeamMockup} alt="" />
 
-                <Link to ='/projects' onClick={e=> window.scrollTo(0,0)}>React Redux Multi-Chat Messenger</Link>
-                <p>This build is a messenger tool where users can collaborate in groups or in pairs. Currently working on adding a status feed and shift the build more towards a social medial. Emojis have been implemented!.</p>
+                <Link to ='/projects' onClick={e=> window.scrollTo(0,0)}>The Social Platform</Link>
+                <p>The Social Platform is my biggest project to date and is the project I am most proud of. It is a social-media platform that is heavily inspired by Slack and Discord with a touch of Facebook!</p>
+                <br />
 
             </div>
             <div 
                 className = 'radial-gradient'
-                onClick = { e=> {onClick(e, 1)}}
+                onClick = { e=> {onClick(e, 0)}}
             >
             
-                <h4>Currently Working On</h4>
-                <img src={images.reactSnkrsMockup} alt="" />
-                <Link to ='/projects' onClick={e=> window.scrollTo(0,0)}>Sneaker Tool</Link>
+                <h4>In Production...</h4>
+                <img src={images.hgrMockup} alt="" />
+                <Link to ='/projects' onClick={e=> window.scrollTo(0,0)}>High Ground Restore Roofing</Link>
                 <p>
-                    Currently in development, is a sneaker tool application that keeps sneaker consumers up to date on upcoming sneaker release information. In addition, they are able to research any sneaker that comes to mind.
+                    Currently in production, is an ongoing partnership project with a starter roofing company here in Chicago. This application has a heavily SEO focused approach. Check it out in projects for more detailed information.
                 </p>
                 
             </div>
