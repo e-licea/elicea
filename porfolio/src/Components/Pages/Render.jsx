@@ -1,7 +1,6 @@
 import React from 'react'
 import { Route } from 'react-router-dom';
 
-
 //import Components
 import Home from './Home/Home';
 import TheLab from '../TheLab/TheLab'

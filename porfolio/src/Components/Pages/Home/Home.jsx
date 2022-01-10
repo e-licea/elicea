@@ -10,8 +10,8 @@ export default function Home() {
         <div>
             <Jumbotron/>
             <Featured/>
-            <Intro/>
             <Skills/>
+            <Intro/>
             <Heatmap/>
         </div>
     )

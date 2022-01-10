@@ -48,11 +48,11 @@ export default function Featured() {
                 className = 'radial-gradient'
                 onClick = { e=> {onClick(e, 2)}}
             >
-                <h4>The Holy Grail!</h4>
+                <h4>The Social Platform!</h4>
                 <img src={images.rTeamMockup} alt="" />
 
                 <Link to ='/projects' onClick={e=> window.scrollTo(0,0)}>The Social Platform</Link>
-                <p>The Social Platform is my biggest project to date and is the project I am most proud of. It is a social-media platform that is heavily inspired by Slack and Discord with a touch of Facebook!</p>
+                <p>The Social Platform is one of my more larger projects to date. It is exactly as the name suggests. Read more about how this project is being developed and feel free to try it out.</p>
                 <br />
 
             </div>
