@@ -48,7 +48,7 @@ export default function Featured() {
                 className = 'radial-gradient'
                 onClick = { e=> {onClick(e, 2)}}
             >
-                <h4>The Social Platform!</h4>
+                <h4>For Team Collaboration!</h4>
                 <img src={images.rTeamMockup} alt="" />
 
                 <Link to ='/projects' onClick={e=> window.scrollTo(0,0)}>The Social Platform</Link>
