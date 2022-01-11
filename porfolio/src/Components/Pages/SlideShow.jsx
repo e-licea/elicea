@@ -139,10 +139,16 @@ export const projects = [
     src:'https://github.com/e-licea/react-snkrz',
     deploy: 'https://dreamy-pare-fd4639.netlify.app/',
     imgSrc: images.rTeamMockup,
-    desc:['The idea behind the Social Platform was creating a workspace much like Discord and Slack. In my experience I have used both platforms and became attracted to the way these services flowed. I became inspired to try creating my own workspace platform like these with a slight touch of Facebook. I think the hardest part about this project was building a minimalistic database schema that would make sense for the entire application. Although state management is a bit tedious, Redux was a great help. Currently, this application is being optimized and chat functionality is being constructed but a beta demo can be tested with the deploy link down below. Have at it!'],
-    challenges: ['Redux state', 'Authentication with JSON Web Tokens','Creating a reliable emoji api', 'Creating a logical Postgres database schema' ],
-    technologies: ['React', 'Redux', 'Node','Yup Form Validator', 'Express', 'Less CSS', 'PostgreSQL'],
-    currentlyWorking:['Creating user profile', 'Setting up a status feed page.']
+    desc:[
+      'The idea behind the Social Platform was creating a workspace much like Slack and Facebook. My inspiration behind this idea was to take "productive" from slack and the "entertaintment" from Facebook to create a hybrid of both.',
+      'Social Platform\'s messenger features resemble Slack to provide productivity among users in a workzone, while also having a staus feed that is inspired by facebook so that users can keep up with one another. Users can have own profiles, private workzones, to have fun while also getting things done no matter what activity they are using the application for!',
+
+      'Although this application uses multiple technologies the two main ones are Redux, and Socket IO. Redux was a fundamental technology for this application to manage multiple states at once. I have found it to be extremely useful and has definitely served as an optimizer for the application. SocketIO was just recently implented into this application because I had discovered that the application was updating in real time without reloading the page. Currently, a lot of the original back-end endpoints are being switched to sockets for this reason, and also so the server takes less requests in hopes to on day have a large amount of users.',
+      'Check out how long this application has come by visitng the deploy link below!'
+  ],
+    challenges: ['Migrating to a socket server', 'Creating a logical and minimal Postgres database schema' ],
+    technologies: ['React', 'Redux', 'Node', 'SocketIO', 'Yup Form Validator', 'Express', 'Less CSS', 'PostgreSQL'],
+    currentlyWorking:['Real-time application updates with sockets', 'Implementing Emojis globally', 'Implementing additional CRUD features.']
   },
   {
     id: 3,
