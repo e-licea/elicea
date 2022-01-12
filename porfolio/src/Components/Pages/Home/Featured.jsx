@@ -58,14 +58,14 @@ export default function Featured() {
             </div>
             <div 
                 className = 'radial-gradient'
-                onClick = { e=> {onClick(e, 0)}}
+                onClick = { e=> {onClick(e, 1)}}
             >
             
                 <h4>In Production...</h4>
-                <img src={images.hgrMockup} alt="" />
+                <img src={images.reactSnkrsMockup} alt="" />
                 <Link to ='/projects' onClick={e=> window.scrollTo(0,0)}>High Ground Restore Roofing</Link>
                 <p>
-                    Currently in production, is an ongoing partnership project with a starter roofing company here in Chicago. This application has a heavily SEO focused approach. Check it out in projects for more detailed information.
+                    Currently in production, is a small sneaker application that serves useful data for all sneaker heads alike. Explore a database of sneakers and be the first to find out about the latest sneaker releases.
                 </p>
                 
             </div>

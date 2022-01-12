@@ -8,6 +8,7 @@ import Jumbotron from './Jumbotron'
 export default function Home() {
     return (
         <div>
+            {console.log(process.env.REACT_APP_API_URL)}
             <Jumbotron/>
             <Featured/>
             <Skills/>
