@@ -63,7 +63,7 @@ export default function Featured() {
             
                 <h4>In Production...</h4>
                 <img src={images.reactSnkrsMockup} alt="" />
-                <Link to ='/projects' onClick={e=> window.scrollTo(0,0)}>High Ground Restore Roofing</Link>
+                <Link to ='/projects' onClick={e=> window.scrollTo(0,0)}>The Ultimate Sneaker App!</Link>
                 <p>
                     Currently in production, is a small sneaker application that serves useful data for all sneaker heads alike. Explore a database of sneakers and be the first to find out about the latest sneaker releases.
                 </p>
