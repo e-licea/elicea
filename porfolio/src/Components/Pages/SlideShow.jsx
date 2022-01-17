@@ -129,7 +129,7 @@ export const projects = [
     desc:[
       'This app is a sneaker tool that is made for the most passionate sneaker fanatics. It\'s intent is to serve exclusive information that will help sneaker fanatics prepare for their next anticipated shoe release. It serves information such as retail pricing, release dates, colorways, and even a prediction on what sneaker organizations will be releasing which shoe. Even when no sneaker releases are taking place, users are still able to take advantage of the large sneakerpedia that this sneaker tool offers. A database is able to serve insights on almost any sneaker that is searched by the user. The convenience of such a tool can come in handy for people who make hustles from shoe resales or simply just to pull up a sneaker information to show a friend.'
     ],
-    deploy: 'https://nervous-noyce-e6328e.netlify.app/',
+    deploy: 'https://sneakers-app.vercel.app/',
     challenges: ['Web Scraping and parsing information to JSON with async'],
     technologies: ['React', 'Cheerio', 'Node', 'Express',  'Less CSS'],
     currentlyWorking: ['Deploying on a server with multiple open ports']

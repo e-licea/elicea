@@ -48,7 +48,6 @@ function App() {
       setFocusedArticle: setFocusedArticle
     }}>
       <div  className="App" >
-    
         <Nav/>
         <ToggleDarkMode/>
         <Render/>
