@@ -369,7 +369,7 @@ const skills = [
 
     {
         id : 12,
-        skill: "Windows10",
+        skill: "Windows11",
         end: 'os',
         img: Windows,
         description: [
