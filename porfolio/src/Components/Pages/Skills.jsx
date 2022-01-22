@@ -13,6 +13,8 @@ import JS from '../../img/portfolioImg/js.png'
 import OSX from '../../img/portfolioImg/osx.png'
 import Windows from '../../img/portfolioImg/win.png'
 import Linux from '../../img/portfolioImg/linux.png'
+import Mongo from '../../img/portfolioImg/mongo.png'
+
 import { init } from 'ityped'
 
 
@@ -407,6 +409,20 @@ const skills = [
     
     ]
     },
+    {
+        id : 15,
+        skill: "MongoDB",
+        end: 'back',
+        img: Mongo,
+        description: [
+            "Setting up setting up express servers with route handlers.",
+            "Connecting RESTful APIs with sql databases for persistence.",
+            "User authentication with JSON tokens or sessions. ",
+            "Back-end app testing with Jest  "
+    
+    ]
+    },
+
  ]
 
  

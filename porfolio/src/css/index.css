@@ -384,7 +384,7 @@
 .theme-dark {
   --primary-text: #dbdbdb;
   --secondary-text: #81ff87;
-  --primary-background: #0a101a;
+  --primary-background: #0a0a0a;
   --secondary-background: #81ff87;
   --border-bottom: white;
   --code-container: #0f1827;
@@ -1291,6 +1291,7 @@ html,
   height: max-content;
   background-color: var(--primary-background);
   color: var(--primary-text);
+  transition: all 0.3s;
 }
 p,
 ul {
