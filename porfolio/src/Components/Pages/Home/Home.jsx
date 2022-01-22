@@ -12,7 +12,7 @@ export default function Home() {
             <Jumbotron/>
             <Featured/>
             <Skills/>
-            <Intro/>
+            {/* <Intro/> */}
             <Heatmap/>
         </div>
     )
