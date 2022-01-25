@@ -46,7 +46,7 @@ export default function Featured() {
         id = 'Featured'>
             <div 
                 className = 'radial-gradient'
-                onClick = { e=> {onClick(e, 2)}}
+                onClick = { e=> {onClick(e, 1)}}
             >
                 <h4>For Team Collaboration!</h4>
                 <img src={images.rTeamMockup} alt="" />
@@ -58,8 +58,7 @@ export default function Featured() {
             </div>
             <div 
                 className = 'radial-gradient'
-                onClick = { e=> {onClick(e, 1)}}
-            >
+                onClick = { e=> {onClick(e, 0)}}>
             
                 <h4>In Production...</h4>
                 <img src={images.reactSnkrsMockup} alt="" />
