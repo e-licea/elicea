@@ -20,14 +20,14 @@ export default function SlideShow(){
     if (e.target.id != 'next'){
       //console.log('prev')
       setProjectLoading(true)
-      setActiveProject(activeProject.id == 0? projects[2] : projects[activeProject.id - 1])
+      setActiveProject(activeProject.id == 0? projects[1] : projects[activeProject.id - 1])
       setProjectLoading(false)
 
     }
     else {
       //console.log('next')
       setProjectLoading(true)
-      setActiveProject(activeProject.id == 2? projects[0] : projects[activeProject.id + 1])
+      setActiveProject(activeProject.id == 1? projects[0] : projects[activeProject.id + 1])
       setProjectLoading(false)
     }
   }
@@ -151,15 +151,15 @@ export const projects = [
     technologies: ['React', 'Redux', 'Node', 'SocketIO', 'Yup Form Validator', 'Express', 'Less CSS', 'PostgreSQL'],
     currentlyWorking:['Real-time application updates with sockets', 'Implementing Emojis globally', 'Implementing additional CRUD features.']
   },
-  {
-    id: 2,
-    project: 'Flask Blog Manager',
-    src:'https://github.com/e-licea/highgroundrestoreapi',
-    deploy: 'https://highgroundrestoreapi.herokuapp.com/login',
-    imgSrc: images.articleManagerMockup,
-    desc:['This Flask application was designed for managing and creating content for a blog website. The blog manager has protected endpoints with Flask sessions that require the proper credentials for write privileges inside the app. Once logged in, a user is able to create drafts, add content such as paragraphs and images, and then publish the article. When the article is published, it is immediately available to be read through the client api endpoints.'],
-    challenges: ['Authentication with Flask Sessions','Serializing data to JSON', 'Creating a logical Postgres database schema' ],
-    technologies: ['Flask', 'Vanilla JS', 'DJango HTML', 'SQL Alchemy',  'Less CSS', 'PostgreSQL'],
-    currentlyWorking:['Adding additional edit functions']
-  }
+  // {
+  //   id: 2,
+  //   project: 'Flask Blog Manager',
+  //   src:'https://github.com/e-licea/highgroundrestoreapi',
+  //   deploy: 'https://highgroundrestoreapi.herokuapp.com/login',
+  //   imgSrc: images.articleManagerMockup,
+  //   desc:['This Flask application was designed for managing and creating content for a blog website. The blog manager has protected endpoints with Flask sessions that require the proper credentials for write privileges inside the app. Once logged in, a user is able to create drafts, add content such as paragraphs and images, and then publish the article. When the article is published, it is immediately available to be read through the client api endpoints.'],
+  //   challenges: ['Authentication with Flask Sessions','Serializing data to JSON', 'Creating a logical Postgres database schema' ],
+  //   technologies: ['Flask', 'Vanilla JS', 'DJango HTML', 'SQL Alchemy',  'Less CSS', 'PostgreSQL'],
+  //   currentlyWorking:['Adding additional edit functions']
+  // }
 ]//
